@@ -3,10 +3,10 @@
 ## Team Assignments
 See the table for your system assigments.  Please use the system assigned to your team.
 
-* [System/Database Assignments](/SailfishClassOct2017/LabSystems.md)
+* [System/Database Assignments](/LabSystems.md)
 
 ## Authenticate to the POC Lab prior to testing the database connection
-* [Authenticate to SVL POC Network](/SailfishClassOct2017/Docs/06_Login_to_IIAS_SVL.md)
+* [Authenticate to SVL POC Network](/Docs/06_Login_to_IIAS_SVL.md)
 
 ## Attach to your Db2 Warehouse Client container  
 
@@ -25,12 +25,12 @@ See the table for your system assigments.  Please use the system assigned to you
   ```
   #Db2 Warehouse environment variables
   export DB_DATABASE=bludb
-  export DB_HOST=9.30.106.50
+  export DB_HOST=9.30.106.115
   export DB_USER=<team-assigned-ID>
   export DB_PASSWORD=<team-assigned-password>
   #Netezza environment variables
   export NZ_DATABASE=<your-assigned-database>
-  export NZ_HOST=<your-assigned-IP>
+  export NZ_HOST=9.30.106.112
   export NZ_USER=<your-svlab-domain-id>
   export NZ_PASSWORD=<your-nzlab-domain-password>
   ```
