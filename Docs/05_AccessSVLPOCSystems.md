@@ -9,8 +9,8 @@
      Windows: Connect with AT&T Network Client - IBM  
      
 1. Authenticating to the SVL POC Network through the BSO firewall with your IBM Intranet Credentials. 
-   * [BSO Authentication](/SailfishClassOct2017/Docs/06_Authenticate_SVL.md) 
+   * [BSO Authentication](/Docs/06_Authenticate_SVL.md) 
   
 1. Logging into the IIAS system with your LAB Domain Credentials.  
-   * [Login steps](/SailfishClassOct2017/Docs/06_Login_to_IIAS_SVL.md)  
+   * [Login steps](/Docs/06_Login_to_IIAS_SVL.md)  
    
