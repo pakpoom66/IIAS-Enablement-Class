@@ -18,7 +18,7 @@ The systems used during the class are located in the Silicon Valley Lab (SVL).  
 
 ## System/Database assignments by team  
 
-  * [SVL Class Lab Systems](//LabSystems.md)
+  * [SVL Class Lab Systems](/LabSystems.md)
 
 ### Logging into the IIAS system.  
    * [BSO Authentication](/FastStart-SF-EMEA-2018/Docs/06_Authenticate_SVL.md)     
