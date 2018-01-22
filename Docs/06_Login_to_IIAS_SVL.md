@@ -5,7 +5,7 @@
 * Test user ID until week of class  
   
    USERID: sfuser  
-   PASSWORD: Sailfishtest@2017  
+   PASSWORD: Sailfishtest@2018  
 
 > Replace any occurrence of `<your-svl-domain-id>` with your assigned team ID
 
