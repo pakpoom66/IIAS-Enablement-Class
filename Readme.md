@@ -1,13 +1,13 @@
 # Class Prerequisites
 
-  In preparation for the class please following these [steps](FastStart-SF-EMEA-2018/Prerequisities.md) prior to attending the class. 
+  In preparation for the class please following these [steps](/FastStart-SF-EMEA-2018/Prerequisities.md) prior to attending the class. 
   
   > **Failure to preform these steps prior to class could prevent you from accessing the systems used in the lab exercises.**
 
 ## Test access to SVL lab systems  
 
 Prior to coming to class test that you can access the lab systems.
-   * [SVL POC system login instructions](FastStart-SF-EMEA-2018/Docs/05_AccessSVLPOCSystems.md)  
+   * [SVL POC system login instructions](/FastStart-SF-EMEA-2018/Docs/05_AccessSVLPOCSystems.md)  
                                           
    > Note: you will need to authenticate to the SVL POC Lab to perform the labs
 
@@ -18,7 +18,7 @@ The systems used during the class are located in the Silicon Valley Lab (SVL).  
 
 ## System/Database assignments by team  
 
-  * [SVL Class Systems](/SailfishClassOct2017/LabSystems.md)
+  * [SVL Class Systems](/FastStart-SF-EMEA-2018/LabSystems.md)
 
 ### Logging into the IIAS system.  
    * [BSO Authentication](/FastStart-SF-EMEA-2018/Docs/06_Authenticate_SVL.md)     
