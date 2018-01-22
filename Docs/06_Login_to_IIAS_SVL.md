@@ -23,7 +23,7 @@ The web console is a web-based client for managing and monitoring the Integrated
 The database administrator uses the web console to monitor performance.
 
 1. Users and administrators connect to the web console via a web browser at:  
-   `https://9.30.106.50:8443/console`
+   `https://9.30.106.115:8443/console`
 
 1. Use your SVL Domain User ID and Password to login.
 
@@ -39,20 +39,20 @@ Administrators can log in as user bluadmin or other administrator users, while d
    * Mac: Open Terminal (/Applications/Utilities.Terminal.app) or iTerm (/Applications/iTerm.app)  
      
      Login to IIAS head node OS:  
-     `$ ssh <your-svl-domain-id>@9.30.106.50`  
+     `$ ssh <your-svl-domain-id>@9.30.106.115`  
      > Enter your NZLAB Domain ID and password
      
      Login to Db2 Warehouse container directly:  
-     `$ ssh <your-svl-domain-id>@9.30.106.50 -p 50022`  
+     `$ ssh <your-svl-domain-id>@9.30.106.115 -p 50022`  
      > Enter your SVL Domain ID and password
      
    * Windows: Open PuTTY and enter the following information in the "PuTTY Configuration" window:  
       
      **Sailfish Headnode Host OS**  
-     (1) HostName (or IP address)	: 9.30.106.50  
+     (1) HostName (or IP address)	: 9.30.106.115  
      (2) Port				: 22  
      (3) Connection type		: ssh  
-     (4) Saved Sessions			: IIAS-Headnode-Host-SVL (node0101)  
+     (4) Saved Sessions			: svl-sfpoc002 (node0101)  
      (5) Click `Save`  
      (6) Click `Open`  
      > Enter your NZLAB Domain ID and password  
@@ -66,16 +66,16 @@ Administrators can log in as user bluadmin or other administrator users, while d
    * Mac: Open Terminal (/Applications/Utilities.Terminal.app) or iTerm (/Applications/iTerm.app)  
            
      Login to Db2 Warehouse container directly:  
-     `$ ssh <your-svl-domain-id>@9.30.106.50 -p 50022`  
+     `$ ssh <your-svl-domain-id>@9.30.106.115 -p 50022`  
      > Enter your SVL Domain ID and password
      
    * Windows: Open PuTTY and enter the following information in the "PuTTY Configuration" window:  
       
      **Db2 Warehouse Container**  
-     (1) HostName (or IP address)	: 9.30.106.50  
+     (1) HostName (or IP address)	: 9.30.106.115  
      (2) Port				: 50022  
      (3) Connection type		: ssh  
-     (4) Saved Sessions			: IIAS-Headnode-Db2-SVL (node0101)  
+     (4) Saved Sessions			: svl-sfpoc002 (node0101)  
      (5) Click `Save`  
      (6) Click `Open`  
      > Enter your SVL Domain ID and password
@@ -89,7 +89,7 @@ Administrators can log in as user bluadmin or other administrator users, while d
    ```
    #Db2 Warehouse environment variables
    export DB_DATABASE=bludb
-   export DB_HOST=9.30.106.50
+   export DB_HOST=9.30.106.115
    export DB_USER=<your-svl-domain-id>
    export DB_PASSWORD=<your-svl-domain-password>
    #Netezza environment variables
@@ -104,5 +104,4 @@ Administrators can log in as user bluadmin or other administrator users, while d
    or  
    
    log out/in  
-   
    
