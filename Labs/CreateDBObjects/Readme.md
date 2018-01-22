@@ -26,19 +26,19 @@ For this lab you can ssh to the IIAS container or use your Db2 Client container.
 # Creating database objects
 
   * If remote (i.e. Db2 Warehouse Client Container)
-     > db2 connect to bludb user <your-assigned-user-ID> using Sailfish@2017   
-     > dbsql -h 9.30.106.50 -u teamXX -pw Sailfish@2017 -c "\<sql command\>"  
+     > `db2 connect to bludb user <your-assigned-user-ID> using Sailfish@2017`   
+     > `dbsql -h 9.30.106.50 -u teamXX -pw Sailfish@2017 -c "\<sql command\>"`  
         
     You can set the following variables to simplify the `dbsql` command.  
         
-        ```
-        export DB_HOST=9.30.106.50
-        export DB_USER=teamXX
-        export DB_PASSWORD=Sailfish@2017
-        export DB_DATABASE=bludb
-        ```  
+    ```
+    export DB_HOST=9.30.106.50
+    export DB_USER=teamXX
+    export DB_PASSWORD=Sailfish@2017
+    export DB_DATABASE=bludb
+    ```  
         
-        > Note: replace teamXX with your team ID in the examples below.
+    > Note: replace teamXX with your team ID in the examples below.
 
 ## Partition Groups
 
