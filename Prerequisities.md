@@ -7,7 +7,7 @@
 1. Request access to the POC Network if you do not have access already.
    > Note: BSO firewall  
 
-   * [Set up instructions](/FastStart-SF-EMEA-2018/Docs/01_SVLLabAccess.md) 
+   * [Set up instructions](/Docs/01_SVLLabAccess.md) 
    
 1. Windows users: Install an ssh client such as PuTTY on your workstation for ssh access into the Db2 Warehouse container.
 
@@ -21,17 +21,17 @@
 
 1. Sign-up for a Docker Hub account.
 
-   * [Sign-up instructions](/SailfishClassOct2017/Docs/03_Sign-upDockerHub.md)
+   * [Sign-up instructions](/Docs/03_Sign-upDockerHub.md)
  
 1. Request access to Db2 Warehouse and Db2 Warehouse Client Container 
 
-   * [Request Db2 Warehouse container access](/SailfishClassOct2017/Docs/04_Db2WContainerAccess.md)
+   * [Request Db2 Warehouse container access](/Docs/04_Db2WContainerAccess.md)
 
 1. Install the Db2 Warehouse Client Container on your workstation. 
-   * [Docker for Mac instructions](/SailfishClassOct2017/Docs/02_Db2WClientSetupMac.md)
+   * [Docker for Mac instructions](/Docs/02_Db2WClientSetupMac.md)
    * [Windows instructions coming...]()  
 1. Catalog the remote databases for Sailfish and Netezza   
-   * [Catalog remote database](/SailfishClassOct2017/Docs/07_CatalogDB.md)
+   * [Catalog remote database](/Docs/07_CatalogDB.md)
 
 ## Optional: Install Db2 Warehouse Client drivers and 3rd Party tools on your workstation
 
