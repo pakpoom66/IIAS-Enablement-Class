@@ -7,7 +7,7 @@
 1. Request access to the POC Network if you do not have access already.
    > Note: BSO firewall  
 
-   * [Set up instructions](/SailfishClassOct2017/Docs/01_SVLLabAccess.md) 
+   * [Set up instructions](/FastStart-SF-EMEA-2018/Docs/01_SVLLabAccess.md) 
    
 1. Windows users: Install an ssh client such as PuTTY on your workstation for ssh access into the Db2 Warehouse container.
 
