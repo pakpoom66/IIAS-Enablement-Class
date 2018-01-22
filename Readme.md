@@ -1,6 +1,6 @@
 # Class Prerequisites
 
-  In preparation for the class please following these [steps](/SailfishClassOct2017/Prerequisities.md) prior to attending the class. 
+  In preparation for the class please following these [steps](/FastStart-SF-EMEA-2018/Prerequisities.md) prior to attending the class. 
   
   > **Failure to preform these steps prior to class could prevent you from accessing the systems used in the lab exercises.**
 
