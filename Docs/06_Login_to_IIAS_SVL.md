@@ -10,7 +10,7 @@
 > Replace any occurrence of `<your-svl-domain-id>` with your assigned team ID
 
 > Note:  
-> * Authenticate to the [BSO Firewall](/SailfishClassOct2017/Docs/06_Authenticate_SVL.md) prior accessing the SVL systems.
+> * Authenticate to the [BSO Firewall](/Docs/06_Authenticate_SVL.md) prior accessing the SVL systems.
 >   * This is your IBM Intranet User ID and password.  
 > * Use your SVL Domain Userid/Password when connecting to the SVL Systems  
 >   * This is **not** your IBM intranet password.  
