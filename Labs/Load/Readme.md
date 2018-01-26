@@ -155,9 +155,9 @@ You can access help by typing `db2 load ?`.
 Verify that the loaded rows match the records in the data files.  
 [NZ Table counts](/SailfishClassOct2017/Labs/Migration/BDI_rowcounts.md )
 
-[Sample Db2 `LOAD FROM CURSOR` script for all tables](FastStart-SF-EMEA-2018/Labs/Load/db2loadcur-1.sh).
+[Sample Db2 `LOAD FROM CURSOR` script for all tables](/Load/db2loadcur-1.sh).
 
-[Sample Db2 `LOAD FROM CURSOR` script for a single table]( FastStart-SF-EMEA-2018/Labs/Load/db2loadcur-1.sh). 
+[Sample Db2 `LOAD FROM CURSOR` script for a single table](/Load/db2loadcur-1.sh). 
 
 ### Check compression after the load
 
