@@ -111,7 +111,7 @@ order by tabname
 
 Load a new set of BDI tables (26) from the files provided.  Utilize the Db2 `LOAD` utility available in the Db2 Warehouse client container (use `LOAD CLIENT` in the script) or in the Db2 Warehouse server container.
 
-[Use the following DDL to create a new set of tables](/SailfishClassOct2017/Labs/Load/bdi_LOAD.ddl).
+[Use the following DDL to create a new set of tables](/Labs/Load/bdi_LOAD.ddl).
 
 Data file directory: `/scratch/home/poc/data`  
 
@@ -155,9 +155,9 @@ You can access help by typing `db2 load ?`.
 Verify that the loaded rows match the records in the data files.  
 [NZ Table counts](/Labs/Migration/BDI_rowcounts.md )
 
-[Sample Db2 `LOAD FROM CURSOR` script for all tables](/Load/db2loadcur-1.sh).
+[Sample Db2 `LOAD FROM CURSOR` script for all tables](/Labs/Load/db2loadcur-1.sh).
 
-[Sample Db2 `LOAD FROM CURSOR` script for a single table](/Load/db2loadcur-1.sh). 
+[Sample Db2 `LOAD FROM CURSOR` script for a single table](Labs/Load/db2loadcur-1.sh). 
 
 ### Check compression after the load
 
