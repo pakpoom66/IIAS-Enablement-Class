@@ -118,7 +118,7 @@ Data file directory: `/scratch/home/poc/data`
 You can access help by typing `db2 load ?`.
 
 Verify that the loaded rows match the records in the data files.  
-[NZ Table counts](/SailfishClassOct2017/Labs/Migration/BDI_rowcounts.md )
+[NZ Table counts](/Labs/Migration/BDI_rowcounts.md )
 
 [Sample Db2 `LOAD` script for all tables](/Labs/Load/db2load-all.sh).
 
@@ -153,7 +153,7 @@ Copy data from the base tables into new BDI tables (26).   Utilize the Db2 `LOAD
 You can access help by typing `db2 load ?`.
 
 Verify that the loaded rows match the records in the data files.  
-[NZ Table counts](/SailfishClassOct2017/Labs/Migration/BDI_rowcounts.md )
+[NZ Table counts](/Labs/Migration/BDI_rowcounts.md )
 
 [Sample Db2 `LOAD FROM CURSOR` script for all tables](/Load/db2loadcur-1.sh).
 
