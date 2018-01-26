@@ -81,11 +81,11 @@ Data file directory: `/scratch/home/poc/data`
 You can access help by typing `dbload -h`.
 
 Verify that the loaded rows match the records in the data files.  
-[NZ Table counts](/SailfishClassOct2017/Labs/Migration/BDI_rowcounts.md)
+[NZ Table counts](/Labs/Migration/BDI_rowcounts.md)
 
-[Sample `dbload` script for all tables](/SailfishClassOct2017/Labs/Load/dbload-all.sh).
+[Sample `dbload` script for all tables](/Labs/Load/dbload-all.sh).
 
-[Sample `dbload` script for a single table](/SailfishClassOct2017/Labs/Load/dbload-1.sh). 
+[Sample `dbload` script for a single table](/Labs/Load/dbload-1.sh). 
 
 ### Check compression after the load
 
@@ -120,9 +120,9 @@ You can access help by typing `db2 load ?`.
 Verify that the loaded rows match the records in the data files.  
 [NZ Table counts](/SailfishClassOct2017/Labs/Migration/BDI_rowcounts.md )
 
-[Sample Db2 `LOAD` script for all tables](/SailfishClassOct2017/Labs/Load/db2load-all.sh).
+[Sample Db2 `LOAD` script for all tables](/Labs/Load/db2load-all.sh).
 
-[Sample Db2 `LOAD` script for a single table](/SailfishClassOct2017/Labs/Load/db2load-1.sh). 
+[Sample Db2 `LOAD` script for a single table](/Labs/Load/db2load-1.sh). 
 
 ### Check compression after the load
 
@@ -148,16 +148,16 @@ order by tabname
 
 Copy data from the base tables into new BDI tables (26).   Utilize the Db2 `LOAD FROM CURSOR` utility available in the Db2 Warehouse client container (use `LOAD CLIENT` in the script) or in the Db2 Warehouse server container.  This is an in-place copy method.
 
-[Use the following DDL to create a new set of tables](/SailfishClassOct2017/Labs/Load/bdi_LOADCUR.ddl).
+[Use the following DDL to create a new set of tables](/Labs/Load/bdi_LOADCUR.ddl).
 
 You can access help by typing `db2 load ?`.
 
 Verify that the loaded rows match the records in the data files.  
 [NZ Table counts](/SailfishClassOct2017/Labs/Migration/BDI_rowcounts.md )
 
-[Sample Db2 `LOAD FROM CURSOR` script for all tables](/SailfishClassOct2017/Labs/Load/db2loadcur-all.sh).
+[Sample Db2 `LOAD FROM CURSOR` script for all tables](/Labs/Load/db2loadcur-all.sh).
 
-[Sample Db2 `LOAD FROM CURSOR` script for a single table](/SailfishClassOct2017/Labs/Load/db2loadcur-1.sh). 
+[Sample Db2 `LOAD FROM CURSOR` script for a single table](/Labs/Load/db2loadcur-1.sh). 
 
 ### Check compression after the load
 
@@ -183,12 +183,12 @@ order by tabname
 
 Copy data from the base tables into new BDI tables (26).  Utilize the `CREATE TABLE AS` SQL statment from the Db2 Warehouse client container or in the Db2 Warehouse server container.  This is an in-place copy method.
 
-[Use the following CTAS DDL](/SailfishClassOct2017/Labs/Load/bdi_CTAS.ddl).
+[Use the following CTAS DDL](/Labs/Load/bdi_CTAS.ddl).
 
 [CTAS information](https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.apdv.porting.doc/doc/r_sql_compat_ctas.html).
 
 Verify that the loaded rows match the records in the data files.  
-[NZ Table counts](/SailfishClassOct2017/Labs/Migration/BDI_rowcounts.md )
+[NZ Table counts](/Labs/Migration/BDI_rowcounts.md )
 
 ### Check compression after the load
 
