@@ -15,7 +15,8 @@ The class will be divided into teams of three.  This will reduce the load on the
 ## System/Database Assignments
 
 ### Team Assignements
-  
+
+#### Netezza
   | Name   | Make  | Model  | VIP  | Team Assignments  | Database  |
   |---|---|---|---|---|---|
   | NZ7836133  | Mako  | N3001-005  | 9.30.106.112  | team01  | bdi01  |
@@ -30,5 +31,9 @@ The class will be divided into teams of three.  This will reduce the load on the
   | NZ7836034  | Mako  | N3001-005  | 9.30.106.112 | team10  | bdi10  |
   | NZ7836034  | Mako  | N3001-005  | 9.30.106.112 | team11  | bdi11  |
   | NZ7836034  | Mako  | N3001-005  | 9.30.106.112 | team12  | bdi12  |
+
+#### Sailfish
+  | Name   | Make  | Model  | VIP  | Team Assignments  | Database  |
+  |---|---|---|---|---|---|
   | SFPOC001  | Sailfish  | N4001-010  | 9.30.106.50  |  team01-06 | BLUDB  |
   | SFPOC002  | Sailfish  | N4001-010  | 9.30.106.115  |  team07-12 | BLUDB  |
