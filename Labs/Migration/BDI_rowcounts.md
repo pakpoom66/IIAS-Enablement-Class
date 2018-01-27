@@ -5,7 +5,7 @@
 |  # Of Tables   | 26  |
 |  # Of Rows     | 79,615,394  |
 
-## Schema: `BDINSIGHTS`
+## Netezza Row counts by table: Source System
 |    # |           rowcount   |     table size (bytes)  |  table schema  |table name  |  
 |---|---|---|----|---|
 |     1|              73,050  |              15,728,640 |  BDINSIGHTS  |  DATE_DIM  |  
