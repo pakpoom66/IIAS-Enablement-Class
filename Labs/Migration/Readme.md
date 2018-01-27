@@ -33,13 +33,13 @@ For this lab you can ssh to the IIAS container or use your Db2 Client container.
   | team03  | 9.30.106.112  | 9.30.106.50  | bdi03 | bludb  | BDINSIGHTS  | bdi03  |
   | team04  | 9.30.106.112  | 9.30.106.50  | bdi04 | bludb  | BDINSIGHTS  | bdi04  |
   | team05  | 9.30.106.112  | 9.30.106.50  | bdi05 | bludb  | BDINSIGHTS  | bdi05  |
-  | team06  | 9.30.106.112  | 9.30.106.50  | bdi06 | bludb  | BDINSIGHTS  | bdi06  |
-  | team07  | 9.30.106.112  | 9.30.106.50  | bdi07 | bludb  | BDINSIGHTS  | bdi07  |
-  | team08  | 9.30.106.112  | 9.30.106.50  | bdi08 | bludb  | BDINSIGHTS  | bdi08  |
-  | team09  | 9.30.106.112  | 9.30.106.50  | bdi09 | bludb  | BDINSIGHTS  | bdi09  |
-  | team10  | 9.30.106.112  | 9.30.106.50  | bdi10 | bludb  | BDINSIGHTS  | bdi10  |
-  | team11  | 9.30.106.112  | 9.30.106.50  | bdi10 | bludb  | BDINSIGHTS  | bdi10  |
-  | team12  | 9.30.106.112  | 9.30.106.50  | bdi10 | bludb  | BDINSIGHTS  | bdi10  |
+  | team06  | 9.30.106.112  | 9.30.106.115  | bdi06 | bludb  | BDINSIGHTS  | bdi06  |
+  | team07  | 9.30.106.112  | 9.30.106.115  | bdi07 | bludb  | BDINSIGHTS  | bdi07  |
+  | team08  | 9.30.106.112  | 9.30.106.115  | bdi08 | bludb  | BDINSIGHTS  | bdi08  |
+  | team09  | 9.30.106.112  | 9.30.106.115  | bdi09 | bludb  | BDINSIGHTS  | bdi09  |
+  | team10  | 9.30.106.112  | 9.30.106.115  | bdi10 | bludb  | BDINSIGHTS  | bdi10  |
+  | team11  | 9.30.106.112  | 9.30.106.115  | bdi10 | bludb  | BDINSIGHTS  | bdi10  |
+  | team12  | 9.30.106.112  | 9.30.106.115  | bdi10 | bludb  | BDINSIGHTS  | bdi10  |
 
   
 ## Phase 1 of POC
