@@ -1,12 +1,12 @@
 # Migration Lab
 
-The following details the Migration Lab.  This lab is a similation of a simple  IBM Integrated Analytics System (IIAS) Migration POC pulling data and queries from an existing Netezza system (see [Lab Narrative](/SailfishClassOct2017/Labs/Migration/LabNarrative.md)).  You will migrate an existing database on a Netezza system to IIAS running Db2 Warehouse.  Both of these system are in the SVL POC Lab connected by a single 10Gb network cable.
+The following details the Migration Lab.  This lab is a similation of a simple  IBM Integrated Analytics System (IIAS) Migration POC pulling data and queries from an existing Netezza system (see [Lab Narrative](/Labs/Migration/LabNarrative.md)).  You will migrate an existing database on a Netezza system to IIAS running Db2 Warehouse.  Both of these system are in the SVL POC Lab connected by a single 10Gb network cable.
 
 Each of the assigned groups (team01 - team10) will migrate their assigned database on Netezza to a schema on Db2 Warehouse inside the IIAS system.  See `Database migration` below.
 
 ## Lab Narrative
 
-Read the [Lab Narrative](/SailfishClassOct2017/Labs/Migration/LabNarrative.md) to understand the background of the Lab/POC.
+Read the [Lab Narrative](/Labs/Migration/LabNarrative.md) to understand the background of the Lab/POC.
 
 ## Lab Exercise
 
@@ -17,6 +17,7 @@ For this lab you can ssh to the IIAS container or use your Db2 Client container.
 ### Direct ssh to IIAS Db2 Warehouse container
 
 `ssh teamXX@9.30.106.50 -p 50022`  # where XX is your assigned team number
+`ssh teamXX@9.30.106.115 -p 50022`  # where XX is your assigned team number
 
 ## Database migration assignments by team
 
@@ -34,6 +35,8 @@ For this lab you can ssh to the IIAS container or use your Db2 Client container.
   | team08  | 9.30.106.112  | 9.30.106.50  | bdi08 | bludb  | BDINSIGHTS  | bdi08  |
   | team09  | 9.30.106.112  | 9.30.106.50  | bdi09 | bludb  | BDINSIGHTS  | bdi09  |
   | team10  | 9.30.106.112  | 9.30.106.50  | bdi10 | bludb  | BDINSIGHTS  | bdi10  |
+  | team11  | 9.30.106.112  | 9.30.106.50  | bdi10 | bludb  | BDINSIGHTS  | bdi10  |
+  | team12  | 9.30.106.112  | 9.30.106.50  | bdi10 | bludb  | BDINSIGHTS  | bdi10  |
 
   
 ## Phase 1 of POC
@@ -48,12 +51,12 @@ You can access help by typing `db_migrate -h`.
   > Where XX is your assigned team number
 
 Verify that your migrated rows match the rows in the source system.
-[NZ Table counts](/SailfishClassOct2017/Labs/Migration/BDI_rowcounts.md )
+[NZ Table counts](/Labs/Migration/BDI_rowcounts.md )
 
 Compare the table sizes between the Netezza and IIAS.  On IIAS use the `db_size` script to get tables size information.
 [NZ Table sizes](/SailfishClassOct2017/Labs/Migration/BDI_DBSize.md)
 
-[Sample migration script](/SailfishClassOct2017/Labs/Migration/migrate.sh)
+[Sample migration script](/Labs/Migration/migrate.sh)
  
 Report any issues found during initial migration and correct all errors.
 
@@ -61,7 +64,7 @@ Did you have any tables fail during the db_migration?
 How many tables failed? Why?  
 How did you fix the failed tables?  
 
-Single table migration [script](/SailfishClassOct2017/Labs/Migration/migrate-table.sh) example. 
+Single table migration [script](/Labs/Migration/migrate-table.sh) example. 
 
 ### Extra Credit: Migrate Netezza tables using IBM Database Harmony Profiler
 
@@ -72,7 +75,7 @@ Single table migration [script](/SailfishClassOct2017/Labs/Migration/migrate-tab
         `db2 connect to bludb`  
    
       * From your Db2 Warehouse Client container  
-        `db2 connect to <your-remote-DB> user <your-team-ID> using Sailfish@2017`  
+        `db2 connect to <your-remote-DB> user <your-team-ID> using Sailfish@2018`  
         
       `db2 -x "list tables for schema bdiXX_bdi" |awk '{print "drop table " $2 "."  $1 ";"}' |db2`  
       * Where XX is your assigned team number.  
@@ -80,7 +83,7 @@ Single table migration [script](/SailfishClassOct2017/Labs/Migration/migrate-tab
 1. Use [IBM Data Harmony Profiler](https://www.ibm.com/developerworks/community/blogs/05901c97-75b2-47a1-9c32-25f748855913/entry/Introducing_DCW_Lite?lang=en) to create tables prior to running db_migrate.
 > Note: Db2 Harmony Profiler Tool download link available in IIAS Console.  
 
-   * [Netezza Source DDL](/SailfishClassOct2017/Labs/Migration/NZQueries/nzbdinsights.ddl)
+   * [Netezza Source DDL](/Labs/Migration/NZQueries/nzbdinsights.ddl)
 
 1. Run the converted DDL.  Make sure that your schema is teamXX, where XX is your assigned team number.
 
