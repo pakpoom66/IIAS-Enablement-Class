@@ -31,4 +31,4 @@ The class will be divided into teams of three.  This will reduce the load on the
   | NZ7836034  | Mako  | N3001-005  | 9.30.106.112 | team11  | bdi11  |
   | NZ7836034  | Mako  | N3001-005  | 9.30.106.112 | team12  | bdi12  |
   | SFPOC001  | Sailfish  | N4001-010  | 9.30.106.50  |  team01-06 | BLUDB  |
-  | SFPOC002  | Sailfish  | N4001-010  | 9.30.106.115  |  team07-10 | BLUDB  |
+  | SFPOC002  | Sailfish  | N4001-010  | 9.30.106.115  |  team07-12 | BLUDB  |
