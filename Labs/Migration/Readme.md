@@ -57,7 +57,7 @@ Verify that your migrated rows match the rows in the source system.
 [NZ Table counts](/Labs/Migration/BDI_rowcounts.md )
 
 Compare the table sizes between the Netezza and IIAS.  On IIAS use the `db_size` script to get tables size information.
-[NZ Table sizes](/SailfishClassOct2017/Labs/Migration/BDI_DBSize.md)
+[NZ Table sizes](/Labs/Migration/BDI_DBSize.md)
 
 [Sample migration script](/Labs/Migration/migrate.sh)
  
