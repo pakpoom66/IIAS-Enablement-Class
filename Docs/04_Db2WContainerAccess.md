@@ -2,4 +2,4 @@
 
    You no longer need to request access to the Container.  It is available in the [Docker Store](https://store.docker.com/).
 
-[IBM Db2 Warehouse client container[(https://store.docker.com/images/ibm-db2-warehouse-client-container)
+[IBM Db2 Warehouse client container](https://store.docker.com/images/ibm-db2-warehouse-client-container)
