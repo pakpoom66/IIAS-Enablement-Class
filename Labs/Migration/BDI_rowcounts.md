@@ -7,7 +7,7 @@
 
 ## Schema: `BDINSIGHTS`
 |    # |           rowcount   |     table size (bytes)  |  table schema  |table name  |  
-|---|---|---|---|
+|---|---|---|----|---|
 |     1|              73,050  |              15,728,640 |  BDINSIGHTS  |  DATE_DIM  |  
 |     2|              54,001  |              15,728,640 |  BDINSIGHTS  |  ITEM  |  
 |     3|                 389  |              15,204,352 |  BDINSIGHTS  |  PROMOTION  |  
