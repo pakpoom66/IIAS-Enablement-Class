@@ -16,10 +16,10 @@ For this lab you can ssh to the IIAS container or use your Db2 Client container.
 
 ### Direct ssh to IIAS Db2 Warehouse container
 
-#### team01-team05  
+#### team01-team06  
    `ssh teamXX@9.30.106.50 -p 50022`  # where XX is your assigned team number  
 
-#### team06-team12  
+#### team07-team12  
    `ssh teamXX@9.30.106.115 -p 50022`  # where XX is your assigned team number
 
 ## Database migration assignments by team
@@ -33,7 +33,7 @@ For this lab you can ssh to the IIAS container or use your Db2 Client container.
   | team03  | 9.30.106.112  | 9.30.106.50  | bdi03 | bludb  | BDINSIGHTS  | bdi03  |
   | team04  | 9.30.106.112  | 9.30.106.50  | bdi04 | bludb  | BDINSIGHTS  | bdi04  |
   | team05  | 9.30.106.112  | 9.30.106.50  | bdi05 | bludb  | BDINSIGHTS  | bdi05  |
-  | team06  | 9.30.106.112  | 9.30.106.115  | bdi06 | bludb  | BDINSIGHTS  | bdi06  |
+  | team06  | 9.30.106.112  | 9.30.106.50  | bdi06 | bludb  | BDINSIGHTS  | bdi06  |
   | team07  | 9.30.106.112  | 9.30.106.115  | bdi07 | bludb  | BDINSIGHTS  | bdi07  |
   | team08  | 9.30.106.112  | 9.30.106.115  | bdi08 | bludb  | BDINSIGHTS  | bdi08  |
   | team09  | 9.30.106.112  | 9.30.106.115  | bdi09 | bludb  | BDINSIGHTS  | bdi09  |
