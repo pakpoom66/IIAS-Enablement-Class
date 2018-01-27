@@ -16,9 +16,10 @@ For this lab you can ssh to the IIAS container or use your Db2 Client container.
 
 ### Direct ssh to IIAS Db2 Warehouse container
 
-*team01-team05  
+#### team01-team05  
    `ssh teamXX@9.30.106.50 -p 50022`  # where XX is your assigned team number  
-*team06-team12  
+
+#### team06-team12  
    `ssh teamXX@9.30.106.115 -p 50022`  # where XX is your assigned team number
 
 ## Database migration assignments by team
