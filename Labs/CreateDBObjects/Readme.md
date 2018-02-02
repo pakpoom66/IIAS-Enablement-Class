@@ -6,10 +6,13 @@ For this lab you can ssh to the IIAS container or use your Db2 Client container.
 
 ### ssh to the IIAS Db2 Warehouse container
 
-`ssh teamXX@9.30.106.50 -p 50022`  # where XX is your assigned team number
+`ssh teamXX@9.30.106.50 -p 50022`  # where XX is your assigned team number  
+or  
+`ssh teamXX@9.30.106.115 -p 50022`  # where XX is your assigned team number
 
 #### Database connection information  
 
+##### Group 1
   | Team/User | Host name / VIP  | 
   |:---:|:---:|
   | team01  | 9.30.106.50  | 
@@ -22,24 +25,42 @@ For this lab you can ssh to the IIAS container or use your Db2 Client container.
   | team08  | 9.30.106.50  | 
   | team09  | 9.30.106.50  | 
   | team10  | 9.30.106.50  | 
-  
+  | team11  | 9.30.106.50  | 
+  | team12  | 9.30.106.50  | 
+
+##### Group 2
+  | Team/User | Host name / VIP  | 
+  |:---:|:---:|
+  | team01  | 9.30.106.115  | 
+  | team02  | 9.30.106.115  | 
+  | team03  | 9.30.106.115  | 
+  | team04  | 9.30.106.115  | 
+  | team05  | 9.30.106.115  | 
+  | team06  | 9.30.106.115  | 
+  | team07  | 9.30.106.115  | 
+  | team08  | 9.30.106.115  | 
+  | team09  | 9.30.106.115  | 
+  | team10  | 9.30.106.115  | 
+  | team11  | 9.30.106.115  | 
+  | team12  | 9.30.106.115  | 
+    
 # Creating database objects
 
   * If running from a remote machine (i.e. Db2 Warehouse Client Container)
      > Db2 CLI commands
-     > `db2 connect to bludb user <your-assigned-user-ID> using Sailfish@2017` 
+     > `db2 connect to bludb user <your-assigned-user-ID> using Sailfish@2018` 
      > `db2 "CREATE..."`. 
      > `db2 connect reset`  
      
      > DB Client commands:
-     > `dbsql -h 9.30.106.50 -u teamXX -pw Sailfish@2017 -c "\<sql command\>"`  
+     > `dbsql -h 9.30.106.XXX -u teamXX -pw Sailfish@2018 -c "\<sql command\>"`  
         
     You can set the following variables to simplify the `dbsql` command.  
         
     ```
-    export DB_HOST=9.30.106.50
+    export DB_HOST=9.30.106.XXX
     export DB_USER=teamXX
-    export DB_PASSWORD=Sailfish@2017
+    export DB_PASSWORD=Sailfish@2018
     export DB_DATABASE=bludb
     ```  
         
