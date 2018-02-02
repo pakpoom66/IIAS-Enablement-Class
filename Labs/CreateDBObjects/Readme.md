@@ -92,7 +92,7 @@ IIAS database partition groups
 
 1. Explore the database partition groups associated with the `BLUDB`.  
    
-   `nzsql -c "select * from SYSCAT.DBPARTITIONGROUPDEF order by 1, 2;"`  
+   `dbsql -c "select * from SYSCAT.DBPARTITIONGROUPDEF order by 1, 2;"`  
 
    * db2clp example only:  
    `db2 LIST DATABASE PARTITION GROUPS;`  
