@@ -166,9 +166,9 @@ Using table spaces to organize storage offers a number of benefits:
    time_code      INTEGER,
    product_code   INTEGER,
    units_sold     SMALLINT,
-   revenue        MONEY(8,2),
-   cost           MONEY(8,2),
-   net_profit     MONEY(8,2)
+   revenue        DECIMAL(8,2),
+   cost           DECIMAL(8,2),
+   net_profit     DECIMAL(8,2)
    )
    distribute by (customer_code) 
    in TEAMXX_TSFACT
