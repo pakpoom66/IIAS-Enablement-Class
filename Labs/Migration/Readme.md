@@ -50,7 +50,7 @@ Please migrate your assigned database to your assigned target schema, see assign
 You can access help by typing `db_migrate -h`.
 
 * NZ User ID : teamXX
-* NZ Password: Sailfish@2017
+* NZ Password: Sailfish@2018
   > Where XX is your assigned team number
 
 Verify that your migrated rows match the rows in the source system.
