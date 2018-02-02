@@ -49,7 +49,7 @@ or
   * If running from a remote machine (i.e. Db2 Warehouse Client Container)
      > Db2 CLP commands. 
      
-     > `db2 connect to bludb user < your-assigned-user-ID > using Sailfish@2018`  
+     > `db2 connect to bludb user teamXX using Sailfish@2018`  
      > `db2 "CREATE..."`  
      > `db2 connect reset`  
      
