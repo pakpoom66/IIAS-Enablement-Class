@@ -111,7 +111,7 @@ Load a new set of BDI tables (26) from the files provided.  Utilize the Db2 `LOA
 
 [Use the following DDL to create a new set of tables](/Labs/Load/bdi_LOAD.ddl).
 
-Data file directory: `/scratch/home/poc/data`  
+Data file directory: `/scratch/home/poc/IBM/data`  
 
 You can access help by typing `db2 load ?`.
 
