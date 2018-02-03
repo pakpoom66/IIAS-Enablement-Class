@@ -1,13 +1,13 @@
 #!/bin/bash
 
 user=$USER
-password=Sailfish@2017
+password=Sailfish@2018
 dbname=BLUDB
 tbschema=$user
 #tbname="CALL_CENTER"
 tbname="CATALOG_RETURNS"
-hostnm=9.30.106.50
-datdir=/scratch/home/poc/data
+hostnm=9.30.106.XXX
+datdir=/scratch/home/poc/IBM/data
 outdir=/scratch/home/${user}/load/log
 
 mkdir -p $outdir
