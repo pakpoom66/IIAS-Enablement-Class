@@ -1,7 +1,7 @@
 #!/bin/bash
 
 user=$USER
-password=Sailfish@2017
+password=Sailfish@2018
 dbname=BLUDB
 tbschema=$user
 hostnm=9.30.106.50
