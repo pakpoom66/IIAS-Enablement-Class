@@ -4,7 +4,7 @@ The typical scenario in a POC is that the customer will provide you data (files)
 
 The data files have been prepared for you and are located in `/scratch/home/poc/data`.  The data files used in this lab do not include the schema in the file name.  This was done for this lab to allow all teams to load the same data files.  In a customer POC it is recommended that data files names include the schema. Example: `BDI00.CALL_CENTER.del`.  This will make scripting easier.
 
-We will perform `dbload`, `Db2 LOAD`, `Db2 LOAD FROM CURSOR` and `CREATE TABLE AS SELECT...` (CTAS).  You are likely to use these load options during a POC depending on your goal for the data loading.  Also, you during a POC is is common to copy the data within the cluster or outside the cluster via `LOAD FROM CURSOR`.
+We will perform `dbload`, `Db2 LOAD`, `Db2 LOAD FROM CURSOR` and `CREATE TABLE AS SELECT...` (CTAS).  You are likely to use these load options during a POC depending on your goal for the data loading.  Also, during a POC it is common to copy the data within the cluster or outside the cluster via `LOAD FROM CURSOR`.
 
 * `dbload` (BEST PERFORMANCE)
 * `Db2 LOAD` (BEST COMPRESSION)
@@ -46,13 +46,11 @@ We will perform `dbload`, `Db2 LOAD`, `Db2 LOAD FROM CURSOR` and `CREATE TABLE A
 
 ## Lab Exercise
 
-Please see your assignments by team for the database that you are to migrate.  Since the Db2 Warehouse environment only supports a single database you are migrate the database using the database as part of the schema name.
-
-For this lab you can ssh to the IIAS container or use your Db2 Client container.
+For this lab you can ssh to the IIAS container or use your Db2 Client container to access the database environment.
 
 ### ssh to IIAS Db2 Warehouse container
 
-`ssh teamXX@9.30.106.50 -p 50022`  # Replace XX with your assigned team number.
+`ssh teamXX@9.30.106.XXX -p 50022`  # Replace teamXX with your assigned team userid.
 
 ## Team assignments
 
@@ -70,7 +68,7 @@ For this lab you can ssh to the IIAS container or use your Db2 Client container.
   | team10  | bludb  | bdi10  |
 
   * User ID : teamXX
-  * Password: Sailfish@2017
+  * Password: Sailfish@2018
     > Replace XX with your assigned team number  
     
 ## Load the data files using `dbload`  
