@@ -46,26 +46,11 @@ We will perform `dbload`, `Db2 LOAD`, `Db2 LOAD FROM CURSOR` and `CREATE TABLE A
 
 ## Lab Exercise
 
-For this lab you can ssh to the IIAS container or use your Db2 Client container to access the database environment.
+For this lab you can ssh into the IIAS container or use your Db2 Client container to access the database environment.  From one of these containers you can run the appropriate commands/scripts for loading the data.
 
 ### ssh to IIAS Db2 Warehouse container
 
-`ssh teamXX@9.30.106.XXX -p 50022`  # Replace teamXX with your assigned team userid.
-
-## Team assignments
-
-  | Team/User | Database  | Schema  |
-  |---|---|---|
-  | team01  | bludb  | bdi01  |
-  | team02  | bludb  | bdi02  |
-  | team03  | bludb  | bdi03  |
-  | team04  | bludb  | bdi04  |
-  | team05  | bludb  | bdi05  |
-  | team06  | bludb  | bdi06  |
-  | team07  | bludb  | bdi07  |
-  | team08  | bludb  | bdi08  |
-  | team09  | bludb  | bdi09  |
-  | team10  | bludb  | bdi10  |
+`ssh teamXX@9.30.106.XXX -p 50022`
 
   * User ID : teamXX
   * Password: Sailfish@2018
@@ -87,7 +72,7 @@ Verify that the loaded rows match the records in the data files.
 
 ### Check compression after the load
 
-```sql
+```
 select * 
 from ( SELECT substr(tabschema,1,18) as tabschema
 , substr(tabname,1,33) as tabname
@@ -124,7 +109,7 @@ Verify that the loaded rows match the records in the data files.
 
 ### Check compression after the load
 
-```sql
+```
 select * 
 from ( SELECT substr(tabschema,1,18) as tabschema
 , substr(tabname,1,33) as tabname
@@ -159,7 +144,7 @@ Verify that the loaded rows match the records in the data files.
 
 ### Check compression after the load
 
-```sql
+```
 select * 
 from ( SELECT substr(tabschema,1,18) as tabschema
 , substr(tabname,1,33) as tabname
@@ -210,6 +195,6 @@ order by tabname
 
 ## Load using Federation
 
-> Note: Sorry ran out of time!!!  Thanks for getting to the end.  On the roadmap :).
+On the roadmap :).
 
 
