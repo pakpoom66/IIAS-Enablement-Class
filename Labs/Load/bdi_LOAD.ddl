@@ -11,11 +11,11 @@
 CONNECT TO BLUDB;
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."CALL_CENTER"
+-- DDL Statements for Table "TEAMXX  "."CALL_CENTER"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."CALL_CENTER_LOAD"  (
+CREATE TABLE "TEAMXX  "."CALL_CENTER_LOAD"  (
 		  "CC_CALL_CENTER_SK" BIGINT NOT NULL , 
 		  "CC_CALL_CENTER_ID" CHAR(16 OCTETS) NOT NULL WITH DEFAULT ' ' , 
 		  "CC_REC_START_DATE" DATE , 
@@ -53,11 +53,11 @@ CREATE TABLE "TEAM00  "."CALL_CENTER_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."CATALOG_PAGE"
+-- DDL Statements for Table "TEAMXX  "."CATALOG_PAGE"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."CATALOG_PAGE_LOAD"  (
+CREATE TABLE "TEAMXX  "."CATALOG_PAGE_LOAD"  (
 		  "CP_CATALOG_PAGE_SK" BIGINT NOT NULL , 
 		  "CP_CATALOG_PAGE_ID" CHAR(16 OCTETS) NOT NULL WITH DEFAULT ' ' , 
 		  "CP_START_DATE_SK" BIGINT , 
@@ -74,11 +74,11 @@ CREATE TABLE "TEAM00  "."CATALOG_PAGE_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."CATALOG_RETURNS"
+-- DDL Statements for Table "TEAMXX  "."CATALOG_RETURNS"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."CATALOG_RETURNS_LOAD"  (
+CREATE TABLE "TEAMXX  "."CATALOG_RETURNS_LOAD"  (
 		  "CR_RETURNED_DATE_SK" BIGINT , 
 		  "CR_RETURNED_TIME_SK" BIGINT , 
 		  "CR_ITEM_SK" BIGINT NOT NULL , 
@@ -113,11 +113,11 @@ CREATE TABLE "TEAM00  "."CATALOG_RETURNS_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."CUSTOMER_ADDRESS"
+-- DDL Statements for Table "TEAMXX  "."CUSTOMER_ADDRESS"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."CUSTOMER_ADDRESS_LOAD"  (
+CREATE TABLE "TEAMXX  "."CUSTOMER_ADDRESS_LOAD"  (
 		  "CA_ADDRESS_SK" BIGINT NOT NULL , 
 		  "CA_ADDRESS_ID" CHAR(16 OCTETS) NOT NULL WITH DEFAULT ' ' , 
 		  "CA_STREET_NUMBER" CHAR(10 OCTETS) , 
@@ -137,11 +137,11 @@ CREATE TABLE "TEAM00  "."CUSTOMER_ADDRESS_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."CUSTOMER_DEMOGRAPHICS"
+-- DDL Statements for Table "TEAMXX  "."CUSTOMER_DEMOGRAPHICS"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."CUSTOMER_DEMOGRAPHICS_LOAD"  (
+CREATE TABLE "TEAMXX  "."CUSTOMER_DEMOGRAPHICS_LOAD"  (
 		  "CD_DEMO_SK" BIGINT NOT NULL , 
 		  "CD_GENDER" CHAR(1 OCTETS) , 
 		  "CD_MARITAL_STATUS" CHAR(1 OCTETS) , 
@@ -157,11 +157,11 @@ CREATE TABLE "TEAM00  "."CUSTOMER_DEMOGRAPHICS_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."DATE_DIM"
+-- DDL Statements for Table "TEAMXX  "."DATE_DIM"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."DATE_DIM_LOAD"  (
+CREATE TABLE "TEAMXX  "."DATE_DIM_LOAD"  (
 		  "D_DATE_SK" BIGINT NOT NULL , 
 		  "D_DATE_ID" CHAR(16 OCTETS) NOT NULL WITH DEFAULT ' ' , 
 		  "D_DATE" DATE NOT NULL , 
@@ -196,11 +196,11 @@ CREATE TABLE "TEAM00  "."DATE_DIM_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."HOUSEHOLD_DEMOGRAPHICS"
+-- DDL Statements for Table "TEAMXX  "."HOUSEHOLD_DEMOGRAPHICS"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."HOUSEHOLD_DEMOGRAPHICS_LOAD"  (
+CREATE TABLE "TEAMXX  "."HOUSEHOLD_DEMOGRAPHICS_LOAD"  (
 		  "HD_DEMO_SK" BIGINT NOT NULL , 
 		  "HD_INCOME_BAND_SK" BIGINT , 
 		  "HD_BUY_POTENTIAL" CHAR(15 OCTETS) NOT NULL WITH DEFAULT ' ' , 
@@ -212,11 +212,11 @@ CREATE TABLE "TEAM00  "."HOUSEHOLD_DEMOGRAPHICS_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."INCOME_BAND"
+-- DDL Statements for Table "TEAMXX  "."INCOME_BAND"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."INCOME_BAND_LOAD"  (
+CREATE TABLE "TEAMXX  "."INCOME_BAND_LOAD"  (
 		  "IB_INCOME_BAND_SK" BIGINT NOT NULL , 
 		  "IB_LOWER_BOUND" BIGINT , 
 		  "IB_UPPER_BOUND" BIGINT )   
@@ -226,11 +226,11 @@ CREATE TABLE "TEAM00  "."INCOME_BAND_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."INVENTORY"
+-- DDL Statements for Table "TEAMXX  "."INVENTORY"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."INVENTORY_LOAD"  (
+CREATE TABLE "TEAMXX  "."INVENTORY_LOAD"  (
 		  "INV_DATE_SK" BIGINT NOT NULL , 
 		  "INV_ITEM_SK" BIGINT NOT NULL , 
 		  "INV_WAREHOUSE_SK" BIGINT NOT NULL , 
@@ -243,11 +243,11 @@ CREATE TABLE "TEAM00  "."INVENTORY_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."ITEM"
+-- DDL Statements for Table "TEAMXX  "."ITEM"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."ITEM_LOAD"  (
+CREATE TABLE "TEAMXX  "."ITEM_LOAD"  (
 		  "I_ITEM_SK" BIGINT NOT NULL , 
 		  "I_ITEM_ID" CHAR(16 OCTETS) NOT NULL WITH DEFAULT ' ' , 
 		  "I_REC_START_DATE" DATE , 
@@ -276,11 +276,11 @@ CREATE TABLE "TEAM00  "."ITEM_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."PROMOTION"
+-- DDL Statements for Table "TEAMXX  "."PROMOTION"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."PROMOTION_LOAD"  (
+CREATE TABLE "TEAMXX  "."PROMOTION_LOAD"  (
 		  "P_PROMO_SK" BIGINT NOT NULL , 
 		  "P_PROMO_ID" CHAR(16 OCTETS) NOT NULL WITH DEFAULT ' ' , 
 		  "P_START_DATE_SK" BIGINT , 
@@ -306,11 +306,11 @@ CREATE TABLE "TEAM00  "."PROMOTION_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."REASON"
+-- DDL Statements for Table "TEAMXX  "."REASON"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."REASON_LOAD"  (
+CREATE TABLE "TEAMXX  "."REASON_LOAD"  (
 		  "R_REASON_SK" BIGINT NOT NULL , 
 		  "R_REASON_ID" CHAR(16 OCTETS) NOT NULL WITH DEFAULT ' ' , 
 		  "R_REASON_DESC" CHAR(100 OCTETS) )   
@@ -320,11 +320,11 @@ CREATE TABLE "TEAM00  "."REASON_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."SHIP_MODE"
+-- DDL Statements for Table "TEAMXX  "."SHIP_MODE"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."SHIP_MODE_LOAD"  (
+CREATE TABLE "TEAMXX  "."SHIP_MODE_LOAD"  (
 		  "SM_SHIP_MODE_SK" BIGINT NOT NULL , 
 		  "SM_SHIP_MODE_ID" CHAR(16 OCTETS) NOT NULL WITH DEFAULT ' ' , 
 		  "SM_TYPE" CHAR(30 OCTETS) , 
@@ -337,11 +337,11 @@ CREATE TABLE "TEAM00  "."SHIP_MODE_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."STORE"
+-- DDL Statements for Table "TEAMXX  "."STORE"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."STORE_LOAD"  (
+CREATE TABLE "TEAMXX  "."STORE_LOAD"  (
 		  "S_STORE_SK" BIGINT NOT NULL , 
 		  "S_STORE_ID" CHAR(16 OCTETS) NOT NULL WITH DEFAULT ' ' , 
 		  "S_REC_START_DATE" DATE , 
@@ -377,11 +377,11 @@ CREATE TABLE "TEAM00  "."STORE_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."STORE_RETURNS"
+-- DDL Statements for Table "TEAMXX  "."STORE_RETURNS"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."STORE_RETURNS_LOAD"  (
+CREATE TABLE "TEAMXX  "."STORE_RETURNS_LOAD"  (
 		  "SR_RETURNED_DATE_SK" BIGINT , 
 		  "SR_RETURN_TIME_SK" BIGINT , 
 		  "SR_ITEM_SK" BIGINT NOT NULL , 
@@ -409,11 +409,11 @@ CREATE TABLE "TEAM00  "."STORE_RETURNS_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."STORE_SALES"
+-- DDL Statements for Table "TEAMXX  "."STORE_SALES"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."STORE_SALES_LOAD"  (
+CREATE TABLE "TEAMXX  "."STORE_SALES_LOAD"  (
 		  "SS_SOLD_DATE_SK" BIGINT NOT NULL , 
 		  "SS_SOLD_TIME_SK" BIGINT NOT NULL , 
 		  "SS_ITEM_SK" BIGINT NOT NULL , 
@@ -444,11 +444,11 @@ CREATE TABLE "TEAM00  "."STORE_SALES_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."TIME_DIM"
+-- DDL Statements for Table "TEAMXX  "."TIME_DIM"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."TIME_DIM_LOAD"  (
+CREATE TABLE "TEAMXX  "."TIME_DIM_LOAD"  (
 		  "T_TIME_SK" BIGINT NOT NULL , 
 		  "T_TIME_ID" CHAR(16 OCTETS) NOT NULL WITH DEFAULT ' ' , 
 		  "T_TIME" BIGINT NOT NULL , 
@@ -465,11 +465,11 @@ CREATE TABLE "TEAM00  "."TIME_DIM_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."UTF8_TEST"
+-- DDL Statements for Table "TEAMXX  "."UTF8_TEST"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."UTF8_TEST_LOAD"  (
+CREATE TABLE "TEAMXX  "."UTF8_TEST_LOAD"  (
 		  "BASE_LANGUAGE" VARCHAR(50 OCTETS) , 
 		  "SAMPLE_STRING" VARCHAR(200 CODEUNITS32) , 
 		  "DISTRIBUTION_COLUMN" INTEGER )   
@@ -479,11 +479,11 @@ CREATE TABLE "TEAM00  "."UTF8_TEST_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."WAREHOUSE"
+-- DDL Statements for Table "TEAMXX  "."WAREHOUSE"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."WAREHOUSE_LOAD"  (
+CREATE TABLE "TEAMXX  "."WAREHOUSE_LOAD"  (
 		  "W_WAREHOUSE_SK" BIGINT NOT NULL , 
 		  "W_WAREHOUSE_ID" CHAR(16 OCTETS) NOT NULL WITH DEFAULT ' ' , 
 		  "W_WAREHOUSE_NAME" VARCHAR(20 OCTETS) , 
@@ -504,11 +504,11 @@ CREATE TABLE "TEAM00  "."WAREHOUSE_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."WEB_PAGE"
+-- DDL Statements for Table "TEAMXX  "."WEB_PAGE"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."WEB_PAGE_LOAD"  (
+CREATE TABLE "TEAMXX  "."WEB_PAGE_LOAD"  (
 		  "WP_WEB_PAGE_SK" BIGINT NOT NULL , 
 		  "WP_WEB_PAGE_ID" CHAR(16 OCTETS) NOT NULL WITH DEFAULT ' ' , 
 		  "WP_REC_START_DATE" DATE , 
@@ -529,11 +529,11 @@ CREATE TABLE "TEAM00  "."WEB_PAGE_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."WEB_RETURNS"
+-- DDL Statements for Table "TEAMXX  "."WEB_RETURNS"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."WEB_RETURNS_LOAD"  (
+CREATE TABLE "TEAMXX  "."WEB_RETURNS_LOAD"  (
 		  "WR_RETURNED_DATE_SK" BIGINT , 
 		  "WR_RETURNED_TIME_SK" BIGINT , 
 		  "WR_ITEM_SK" BIGINT NOT NULL , 
@@ -565,11 +565,11 @@ CREATE TABLE "TEAM00  "."WEB_RETURNS_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."WEB_SALES"
+-- DDL Statements for Table "TEAMXX  "."WEB_SALES"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."WEB_SALES_LOAD"  (
+CREATE TABLE "TEAMXX  "."WEB_SALES_LOAD"  (
 		  "WS_SOLD_DATE_SK" BIGINT , 
 		  "WS_SOLD_TIME_SK" BIGINT , 
 		  "WS_SHIP_DATE_SK" BIGINT , 
@@ -611,11 +611,11 @@ CREATE TABLE "TEAM00  "."WEB_SALES_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."WEB_SITE"
+-- DDL Statements for Table "TEAMXX  "."WEB_SITE"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."WEB_SITE_LOAD"  (
+CREATE TABLE "TEAMXX  "."WEB_SITE_LOAD"  (
 		  "WEB_SITE_SK" BIGINT NOT NULL , 
 		  "WEB_SITE_ID" CHAR(16 OCTETS) NOT NULL WITH DEFAULT ' ' , 
 		  "WEB_REC_START_DATE" DATE , 
@@ -648,11 +648,11 @@ CREATE TABLE "TEAM00  "."WEB_SITE_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."CUSTOMER"
+-- DDL Statements for Table "TEAMXX  "."CUSTOMER"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."CUSTOMER_LOAD"  (
+CREATE TABLE "TEAMXX  "."CUSTOMER_LOAD"  (
 		  "C_CUSTOMER_SK" BIGINT NOT NULL , 
 		  "C_CUSTOMER_ID" CHAR(16 OCTETS) NOT NULL WITH DEFAULT ' ' , 
 		  "C_CURRENT_CDEMO_SK" BIGINT , 
@@ -677,11 +677,11 @@ CREATE TABLE "TEAM00  "."CUSTOMER_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."CATALOG_SALES"
+-- DDL Statements for Table "TEAMXX  "."CATALOG_SALES"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."CATALOG_SALES_LOAD"  (
+CREATE TABLE "TEAMXX  "."CATALOG_SALES_LOAD"  (
 		  "CS_SOLD_DATE_SK" BIGINT , 
 		  "CS_SOLD_TIME_SK" BIGINT , 
 		  "CS_SHIP_DATE_SK" BIGINT , 
@@ -723,11 +723,11 @@ CREATE TABLE "TEAM00  "."CATALOG_SALES_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."CUSTOMER_LOAD"
+-- DDL Statements for Table "TEAMXX  "."CUSTOMER_LOAD"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."CUSTOMER_LOAD_LOAD"  (
+CREATE TABLE "TEAMXX  "."CUSTOMER_LOAD_LOAD"  (
 		  "C_CUSTOMER_SK" BIGINT NOT NULL , 
 		  "C_CUSTOMER_ID" CHAR(16 OCTETS) NOT NULL WITH DEFAULT ' ' , 
 		  "C_CURRENT_CDEMO_SK" BIGINT , 
@@ -754,11 +754,11 @@ CREATE TABLE "TEAM00  "."CUSTOMER_LOAD_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."SALES_FACT"
+-- DDL Statements for Table "TEAMXX  "."SALES_FACT"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."SALES_FACT_LOAD"  (
+CREATE TABLE "TEAMXX  "."SALES_FACT_LOAD"  (
 		  "CUSTOMER_CODE" INTEGER , 
 		  "DISTRICT_CODE" SMALLINT , 
 		  "TIME_CODE" INTEGER , 
@@ -775,11 +775,11 @@ CREATE TABLE "TEAM00  "."SALES_FACT_LOAD"  (
 
 
 ------------------------------------------------
--- DDL Statements for Table "TEAM00  "."CHAR_TEST"
+-- DDL Statements for Table "TEAMXX  "."CHAR_TEST"
 ------------------------------------------------
  
 
-CREATE TABLE "TEAM00  "."CHAR_TEST_LOAD"  (
+CREATE TABLE "TEAMXX  "."CHAR_TEST_LOAD"  (
 		  "ASCII_VALUE" CHAR(10 OCTETS) , 
 		  "CHARACTER_STRING" VARCHAR(100 OCTETS) , 
 		  "DECIMAL_VALUE" INTEGER , 
@@ -799,4 +799,3 @@ COMMIT WORK;
 CONNECT RESET;
 
 TERMINATE;
-
