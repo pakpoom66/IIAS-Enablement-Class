@@ -76,7 +76,7 @@ For this lab you can ssh to the IIAS container or use your Db2 Client container.
 ## Load the data files using `dbload`  
 Load all existing tables from the files provided into your set of tables created in the migration lab.  Utilize the `db_load` script available in the Db2 Warehouse client container or in the Db2 Warehouse server container.
 
-Data file directory: `/scratch/home/poc/data`  
+Data file directory: `/scratch/home/poc/IBM/data`  
 
 You can access help by typing `dbload -h`.
 
