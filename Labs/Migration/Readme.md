@@ -150,5 +150,5 @@ SELECT NUMERIC(WR_RETURN_AMT,7,2) FROM WEB_RETURNS;
 SELECT (WR_RETURN_AMT)::NUMERIC(7,2) FROM WEB_RETURNS;
 ```
 
-* [Netezza Source DML](/SailfishClassOct2017/Labs/Migration/NZQueries/nzbdinsights.sql)
+* [Netezza Source DML](/Labs/Migration/NZQueries/nzbdinsights.sql)
 
