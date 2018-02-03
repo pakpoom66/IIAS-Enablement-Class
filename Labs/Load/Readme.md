@@ -2,7 +2,7 @@
 
 The typical scenario in a POC is that the customer will provide you data (files) to be loaded.  Prior to having the customer dump the entire dataset, request sample rows (1,000-10,000) for all the tables that you will load in the POC.  This will allow you to indentify any potential issues with the generated load files.
 
-The data files have been prepared for you and are located in `/scratch/home/poc/data`.  The data files used in this lab do not include the schema in the file name.  This was done for this lab to allow all teams to load the same data files.  In a customer POC it is recommended that data files names include the schema. Example: `BDI00.CALL_CENTER.del`.  This will make scripting easier.
+The data files have been prepared for you and are located in `/scratch/home/poc/IBM/data`.  The data files used in this lab do not include the schema in the file name.  This was done for this lab to allow all teams to load the same data files.  In a customer POC it is recommended that data files names include the schema. Example: `BDI00.CALL_CENTER.del`.  This will make scripting easier.
 
 We will perform `dbload`, `Db2 LOAD`, `Db2 LOAD FROM CURSOR` and `CREATE TABLE AS SELECT...` (CTAS).  You are likely to use these load options during a POC depending on your goal for the data loading.  Also, during a POC it is common to copy the data within the cluster or outside the cluster via `LOAD FROM CURSOR`.
 
