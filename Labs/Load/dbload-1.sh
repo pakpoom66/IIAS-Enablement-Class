@@ -1,13 +1,13 @@
 #!/bin/bash
 
-user=$USER
-password=Sailfish@2018
-dbname=BLUDB
-tbschema=$user
-tbname=CATALOG_RETURNS
-hostnm=9.30.106.XXX
-datdir=/scratch/home/poc/IBM/data/
-outdir=/scratch/home/${user}/load/log
+user="$USER"
+password="<password-provided>"
+dbname="BLUDB"
+tbschema=$user"
+tbname="<table-name>"
+hostnm="9.30.106.XXX"
+datdir="/scratch/home/poc/IBM/data"
+outdir="/scratch/home/${user}/load/log"
 
 mkdir -p ${outdir}
 

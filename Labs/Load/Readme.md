@@ -53,7 +53,7 @@ For this lab you can ssh into the IIAS container or use your Db2 Client containe
 `ssh teamXX@9.30.106.XXX -p 50022`
 
   * User ID : teamXX
-  * Password: Sailfish@2018
+  * Password: <password-provided>
     > Replace XX with your assigned team number  
     
 ## Load the data files using `dbload`  
