@@ -24,13 +24,13 @@ The class will be divided into teams of three.  This will reduce the load on the
   | NZ7836133  | Mako  | N3001-005  | 9.30.106.112  | team03  | bdi03  |
   | NZ7836133  | Mako  | N3001-005  | 9.30.106.112  | team04  | bdi04  |
   | NZ7836133  | Mako  | N3001-005  | 9.30.106.112  | team05  | bdi05  |
-  | NZ7836034  | Mako  | N3001-005  | 9.30.106.112 | team06  | bdi06  |
-  | NZ7836034  | Mako  | N3001-005  | 9.30.106.112 | team07  | bdi07  |
-  | NZ7836034  | Mako  | N3001-005  | 9.30.106.112 | team08  | bdi08  |
-  | NZ7836034  | Mako  | N3001-005  | 9.30.106.112 | team09  | bdi09  |
-  | NZ7836034  | Mako  | N3001-005  | 9.30.106.112 | team10  | bdi10  |
-  | NZ7836034  | Mako  | N3001-005  | 9.30.106.112 | team11  | bdi11  |
-  | NZ7836034  | Mako  | N3001-005  | 9.30.106.112 | team12  | bdi12  |
+  | NZ7836034  | Mako  | N3001-005  | 9.30.106.112  | team06  | bdi06  |
+  | NZ7836034  | Mako  | N3001-005  | 9.30.106.112  | team07  | bdi07  |
+  | NZ7836034  | Mako  | N3001-005  | 9.30.106.112  | team08  | bdi08  |
+  | NZ7836034  | Mako  | N3001-005  | 9.30.106.112  | team09  | bdi09  |
+  | NZ7836034  | Mako  | N3001-005  | 9.30.106.112  | team10  | bdi10  |
+  | NZ7836034  | Mako  | N3001-005  | 9.30.106.112  | team11  | bdi11  |
+  | NZ7836034  | Mako  | N3001-005  | 9.30.106.112  | team12  | bdi12  |
 
 #### Sailfish
   | Name   | Make  | Model  | VIP  | Team Assignments  | Database  |
