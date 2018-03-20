@@ -195,7 +195,7 @@ Using table spaces to organize storage offers a number of benefits:
 
 * Drop any objects you created during your exploration.  
 
-   `nzsql -c "DROP TABLE teamXX_lab.time_dim;"`    
-   `nzsql -c "DROP TABLE teamXX_lab.sales_fact;"`  
-   `nzsql -c "DROP TABLESPACE TEAMXX_TSDIM;"`  
-   `nzsql -c "DROP TABLESPACE TEAMXX_TSFACT;"`  
+   `dbsql -c "DROP TABLE teamXX_lab.time_dim;"`    
+   `dbsql -c "DROP TABLE teamXX_lab.sales_fact;"`  
+   `dbsql -c "DROP TABLESPACE TEAMXX_TSDIM;"`  
+   `dbsql -c "DROP TABLESPACE TEAMXX_TSFACT;"`  
