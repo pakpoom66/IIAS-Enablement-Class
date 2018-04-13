@@ -1,20 +1,20 @@
 !/bin/bash
 
-threads="2"
+threads="1"
 loader="extTab"
 cksum="yes"
-tout="2800"
-sdb="bdi"         
+tout="1800"
+sdb="bdiXX"         # where XX is your team number
 tdb=BLUDB
-shost=localhost
-suser=admin 
-tuser=bluadmin
-spw="password"
-tpw="bluadmin"
+shost=9.30.106.112
+suser=teamXX        # where XX is your team number
+tuser=teamXX        # where XX is your team number
+spw="Sailfish@2017"
+tpw="Sailfish@2017"
 stable=<source-table-name>
 ttable=<target-table-name>
-sschema="admin"
-tschema="bdi"
+sschema="bdinsights"  
+tschema="bdiXX"    # where XX is your team number
 
 echo "------------------------------------------------------------------"
 echo "db_migration started @ `date`"
