@@ -5,15 +5,14 @@ threads="1"
 loader="extTab"
 cksum=yes
 tout=1800
-sdb=bdiXX      # change XX to your assigned team number
+sdb=bdi      # change XX to your assigned team number
 tdb=BLUDB
-shost=9.30.106.112
-suser="teamXX" # change XX to your assigned team number
-tuser=teamXX   # change XX to your assigned team number
-spw="Sailfish@2017"
-tpw="Sailfish@2017"
-sschema=bdinsights
-tschema="bdiXX"  # change XX to your assigned team number
+shost=localhost
+suser="admin" # change XX to your assigned team number
+tuser="bluadmin"   # change XX to your assigned team number
+spw="password"
+tpw="bluadmin"
+tschema="bdi"  # change XX to your assigned team number
 
 
 echo "------------------------------------------------------------------"
@@ -27,7 +26,7 @@ echo "------------------------------------------------------------------"
 
 start=`date '+%s'`
 
-dbmig="db_migrate -cksum ${cksum} -loader ${loader} -threads ${threads} -timeout ${tout} -sDB ${sdb} -tDB ${tdb} -sHost ${shost} -sUser ${suser} -tUser ${tuser} -sPassword ${spw} -tPassword ${tpw} -sschema ${sschema} -tschema ${tschema} -CreateTargetTable yes -TruncateTargetTable yes"
+dbmig="db_migrate -cksum ${cksum} -loader ${loader} -threads ${threads} -timeout ${tout} -sDB ${sdb} -tDB ${tdb} -sHost ${shost} -sUser ${suser} -tUser ${tuser} -sPassword ${spw} -tPassword ${tpw}  -tschema ${tschema} -CreateTargetTable yes -TruncateTargetTable yes"
 echo "Executing the following command:"
 echo "  ${dbmig}"
 ${dbmig}
