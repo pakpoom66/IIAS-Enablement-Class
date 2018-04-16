@@ -13,7 +13,7 @@ tuser="bluadmin"   # change XX to your assigned team number
 spw="password"
 tpw="bluadmin"
 tschema="bdi"  # change XX to your assigned team number
-
+schema="admin"
 
 echo "------------------------------------------------------------------"
 echo "db_migration started @ `date`"
@@ -26,7 +26,7 @@ echo "------------------------------------------------------------------"
 
 start=`date '+%s'`
 
-dbmig="db_migrate -cksum ${cksum} -loader ${loader} -threads ${threads} -timeout ${tout} -sDB ${sdb} -tDB ${tdb} -sHost ${shost} -sUser ${suser} -tUser ${tuser} -sPassword ${spw} -tPassword ${tpw}  -tschema ${tschema} -CreateTargetTable yes -TruncateTargetTable yes"
+dbmig="db_migrate -cksum ${cksum} -loader ${loader} -threads ${threads} -timeout ${tout} -sDB ${sdb} -tDB ${tdb} -sHost ${shost} -sUser ${suser} -tUser ${tuser} -sPassword ${spw} -tPassword ${tpw}  -schema ${schema} -tschema ${tschema} -CreateTargetTable yes -TruncateTargetTable yes"
 echo "Executing the following command:"
 echo "  ${dbmig}"
 ${dbmig}
