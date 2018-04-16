@@ -16,8 +16,11 @@ Based on availability, we will have access to and IBM Integrated Analytics Syste
 [IIAS DSX Console TBD](https://<IP_address>:8444/)
 
 The VM image login Username: sailfish pawword: ./.cshr1c.
-The Local Db2 Warehouse database is username: bluadmin password: blueadmin
+The Local Db2 Warehouse database is username: bluadmin password: blueadmin  and username: root password: sailfish
 
 # Lab artifacts
 
 Lab artifacts are included in the vm as well an here on git.
+
+* [Migration Lab](./Labs/MigrationTooling/Readme.md)
+* [Data Load Lab](./Labs/DataLoading/Readme.md)
