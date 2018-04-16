@@ -14,7 +14,7 @@ You will migrate an existing database on a Netezza system to Db2 Warehouse local
 
 ## Lab Narrative
 
-Read the [Lab Narrative](/Labs/Migration/LabNarrative.md) to understand the background of the Lab/POC.
+Read the [Lab Narrative](./LabNarrative.md) to understand the background of the Lab/POC.
 
 ## Lab Exercise
 
@@ -61,7 +61,7 @@ In phase one, an assessment will be done to understand the scope of the effort. 
   ### Convert the ddl
   Since reviewing the evaluation and all seems pretty clean, go ahead back to the tool.   
   1. Click on ***Convert SQL***
-  ![convert SQL](./images/convertCode.png)
+  ![convert SQL](./images/ConvertCode.png)
   1. Double Click result to review converted ddl.
   ![review SQL](./images/launchreportConvert.png)
   1. Review the converted ddl. One thing to note in the conversion, the create database statement has be converted into a schema.  IBM Integrated Analytics System currently only has one database. When migrating use schemas for multiple databases.
@@ -158,12 +158,12 @@ Please migrate your assigned database to your assigned target schema, see assign
   1.  When a `.bad` file is dropped by the command, the matching `.log` file is where to start the investigation.
 
 Verify that your migrated rows match the rows in the source system.
-[NZ Table counts](/Labs/Migration/BDI_rowcounts.md )
+[NZ Table counts](./BDI_rowcounts.md )
 
 Compare the table sizes between the Netezza and IIAS.  On IIAS use the `db_size` script to get tables size information.
-[NZ Table sizes](/Labs/Migration/BDI_DBSize.md)
+[NZ Table sizes](./BDI_DBSize.md)
 
-[Sample migration script](/Labs/Migration/migrate.sh)
+[Sample migration script](./migrate.sh)
 
 Report any issues found during initial migration and correct all errors.
 
@@ -171,9 +171,9 @@ Did you have any tables fail during the db_migration?
 How many tables failed? Why?  
 How did you fix the failed tables?  
 
-Single table migration [script](/Labs/Migration/migrate-table.sh) example.
+Single table migration [migrate-table script](./migrate-table.sh) example.
 
-If you want a peak at the answers, try this page. [NZ Table counts](/Labs/Migration/Answers.md )
+If you want a peak at the answers, try this page. [Answer sheet](./Answers.md )
 
 
 ## Phase 2 of POC
