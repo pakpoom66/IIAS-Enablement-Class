@@ -94,6 +94,7 @@ for i in `cat /tmp/nz/gather_nz_info/nz_get_database_names.input`
 do
 echo "Started Gathering Information for Database $i on `date`"
 nzdumpschema -R $i > /tmp/nz/gather_nz_info/dumpschema.$i.txt
+/nz/support/bin/nz_ddl $i > /tmp/nz/gather_nz_info/extracted.$i.ddl
 echo "Completed gathering information for Database $i on `date`"
 echo "***==================================================***"
 done
