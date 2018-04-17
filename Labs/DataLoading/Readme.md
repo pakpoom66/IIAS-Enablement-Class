@@ -94,11 +94,11 @@ Add the following to your user ID's `.bashrc` file and source the file `source ~
    echo "export DB_USER=<`teamXX`>" >> ~/.bashrc  
    echo "export DB_PASSWORD=<your-password>" >> ~/.bashrc  
    ```
-   
+
    Source the `.bashrc` file or logout and login.
-   
+
    `source ~/.bashrc`
-       
+
    > Note: These environment variables will be set for all future logins of `teamXX`.  With these variables set you do not need to provide the host, database, user ID or password to any of the dbtoolkit utilities such as `dbsql` or `dbload`.
 
 
@@ -110,7 +110,7 @@ From the IIAS Db2 Warehouse Container command line create the four sets of table
 #### Copy each of the `DDL` files into seperate files inside the Db2 Warehouse container (Linux OS) or into a SQL tool of your choice and execute the `DDL`:
 
 > Tools:
-      
+
       * IIAS Console (`Run SQL`)
       * `dbsql` command line
       * `db2` command line processor
@@ -135,7 +135,7 @@ ls ./
 ##### Option 1: Use `dbsql` to create the tables:
 
    1. Process the DDL files via the `dbsql`  
-   
+
       ```
       cd
       cd lab/ddl/
@@ -144,16 +144,16 @@ ls ./
       dbsql -schema <teamXX> -f bdi_CURLOAD.ddl  
       dbsql -schema <teamXX> -f bdi_FEDLOAD.ddl
       ```
-   
+
       > Your schema is `teamXX`, where `XX` is your assigned team number.  
 
       > Note: dbtoolkit will use the environment variables (`DB_HOST`, `DB_DATABASE`, `DB_USER`, `DB_PASSWORD` ) if options not specified at command line.
-   
+
       > *`dbsql` Long version*, options override environment variables.  
       `dbsql -host <hostname/VIP> -d bludb -u <teamXX> -pw <your-password> -schema <teamXX> -f <ddlfile>`  
-   
+
    1. List the created tables  
-   
+
       ```
       dbsql -schema <teamXX> -c "\d" |grep _DBLOAD  
       dbsql -schema <teamXX> -c "\d" |grep _DB2LOAD  
@@ -162,17 +162,17 @@ ls ./
       ```
 
       > Note: Your schema is `teamXX`, where `XX` is your assigned team number.
-   
+
 ##### Option 2: Use `db2clp` to create the tables:
 
    1. Connect to the database  
-   
+
       `db2 connect to bludb`
-      
+
       > Note: this connect persists until `db2 connect reset` or `db2 terminate` executed.
-   
+
    1. Process the DDL files via the `db2clp`  
-   
+
       ```
       cd
       cd lab/ddl/
@@ -181,24 +181,24 @@ ls ./
       db2 -tvf bdi_CURLOAD.ddl  
       db2 -tvf bdi_FEDLOAD.ddl  
       ```
-   
+
    1. List the created tables  
-   
+
       ```
       db2 list tables for schema <teamXX> |grep _DBLOAD  
       db2 list tables for schema <teamXX> |grep _DB2LOAD  
       db2 list tables for schema <teamXX> |grep _CURLOAD  
       db2 list tables for schema <teamXX> |grep _FEBLOAD  
       ```
-   
+
       > Note: Your schema is `teamX`, where `XX` is your assigned team number.
-   
+
    1. Reset the Db2 Connection  
-   
+
       `db2 connect reset`  
-   
+
    1. Terminate the Db2 Connection  
-   
+
       `db2 terminate`
 
 ### Load using `dbload`
@@ -220,11 +220,11 @@ You can access help by typing `dbload -h`.
       cp /scratch/home/lab/load/bdi_DBLOAD.sh ./  
       ./bdi_DBLOAD.sh | tee bdi_DBLOAD.out  
       ```
-   
+
       > Note: after the load completes you can review the output:  
-   
+
       `less bdi_DBLOAD.out`
-   
+
    1. Verify loaded records for each `_DBLOAD` table:
 
       ```
@@ -265,11 +265,11 @@ You can access help by typing `db2 load ?`.
       cp /scratch/home/lab/load/bdi_DB2LOAD.sh ./  
       ./bdi_DB2LOAD.sh | tee bdi_DB2LOAD.out  
       ```
-   
+
       > Note: after the load completes you can review the output:  
-   
+
       `less bdi_DB2LOAD.out`
-   
+
    1. Verify loaded records for each `_DB2LOAD` table:
 
       ```
@@ -304,11 +304,11 @@ For the following exercise to work you must have loaded all the tables with the 
       chmod +x bdi_CURLOAD.sh  
       ./bdi_CURLOAD.sh | tee bdi_CURLOAD.out  
       ```
-   
+
       > Note: after the load completes you can review the output:  
-   
+
       `less bdi_CURLOAD.out`
-   
+
    1. Verify loaded records for each `_CURLOAD` table:
 
       ```
@@ -343,11 +343,11 @@ For the following exercise to work you must have loaded all the tables with the 
       db2 connect to bludb  
       db2 -tvf bdi_CTASLOAD.sql | tee bdi_CTASLOAD.out  
       ```
-   
+
       > Note: after the load completes you can review the output:  
-   
+
       `less bdi_CTASLOAD.out`
-   
+
    1. Verify loaded records for each `_CTASLOAD` table:
 
       ```
@@ -371,4 +371,3 @@ For the following exercise to work you must have loaded all the tables with the 
 
 
 ### Load using Fedration
-
