@@ -65,18 +65,18 @@ In phase one, an assessment will be done to understand the scope of the effort. 
   1. Double Click result to review converted ddl.
   ![review SQL](./images/launchreportConvert.png)
   1. Review the converted ddl. One thing to note in the conversion, the create database statement has be converted into a schema.  IBM Integrated Analytics System currently only has one database. When migrating use schemas for multiple databases.
-  ![review SQL](./images/readContertedSQL.png)
-  1. The file is saved in the `~/nz/tmp/nz/gather_nz_info` directory as `extracted.BDI_converted.sql`
+  ![review SQL](./images/ReadContertedSQL.png)
+  1. The file is saved in the `~/nz/tmp/nz/gather_nz_info` directory as `extracted.BDI_converted.sql`.
 
-  ### ***Optional:*** Excuting from the command line.
-
-    1. `cd /home/sailfish/db_harmony`
-    1. Execute `./db_harmony_profiler.sh -help |more` to find the options.
+  ### ***Optional:*** Excuting from the command line
+  1. `cd /home/sailfish/db_harmony`
+  1. `./db_harmony_profiler.sh -help |more` to find the options.
     ![Harmony Profiler Command Line](./images/HpConsoleHelp.png)
-    1. `./db_harmony_profiler.sh evaluate 6 <ddl or sql file>`
+  1. `./db_harmony_profiler.sh evaluate 6 <ddl or sql file>`
 
   ### Cleaning up the converted ddl
   The Command line `dbsql -f <file name>` is more forgiving than the Db2 Warehouse console.  For this lab we are going to go the picky route.  In the Loading lab, the command line approach will be taken.   The console's Run SQL will not tolorate the following:
+  
     ~~~
     /*Netezza slash statement(s) removed <<
     \echo
@@ -115,11 +115,11 @@ Please migrate your assigned database to your assigned target schema, see assign
 
 1. Login into the Db2 Warehouse local container on your vm.
   1. Click the **Login as bludmin to Db2wh** desktop launcher.  This log you into the Db2 Warehouse container as ***bluadmin***.
-  ![](./images/Bluadmin_login.png)
+  ![bluadmin](./images/Bluadmin_login.png)
 
   1. From the command prompt type `db_migrate -h`.
-
-    ![Harmony Profiler](./images/db_migrate.png)
+   ![Harmony Profiler](./images/db_migrate.png)
+    
   1. Take note at the beginning of the output.  There are arguments that start with **s** some with **t**.  **s** stands for the **source** or in our case Netezza and **t** stands for **target** or in our case Db2 Warehouse/IIAS.  
 
     `db_migrate -sbd <Netezza database name> -tdb <Db2 Warehouse database name> -shost <hostanme> -thost <Db2 Warehouse host> -suser <remote DB username> -tuser bluadmin -spassword <remote DB username> -tpassword bluadmin`
@@ -143,7 +143,6 @@ Please migrate your assigned database to your assigned target schema, see assign
         ***Note:*** Ignore Errors from SSH command
     1. Now super user to bluadmin
         `su bluadmin`
-
     1. Run the db_migrate command to move the data over.
     `db_migrate -shost localhost  -cksum yes -loader extTab -threads 2 -sDB bdi -tDB bludb -sUser admin -tUser bluadmin -sPassword password -tPassword bluadmin -schema admin -tschema bdi`
 
@@ -232,4 +231,4 @@ SELECT NUMERIC(WR_RETURN_AMT,7,2) FROM WEB_RETURNS;
 SELECT (WR_RETURN_AMT)::NUMERIC(7,2) FROM WEB_RETURNS;
 ```
 
-* [Netezza Source DML](/Labs/Migration/NZQueries/nzbdinsights.sql)
+* [Netezza Source DML](./NZQueries/nzbdinsights.sql)
