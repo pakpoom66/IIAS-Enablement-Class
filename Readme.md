@@ -23,4 +23,5 @@ The Local Db2 Warehouse database is username: bluadmin password: blueadmin  and 
 Lab artifacts are included in the vm as well an here on git.
 
 * [Migration Lab](./Labs/MigrationTooling/Readme.md)
+* [Create DB Objects Lab](./Labs/CreateDBObjects/Readme.md)
 * [Data Load Lab](./Labs/DataLoading/Readme.md)

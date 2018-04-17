@@ -1,71 +1,31 @@
 # Lab Exercise
 
-Please use your team assigned number for the database that you are to migrate.  
+ If you were on an IIAS system, you would ssh to the IIAS container or use your Db2 Client container.  On this system, you will use the desktop launcher `Login as bluadmin to Db2wh`  This will open up a terminal and `su - bluadmin`
 
-For this lab you can ssh to the IIAS container or use your Db2 Client container.
 
-### ssh to the IIAS Db2 Warehouse container
 
-`ssh teamXX@9.30.106.50 -p 50022`  # where XX is your assigned team number  
-or  
-`ssh teamXX@9.30.106.115 -p 50022`  # where XX is your assigned team number
-
-#### Database connection information  
-
-##### Group 1
-  | Team/User | Host name / VIP  | 
-  |:---:|:---:|
-  | team01  | 9.30.106.50  | 
-  | team02  | 9.30.106.50  | 
-  | team03  | 9.30.106.50  | 
-  | team04  | 9.30.106.50  | 
-  | team05  | 9.30.106.50  | 
-  | team06  | 9.30.106.50  | 
-  | team07  | 9.30.106.50  | 
-  | team08  | 9.30.106.50  | 
-  | team09  | 9.30.106.50  | 
-  | team10  | 9.30.106.50  | 
-  | team11  | 9.30.106.50  | 
-  | team12  | 9.30.106.50  | 
-
-##### Group 2
-  | Team/User | Host name / VIP  | 
-  |:---:|:---:|
-  | team01  | 9.30.106.115  | 
-  | team02  | 9.30.106.115  | 
-  | team03  | 9.30.106.115  | 
-  | team04  | 9.30.106.115  | 
-  | team05  | 9.30.106.115  | 
-  | team06  | 9.30.106.115  | 
-  | team07  | 9.30.106.115  | 
-  | team08  | 9.30.106.115  | 
-  | team09  | 9.30.106.115  | 
-  | team10  | 9.30.106.115  | 
-  | team11  | 9.30.106.115  | 
-  | team12  | 9.30.106.115  | 
-    
 # Creating database objects
 
   * If running from a remote machine (i.e. Db2 Warehouse Client Container)
-     > Db2 CLP commands. 
-     
-     > `db2 connect to bludb user teamXX using Sailfish@2018`  
+     > Db2 CLP commands.
+
+     > `db2 connect to bludb user bluadmin using bluadmin`  
      > `db2 "CREATE..."`  
      > `db2 connect reset`  
-     
+
      > DB Client commands:
-     > `dbsql -h 9.30.106.XXX -u teamXX -pw Sailfish@2018 -c "\<sql command\>"`  
-        
+     > `dbsql -h 172.18.0.2 -u bluadmin -pw bluadmin -c "\<sql command\>"`  
+
     You can set the following variables to simplify the `dbsql` command.  
-        
+
     ```
-    export DB_HOST=9.30.106.XXX
-    export DB_USER=teamXX
-    export DB_PASSWORD=Sailfish@2018
+    export DB_HOST=172.18.0.2
+    export DB_USER=bluadmin
+    export DB_PASSWORD=bluadmin
     export DB_DATABASE=bludb
     ```  
-        
-    > Note: replace teamXX with your team ID in the examples below.
+
+    > Note: replace BDI with your team ID in the examples below.
     > Note: add the export commands to your .bashrc file.  
 
 ## Partition Groups
@@ -88,16 +48,16 @@ IIAS database partition groups
 
 > Note: Keep the database partition groups as-is.  You do not need to create additional database partition groups in IIAS.  Table spaces map to a database partition group, this is how table spaces are defined to data slice(s).
 
-> Note: 
+> Note:
 
 1. Explore the database partition groups associated with the `BLUDB`.  
-   
+
    `dbsql -c "select * from SYSCAT.DBPARTITIONGROUPDEF order by 1, 2;"`  
 
    * db2clp example only:  
    `db2 LIST DATABASE PARTITION GROUPS;`  
    `db2 LIST DATABASE PARTITION GROUPS SHOW DETAIL;`  
-   
+
 ## Table spaces
 
 A table space is a storage structure containing tables, indexes, large objects, and long data. They are used to organize data in a database into logical storage groupings that relate to where data is stored on a system. Table spaces are stored in database partition groups.
@@ -116,28 +76,28 @@ Using table spaces to organize storage offers a number of benefits:
 
    * Create table space in partition group
 
-      `dbsql -c "CREATE TABLESPACE TEAMXX_TSFACT IN IBMDEFAULTGROUP"`  
-      `dbsql -c "CREATE TABLESPACE TEAMXX_TSDIM IN IBMDEFAULTGROUP"`  
+      `dbsql -c "CREATE TABLESPACE BDI_TSFACT IN IBMDEFAULTGROUP"`  
+      `dbsql -c "CREATE TABLESPACE BDI_TSDIM IN IBMDEFAULTGROUP"`  
 
-   > NOTE: It is recommeded that the table spaces used for small tables be put in IBMDEFAULTGROUP.  Both fact tables and dimension tables should be create in a table space that spans IBMDEFAULTGROUP (database partition 1 - X).
+   > NOTE: It is recommended that the table spaces used for small tables be put in IBMDEFAULTGROUP.  Both fact tables and dimension tables should be create in a table space that spans IBMDEFAULTGROUP (database partition 1 - X).
 
 ## Create SCHEMA
 
 * Create a schema as follows
-   
-   `dbsql -c "create schema teamXX_lab;"`  
-   > Note: Replace XX with your assinged team number.
+
+   `dbsql -c "create schema bdi_lab;"`  
+
 
 ## Create Tables in a table space
 
 [Details on partitioned tables](https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.admin.partition.doc/doc/c0021560.html)
 
 * Create a dimension table.  Copy/past the DDL below into a file (vi).  
-   >  Note: Replace XX with your assinged team number.   
+
 
    ```sql
-   SET CURRENT SCHEMA TEAMXX_LAB;  
-   
+   SET CURRENT SCHEMA BDI_LAB;  
+
    CREATE TABLE time_dim
    (
    time_code     INT,
@@ -148,19 +108,21 @@ Using table spaces to organize storage offers a number of benefits:
    quarter_name  CHAR(10),
    year INTEGER
    )
-   distribute by random 
-   in TEAMXX_TSDIM
+   distribute by random
+   in BDI_TSDIM
    ;
    ```  
-   
+
    `dbsql -f <your-filename>`
 
+   You can used the file named [dimension.sql](./dimension.sql) located in `~/labs/create` in the Db2wh container.
+
 * Create a fact table.  Copy/past the DDL below into a file.  
-   >  Note: Replace XX with your assinged team number.   
+
 
    ```sql
-   CREATE TABLE sales_fact 
-   ( 
+   CREATE TABLE sales_fact
+   (
    customer_code  INTEGER,
    district_code  SMALLINT,
    time_code      INTEGER,
@@ -170,24 +132,27 @@ Using table spaces to organize storage offers a number of benefits:
    cost           DECIMAL(8,2),
    net_profit     DECIMAL(8,2)
    )
-   distribute by (customer_code) 
-   in TEAMXX_TSFACT
+   distribute by (customer_code)
+   in BDI_TSFACT
    ;
    ```  
-   
+
    `dbsql -f <your-filename>`
-   
+
+   You can used the file named [fact.sql](./fact.sql) located in `~/labs/create` in the Db2wh container.
+
+
    * Check the table definition (db2clp example).  
    `db2 connect to bludb`  
-   `db2 list tables for schema teamXX_lab`  
-   `db2 DESCRIBE TABLE teamXX_lab.time_fact;`  
-   `db2 DESCRIBE TABLE teamXX_lab.sales_fact;`  
+   `db2 list tables for schema BDI_lab`  
+   `db2 DESCRIBE TABLE BDI_lab.time_fact;`  
+   `db2 DESCRIBE TABLE BDI_lab.sales_fact;`  
 
 * Check the table definition (dbsql example).  
 
    ```  
    dbsql  
-   set schema teamXX_lab;   
+   set schema BDI_lab;   
    select tabschema, tabname from syscat.tables where tabschema = 'BDIXX';
    \d time_fact;  
    \d sales_fact;
@@ -195,7 +160,7 @@ Using table spaces to organize storage offers a number of benefits:
 
 * Drop any objects you created during your exploration.  
 
-   `dbsql -c "DROP TABLE teamXX_lab.time_dim;"`    
-   `dbsql -c "DROP TABLE teamXX_lab.sales_fact;"`  
-   `dbsql -c "DROP TABLESPACE TEAMXX_TSDIM;"`  
-   `dbsql -c "DROP TABLESPACE TEAMXX_TSFACT;"`  
+   `dbsql -c "DROP TABLE BDI_lab.time_dim;"`    
+   `dbsql -c "DROP TABLE BDI_lab.sales_fact;"`  
+   `dbsql -c "DROP TABLESPACE BDI_TSDIM;"`  
+   `dbsql -c "DROP TABLESPACE BDI_TSFACT;"`  
