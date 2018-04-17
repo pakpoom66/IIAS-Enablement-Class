@@ -65,7 +65,7 @@ In phase one, an assessment will be done to understand the scope of the effort. 
   1. Double Click result to review converted ddl.
   ![review SQL](./images/launchreportConvert.png)
   1. Review the converted ddl. One thing to note in the conversion, the create database statement has be converted into a schema.  IBM Integrated Analytics System currently only has one database. When migrating use schemas for multiple databases.
-  ![review SQL](./images/readContertedSQL.png)
+  ![review SQL](./images/ReadContertedSQL.png)
   1. The file is saved in the `~/nz/tmp/nz/gather_nz_info` directory as `extracted.BDI_converted.sql`.
 
   ### ***Optional:*** Excuting from the command line
