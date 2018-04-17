@@ -16,7 +16,7 @@
 
 ## Day 2
 *	Data Movement
-	- Et, Loading Methods and Utils, load rate and Best Practices
+	- Etl, Loading Methods and Utils, load rate and Best Practices
 * Data Update/Delete
   - Data structures (what happens when data is updated/deleted)
   - Groom/Compression/Stats/Reclaim

@@ -4,7 +4,7 @@
 
   There are desktop icons on this Ubuntu image that will Start/Stop and exec Db2 Warehouse, Db2 Client and Harmony Profile.  All of these launchers are bash scripts located in ~/scripts directory.
 
-
+  In the Db2Wh container are all the ddl and sql scripts needed to execute the labs.
 
 # Lab systems used during class
 
@@ -17,7 +17,7 @@ Based on availability, we will have access to and IBM Integrated Analytics Syste
 
 * The VM image login ***username:*** sailfish ***password:*** ./.cshr1c.
 * The Local Db2 Warehouse database:
-  * ***username:*** bluadmin ***password:*** blueadmin 
+  * ***username:*** bluadmin ***password:*** blueadmin
   * ***username:*** root ***password:*** sailfish
 
 # Lab artifacts
