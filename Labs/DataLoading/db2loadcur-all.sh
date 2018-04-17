@@ -3,10 +3,10 @@
 user="$USER"
 password="<password-provided>"
 dbname="BLUDB"
-tbschema=$user"
-hostnm="9.30.106.XXX"
-datdir="/scratch/home/poc/IBM/data"
-outdir="/scratch/home/${user}/load/log"
+tbschema="$user"
+hostnm="<hostname-provided>"
+datdir="/scratch/home/lab/data"
+outdir="/scratch/home/lab/${user}/log/load"
 
 mkdir -p $outdir
 

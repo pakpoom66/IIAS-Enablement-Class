@@ -1,10 +1,10 @@
 #!/bin/bash
 
-user=$USER
-password=Sailfish@2017
-dbname=BLUDB
-tbschema=$user
-hostnm=9.30.106.50
+user="$USER"
+password="<your-password>"
+dbname="BLUDB"
+tbschema="$user"
+hostnm="<hostname/IP-provided>"
 
 echo "----------------------------------------------"
 
