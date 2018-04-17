@@ -66,17 +66,17 @@ In phase one, an assessment will be done to understand the scope of the effort. 
   ![review SQL](./images/launchreportConvert.png)
   1. Review the converted ddl. One thing to note in the conversion, the create database statement has be converted into a schema.  IBM Integrated Analytics System currently only has one database. When migrating use schemas for multiple databases.
   ![review SQL](./images/readContertedSQL.png)
-  1. The file is saved in the `~/nz/tmp/nz/gather_nz_info` directory as `extracted.BDI_converted.sql`
+  1. The file is saved in the `~/nz/tmp/nz/gather_nz_info` directory as `extracted.BDI_converted.sql`.
 
-  ### ***Optional:*** Excuting from the command line.
-
-    1. `cd /home/sailfish/db_harmony`
-    1. Execute `./db_harmony_profiler.sh -help |more` to find the options.
+  ### ***Optional:*** Excuting from the command line
+  1. `cd /home/sailfish/db_harmony`
+  1. `./db_harmony_profiler.sh -help |more` to find the options.
     ![Harmony Profiler Command Line](./images/HpConsoleHelp.png)
-    1. `./db_harmony_profiler.sh evaluate 6 <ddl or sql file>`
+  1. `./db_harmony_profiler.sh evaluate 6 <ddl or sql file>`
 
   ### Cleaning up the converted ddl
   The Command line `dbsql -f <file name>` is more forgiving than the Db2 Warehouse console.  For this lab we are going to go the picky route.  In the Loading lab, the command line approach will be taken.   The console's Run SQL will not tolorate the following:
+  
     ~~~
     /*Netezza slash statement(s) removed <<
     \echo
@@ -143,7 +143,6 @@ Please migrate your assigned database to your assigned target schema, see assign
         ***Note:*** Ignore Errors from SSH command
     1. Now super user to bluadmin
         `su bluadmin`
-
     1. Run the db_migrate command to move the data over.
     `db_migrate -shost localhost  -cksum yes -loader extTab -threads 2 -sDB bdi -tDB bludb -sUser admin -tUser bluadmin -sPassword password -tPassword bluadmin -schema admin -tschema bdi`
 
