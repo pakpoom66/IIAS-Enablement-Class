@@ -115,11 +115,11 @@ Please migrate your assigned database to your assigned target schema, see assign
 
 1. Login into the Db2 Warehouse local container on your vm.
   1. Click the **Login as bludmin to Db2wh** desktop launcher.  This log you into the Db2 Warehouse container as ***bluadmin***.
-  ![](./images/Bluadmin_login.png)
+  ![bluadmin](./images/Bluadmin_login.png)
 
   1. From the command prompt type `db_migrate -h`.
-
-    ![Harmony Profiler](./images/db_migrate.png)
+   ![Harmony Profiler](./images/db_migrate.png)
+    
   1. Take note at the beginning of the output.  There are arguments that start with **s** some with **t**.  **s** stands for the **source** or in our case Netezza and **t** stands for **target** or in our case Db2 Warehouse/IIAS.  
 
     `db_migrate -sbd <Netezza database name> -tdb <Db2 Warehouse database name> -shost <hostanme> -thost <Db2 Warehouse host> -suser <remote DB username> -tuser bluadmin -spassword <remote DB username> -tpassword bluadmin`
