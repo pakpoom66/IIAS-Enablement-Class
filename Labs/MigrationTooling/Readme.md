@@ -76,7 +76,7 @@ In phase one, an assessment will be done to understand the scope of the effort. 
 
   ### Cleaning up the converted ddl
   The Command line `dbsql -f <file name>` is more forgiving than the Db2 Warehouse console.  For this lab we are going to go the picky route.  In the Loading lab, the command line approach will be taken.   The console's Run SQL will not tolorate the following:
-  
+
     ~~~
     /*Netezza slash statement(s) removed <<
     \echo
@@ -119,7 +119,7 @@ Please migrate your assigned database to your assigned target schema, see assign
 
   1. From the command prompt type `db_migrate -h`.
    ![Harmony Profiler](./images/db_migrate.png)
-    
+
   1. Take note at the beginning of the output.  There are arguments that start with **s** some with **t**.  **s** stands for the **source** or in our case Netezza and **t** stands for **target** or in our case Db2 Warehouse/IIAS.  
 
     `db_migrate -sbd <Netezza database name> -tdb <Db2 Warehouse database name> -shost <hostanme> -thost <Db2 Warehouse host> -suser <remote DB username> -tuser bluadmin -spassword <remote DB username> -tpassword bluadmin`
@@ -135,7 +135,7 @@ Please migrate your assigned database to your assigned target schema, see assign
     1. Restart the sshd.
 
         `$ service sshd restart`
-    1. Map a route from the local machine to the remote Netezza machine mocking the default port.
+    1. Map a route from the local machine to the remote Netezza machine mocking the default port.  Your instructor may give you a different `<hostname>:<port>` to plug in to the ssh command.
 
         `ssh -L 5480:services-uscentral.skytap.com:9053 root@localhost -p 50022`    
     1. It will prompt for a password.  `root@localhost's password:`  Enter `sailfish`

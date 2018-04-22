@@ -1,6 +1,6 @@
 # Load / Data Movement Lab  
 
-The typical scenario in a POC is that the customer will provide you data (files) to be loaded.  Prior to having the customer dump the entire dataset, request sample rows (1,000-10,000) for all the tables that you will load in the POC.  This will allow you to indentify any potential issues with the generated load files.
+The typical scenario in a POC is that the customer will provide you data (files) to be loaded.  Prior to having the customer dump the entire dataset, request sample rows (1,000-10,000) for all the tables that you will load in the POC.  This will allow you to identify any potential issues with the generated load files.
 
 The data files have been prepared for you and are located in `/scratch/home/lab/data`.  The data files used in this lab do not include the schema as part of the the file name.  This was done for this lab to have one set of data files that all teams use to load.  In a customer POC it is recommended that data files names include the schema as part of the data file name. Example: `BDINSIGHT.CALL_CENTER.del`.  This will make scripting easier.
 
