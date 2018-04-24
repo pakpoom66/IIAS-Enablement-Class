@@ -8,17 +8,24 @@
 
 # Lab systems used during class
 
-The systems used during the class are located in the Silicon Valley Lab (SVL).  These systems are behind a BSO Firewall and you will need to authenticate to the BSO firewall.  
-
 Based on availability, we will have access to and IBM Integrated Analytics System for you to review for the administration labs and DSX lab.
 
 [IIAS Console TBD](https://<IP_address>:8443/console)
 [IIAS DSX Console TBD](https://<IP_address>:8444/)
 
+Db2Warehouse VM:  Guest VM requirements.   Virtual Box:   2 Cores and 8GB RAM
 * The VM image login ***username:*** sailfish ***password:*** ./.cshr1c.
 * The Local Db2 Warehouse database:
   * ***username:*** bluadmin ***password:*** blueadmin
+
   * ***username:*** root ***password:*** sailfish
+
+DSX Local VM:   Guest VM Requirements.   Virtual Box     4 Cores and 12+ GB RAM
+* The VM image login ***username:*** sailfish ***password:*** ./.cshr1c.
+  * ***username:*** root ***password:*** sailfish
+
+* The DSX Local Login:
+  * ***username:*** admin ***password:*** password
 
 # Lab artifacts
 
