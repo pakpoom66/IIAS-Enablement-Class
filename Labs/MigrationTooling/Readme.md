@@ -140,7 +140,8 @@ Please migrate your assigned database to your assigned target schema, see assign
         `ssh -L 5480:services-uscentral.skytap.com:9053 root@localhost -p 50022`    
     1. It will prompt for a password.  `root@localhost's password:`  Enter `sailfish`
 
-        ***Note:*** Ignore Errors from SSH command
+        ***Note:*** Ignore Errors from SSH command  "bind: Cannot assign requested address"
+        Validate with netstat -an | grep 5480
     1. Now super user to bluadmin
         `su bluadmin`
     1. Run the db_migrate command to move the data over.
