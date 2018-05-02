@@ -13,7 +13,7 @@ Based on availability, we will have access to and IBM Integrated Analytics Syste
 [IIAS Console](https://10.50.88.240:8443/console)
 
 
-Db2Warehouse VM:  Guest VM requirements.   Virtual Box:   3 Cores and 10GB RAM
+Db2 Warehouse VM:  Guest VM requirements.   Virtual Box:   3 Cores and 10GB RAM
 * The VM image login ***username:*** sailfish ***password:*** ./.cshr1c.
 * The Local Db2 Warehouse database:
   * ***username:*** bluadmin ***password:*** bluadmin

@@ -3,11 +3,11 @@
 The following details the Migration Lab.  This lab is a simulation of a simple  IBM Integrated Analytics System (IIAS) Migration POC pulling data and queries from an existing Netezza system (see [Lab Narrative](./LabNarrative.md)).  
 
 This lab has 5 steps.
-1. Extracting the DDL from the Netezza system using Harmony Profiler.
-1. Running and reviewing the assessment from the tooling
-1. Converting the ddl from Netezza to Db2 Warehouse ready ddl.
-1. Creating the tables in Db2 Warehouse using the converted scripts
-1. Run db_migrate to move the data from Netezza to Db2 Warehouse.
+  1. Extracting the DDL from the Netezza system using Harmony Profiler.
+  1. Running and reviewing the assessment from the tooling
+  1. Converting the ddl from Netezza to Db2 Warehouse ready ddl.
+  1. Creating the tables in Db2 Warehouse using the converted scripts
+  1. Run db_migrate to move the data from Netezza to Db2 Warehouse.
 
 
 You will migrate an existing database on a Netezza system to Db2 Warehouse local emulating IIAS Db2 Warehouse.  
@@ -141,7 +141,7 @@ Please migrate your assigned database to your assigned target schema, see assign
     1. It will prompt for a password.  `root@localhost's password:`  Enter `sailfish`
 
         ***Note:*** Ignore Errors from SSH command
-         
+
           `"bind: Cannot assign requested address`
 
           Validate with `netstat -an | grep 5480`
