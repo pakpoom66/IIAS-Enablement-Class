@@ -8,7 +8,7 @@
   -	Software
   -	System Sizing/Expansion (TBD)
 *	Console and command line/Console Demo
-  * Lab: [Console exploration](Labs/Admin/Admin.md)     *Assumes live system access*
+  * Lab: [Console exploration](Labs/Admin/Admin.md)     ***Assumes live system access***
 * Monitoring
   - Overall System
   - Individual Query (explain plans)
@@ -30,7 +30,7 @@
 ## Day 3
 *	Best Practices on Performance Tuning and tools
 *	DSX & Spark
-*	Lab: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  *Assumes live system access*
+*	Lab: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
 *	Roadmap & Q&A  
 
 
