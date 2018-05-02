@@ -3,12 +3,12 @@
 *	Kick off
 *	Intro and Data Warehousing positioning
 *	Overview/Architecture
-   - Hardware
-   -	Platform
-   -	Software
-   -	System Sizing/Expansion (TBD)
+     - Hardware
+     -	Platform
+     -	Software
+     -	System Sizing/Expansion (TBD)
 *	Console and command line/Console Demo
-  	* [Lab Console exploration](Labs/Admin/Admin.md) (Need to build assumes live system access)
+  	 * [Lab Console exploration](Labs/Admin/Admin.md) (Need to build assumes live system access)
 * Monitoring
     - Overall System
     - Individual Query (explain plans)
