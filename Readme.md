@@ -45,7 +45,7 @@
 
 # Lab systems used during class
 
-Based on availability, we will have access to and IBM Integrated Analytics System for you to review for the administration labs and DSX lab.   To gain access to the IIAS system, you will need to follow the steps in the [Partner Access Document](ExternalPartnerAccess.pdf).  If enrolled in a workshop, then follow teh 4 steps starting at the bottom of page 2.
+Based on availability, we will have access to and IBM Integrated Analytics System for you to review for the administration labs and DSX lab.   To gain access to the IIAS system, you will need to follow the steps in the [Partner Access Document](ExternalPartnerAccess.pdf).  If enrolled in a workshop, then follow the 4 steps starting at the bottom of page 2.
 
 [IIAS Console](https://10.50.88.240:8443/console)
 
@@ -60,9 +60,9 @@ Db2 Warehouse VM:  Guest VM requirements.   Virtual Box:   3 Cores and 10GB RAM
 DSX Local sytem hosted on Skytap
 https://amazingkalam.bluedemos.skytapdns.com/dsx-admin/#/
 
-# Lab artifacts
+# Lab Instructions
 
-Lab artifacts are included in the vm as well an here on git.
+Lab instructions are included in the vm as well an here on git.
 
 * [Migration Lab](Labs/MigrationTooling/Readme.md)
 * [Create DB Objects Lab](Labs/CreateDBObjects/Readme.md)
