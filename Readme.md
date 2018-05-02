@@ -1,13 +1,13 @@
 # Workshop Agenda
 ## Day 1   
-*	Kick off
-*	Intro and Data Warehousing positioning
-*	Overview/Architecture
+* Kick off
+* Intro and Data Warehousing positioning
+* Overview/Architecture
    - Hardware
-   -	Platform
-   -	Software
-   -	System Sizing/Expansion (TBD)
-*	Console and command line/Console Demo
+   - Platform
+   - Software
+   - System Sizing/Expansion (TBD)
+* Console and command line/Console Demo
   	* [Lab Console exploration](Labs/Admin/Admin.md) (Need to build assumes live system access)
 * Monitoring
     - Overall System
@@ -28,10 +28,10 @@
   - Set up Tables and Run DB2 Migrate
 
 ## Day 3
-*	Best Practices on Performance Tuning and tools
-*	DSX & Spark
-  -	Lab:  [DSX  - Overview of the interface](Labs/AdvAnalytics/AnalyticsAdmin.md)  (DSX Local)
--	Roadmap & Q&A  
+* Best Practices on Performance Tuning and tools
+* DSX & Spark
+  - Lab:  [DSX  - Overview of the interface](Labs/AdvAnalytics/AnalyticsAdmin.md)  (DSX Local)
+  - Roadmap & Q&A  
 
 
 
