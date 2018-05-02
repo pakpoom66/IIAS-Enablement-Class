@@ -57,8 +57,7 @@ Db2 Warehouse VM:  Guest VM requirements.   Virtual Box:   3 Cores and 10GB RAM
 
   * ***username:*** root ***password:*** sailfish
 
-DSX Local sytem hosted on Skytap
-https://amazingkalam.bluedemos.skytapdns.com/dsx-admin/#/
+DSX Workshop available
 
 # Lab Instructions
 
