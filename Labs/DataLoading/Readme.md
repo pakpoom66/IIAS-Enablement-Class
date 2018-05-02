@@ -2,7 +2,7 @@
 
 The typical scenario in a POC is that the customer will provide you data (files) to be loaded.  Prior to having the customer dump the entire dataset, request sample rows (1,000-10,000) for all the tables that you will load in the POC.  This will allow you to identify any potential issues with the generated load files.
 
-The data files have been prepared for you and are located in `/scratch/home/lab/data`.  The data files used in this lab do not include the schema as part of the the file name.  This was done for this lab to have one set of data files that all teams use to load.  In a customer POC it is recommended that data files names include the schema as part of the data file name. Example: `BDINSIGHT.CALL_CENTER.del`.  This will make scripting easier.
+The data files have been prepared for you and are located in `/scratch/home/lab/data`.  The data files used in this lab do not include the schema as part of the the file name.  This was done for this lab to have one set of data files that all teams use to load.  In a customer POC it is recommended that data files names include the schema as part of the data file name. Example: `BDIPOC.CALL_CENTER.del`.  This will make scripting easier.
 
 We will perform the following types of loads: `dbload`, `Db2 LOAD`, `Db2 LOAD FROM CURSOR`, `CREATE TABLE AS SELECT...` (CTAS) and Federation.  You are likely to use these load options/methods during a POC depending on your goal for the data loading.  
 
@@ -46,7 +46,7 @@ We will perform the following types of loads: `dbload`, `Db2 LOAD`, `Db2 LOAD FR
 
 ## Lab Overview
 
-For this lab you will `ssh` into the IIAS Db2 Warehouse container to load data into the BDI tables that you will create under your user ID schema [`teamXX`].  You will have three sets of BDI tables to load, the tables will have the following extension added to the their name: `_DBLOAD`, `_DB2LOAD`, `_CURLOAD`, `_CTAS` and `FEDLOAD`.
+For this lab ,you will load data from inside the Db2 Warehouse container.   Now to load data into the BDI tables that you will create under your user default schema, so no need to prepend a schema name.  If IIAS, then create using the ID schema [`teamXX`].  You will have three sets of BDI tables to load, the tables will have the following extension added to the their name: `_DBLOAD`, `_DB2LOAD`, `_CURLOAD`, `_CTAS` and `FEDLOAD`.
 
 Example for base table `CALL_CENTER` the following extension is added to the name:  
 ```
@@ -57,10 +57,16 @@ TEAMXX.CALL_CENTER_CTASLOAD
 TEAMXX.CALL_CENTER_FEDLOAD
 ```
 
-This lab will be performed from the command line inside the Db2 Warehouse container on the IBM Integrated Analytics System master node.  You can run any of the SQL statements from another tool  if you wish.  However, there are several bash scripts that need to be run from the Db2 Warehouse container.
+This lab will be performed from the command line inside the Db2 Warehouse container. On the IBM Integrated Analytics System  this would be performed inside the Db2 Warehouse container on the master node.  You can run any of the SQL statements from another tool  if you wish.  However, there are several bash scripts that need to be run from the Db2 Warehouse container.
 
 
 ### Access the IIAS Db2 Warehouse container command line.
+
+#### Using the VM
+* Use the launcher on the desktop that is labeled `Login in as bluadmin to Db2wh`. This will open you up to a shell inside the VM's Db2 Warehouse container as bluadmin.
+
+
+#### If connecting to an actual IIAS System:
 
 Following these steps to access the Db2 Warehouse command line (Linux command line).  
 
@@ -110,16 +116,16 @@ From the IIAS Db2 Warehouse Container command line create the four sets of table
 
 > Tools:
 
-      * IIAS Console (`Run SQL`)
+      * IIAS /Db2 Warehouse Console (`Run SQL`)
       * `dbsql` command line
       * `db2` command line processor
       * 3rd party tool [Aginity, DBeaver, etc]
 
-* [`dbload` DDL](/Labs/Load/bdi_DBLOAD.ddl)  
-* [`db2load` DDL](/Labs/Load/bdi_DB2LOAD.ddl)  
-* [`curload` DDL](/Labs/Load/bdi_CURLOAD.ddl)  
+* [`dbload` DDL](Labs/DataLoading/bdi_DBLOAD.ddl)  
+* [`db2load` DDL](Labs/DataLoading/bdi_DB2LOAD.ddl)  
+* [`curload` DDL](Labs/DataLoading/bdi_CURLOAD.ddl)  
 * CTAS will be done in the LOAD CTAS section
-* [`fedload` DDL](/Labs/Load/bdi_FEDLOAD.ddl)  
+* [`fedload` DDL](Labs/DataLoading/bdi_FEDLOAD.ddl)  
 
 > Note: If you use `dbsql` in the Db2 Warehouse container on the IIAS head node you can copy the DDL files located in `/scratch/home/lab/ddl` to your home directory as follows:
 
@@ -366,7 +372,3 @@ For the following exercise to work you must have loaded all the tables with the 
       db2 connect to bludb  
       db2 -tf compr_CTASLOAD.sql  
       ```
-
-
-
-### Load using Federation

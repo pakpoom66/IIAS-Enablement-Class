@@ -13,7 +13,7 @@ Based on availability, we will have access to and IBM Integrated Analytics Syste
 [IIAS Console](https://10.50.88.240:8443/console)
 
 
-Db2Warehouse VM:  Guest VM requirements.   Virtual Box:   2 Cores and 8GB RAM
+Db2Warehouse VM:  Guest VM requirements.   Virtual Box:   3 Cores and 10GB RAM
 * The VM image login ***username:*** sailfish ***password:*** ./.cshr1c.
 * The Local Db2 Warehouse database:
   * ***username:*** bluadmin ***password:*** bluadmin
@@ -30,4 +30,5 @@ Lab artifacts are included in the vm as well an here on git.
 * [Migration Lab](Labs/MigrationTooling/Readme.md)
 * [Create DB Objects Lab](Labs/CreateDBObjects/Readme.md)
 * [Data Load Lab](Labs/DataLoading/Readme.md)
-* [TestDoc Links](Docs/01_SVLLabAccess.md)
+* [Administration Lab](Labs/Admin/Admin.md)
+* [DSX User Experience Lab](Labs/AdvAnalytics/AnalyticsAdmin.md)
