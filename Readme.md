@@ -10,8 +10,8 @@
 
 Based on availability, we will have access to and IBM Integrated Analytics System for you to review for the administration labs and DSX lab.
 
-[IIAS Console TBD](https://<IP_address>:8443/console)
-[IIAS DSX Console TBD](https://<IP_address>:8444/)
+[IIAS Console](https://10.50.88.240:8443/console)
+[IIAS DSX Console TBD](https://10.50.88.240:8444/)
 
 Db2Warehouse VM:  Guest VM requirements.   Virtual Box:   2 Cores and 8GB RAM
 * The VM image login ***username:*** sailfish ***password:*** ./.cshr1c.
@@ -20,12 +20,8 @@ Db2Warehouse VM:  Guest VM requirements.   Virtual Box:   2 Cores and 8GB RAM
 
   * ***username:*** root ***password:*** sailfish
 
-DSX Local VM:   Guest VM Requirements.   Virtual Box     4 Cores and 12+ GB RAM
-* The VM image login ***username:*** sailfish ***password:*** ./.cshr1c.
-  * ***username:*** root ***password:*** sailfish
-
-* The DSX Local Login:
-  * ***username:*** admin ***password:*** password
+DSX Local sytem hosted on Skytap
+https://amazingkalam.bluedemos.skytapdns.com/dsx-admin/#/
 
 # Lab artifacts
 
@@ -34,3 +30,4 @@ Lab artifacts are included in the vm as well an here on git.
 * [Migration Lab](./Labs/MigrationTooling/Readme.md)
 * [Create DB Objects Lab](./Labs/CreateDBObjects/Readme.md)
 * [Data Load Lab](./Labs/DataLoading/Readme.md)
+* [TestDoc Links](../Docs/01_SVLLabAccess.md)

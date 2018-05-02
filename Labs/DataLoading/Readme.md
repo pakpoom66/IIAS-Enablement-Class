@@ -42,7 +42,6 @@ We will perform the following types of loads: `dbload`, `Db2 LOAD`, `Db2 LOAD FR
 |  TEAMXX  |  WEB_SALES  |  WEB_SALES.del  |  3,599,503  |  864M  |
 |  TEAMXX  |  WEB_SITE  |  WEB_SITE.del  |  35  |  14K  |
 
-> Note: XX is your assigned team number.  We will use your `teamXX` name as the implicit schema name.  In Db2 if you don't specify the schema name it will use your user ID as the schema.
 
 
 ## Lab Overview
@@ -370,4 +369,4 @@ For the following exercise to work you must have loaded all the tables with the 
 
 
 
-### Load using Fedration
+### Load using Federation
