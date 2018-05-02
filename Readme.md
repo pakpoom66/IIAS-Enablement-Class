@@ -3,15 +3,15 @@
 *	Kick off
 *	Intro and Data Warehousing positioning
 *	Overview/Architecture
-     - Hardware
-     -	Platform
-     -	Software
-     -	System Sizing/Expansion (TBD)
+  - Hardware
+  -	Platform
+  -	Software
+  -	System Sizing/Expansion (TBD)
 *	Console and command line/Console Demo
-  	 * [Lab Console exploration](Labs/Admin/Admin.md) (Need to build assumes live system access)
+  * Lab: [Console exploration](Labs/Admin/Admin.md)     *Assumes live system access*
 * Monitoring
-    - Overall System
-    - Individual Query (explain plans)
+  - Overall System
+  - Individual Query (explain plans)
 
 ## Day 2
 *	Data Movement
@@ -30,8 +30,8 @@
 ## Day 3
 *	Best Practices on Performance Tuning and tools
 *	DSX & Spark
-  -	Lab:  [DSX  - Overview of the interface](Labs/AdvAnalytics/AnalyticsAdmin.md)  (DSX Local)
--	Roadmap & Q&A  
+*	Lab: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  *Assumes live system access*
+*	Roadmap & Q&A  
 
 
 
