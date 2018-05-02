@@ -1,21 +1,22 @@
 # Workshop Agenda
+
 ## Day 1   
 * Kick off
 * Intro and Data Warehousing positioning
 * Overview/Architecture
-   - Hardware
-   - Platform
-   - Software
-   - System Sizing/Expansion (TBD)
+  - Hardware
+  - Platform
+  - Software
+  - System Sizing/Expansion (TBD)
 * Console and command line/Console Demo
-  * [Lab Console exploration](Labs/Admin/Admin.md) (Assumes live system access)
+* Lab: [Console exploration](Labs/Admin/Admin.md) (Assumes live system access)
 * Monitoring
   - Overall System
   - Individual Query (explain plans)
 
 ## Day 2
 * Data Movement
-	- Etl, Loading Methods and Utils, load rate and Best Practices
+  - Etl, Loading Methods and Utils, load rate and Best Practices
 * Data Update/Delete
   - Data structures (what happens when data is updated/deleted)
   - Groom/Compression/Stats/Reclaim
