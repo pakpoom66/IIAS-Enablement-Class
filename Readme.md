@@ -45,9 +45,9 @@
 
 # Lab systems used during class
 
-Based on availability, we will have access to and IBM Integrated Analytics System for you to review for the administration labs and DSX lab.   To gain access to the IIAS system, you will need to follow the steps in the [Partner Access Document](ExternalPartnerAccess.pdf).  If enrolled in a workshop, then follow the 4 steps starting at the bottom of page 2.
+Based on availability, we will have access to and IBM Integrated Analytics System for you to review for the administration labs and DSX lab.   Complete the needful in the [Partner access document](./PartnerAccess.md)
 
-[IIAS Console](https://10.50.88.240:8443/console)
+[IIAS Console](https://10.50.88.240:8443/console) 10.50.88.240
 
 
 Db2 Warehouse VM:  Guest VM requirements.   Virtual Box:   3 Cores and 10GB RAM
