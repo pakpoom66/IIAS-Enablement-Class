@@ -1,6 +1,6 @@
 # Migration Lab
 
-The following details the Migration Lab.  This lab is a simulation of a simple  IBM Integrated Analytics System (IIAS) Migration POC pulling data and queries from an existing Netezza system (see [Lab Narrative](Labs/MigrationTooling/LabNarrative.md)).  
+The following details the Migration Lab.  This lab is a simulation of a simple  IBM Integrated Analytics System (IIAS) Migration POC pulling data and queries from an existing Netezza system (see [Lab Narrative](MigrationTooling/LabNarrative.md)).  
 
 This lab has 5 steps.
   1. Extracting the DDL from the Netezza system using Harmony Profiler.
@@ -14,7 +14,7 @@ You will migrate an existing database on a Netezza system to Db2 Warehouse local
 
 ## Lab Narrative
 
-Read the [Lab Narrative](Labs/MigrationTooling/LabNarrative.md) to understand the background of the Lab/POC.
+Read the [Lab Narrative](MigrationTooling/LabNarrative.md) to understand the background of the Lab/POC.
 
 ## Lab Exercise
 
