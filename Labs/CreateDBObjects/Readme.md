@@ -14,12 +14,12 @@
      > `db2 connect reset`  
 
      > DB Client commands:
-     > `dbsql -h 172.18.0.2 -u bluadmin -pw bluadmin -c "\<sql command\>"`  
+     > `dbsql -h localhost -u bluadmin -pw bluadmin -c "\<sql command\>"`  
 
     You can set the following variables to simplify the `dbsql` command.  
 
     ```
-    export DB_HOST=172.18.0.2
+    export DB_HOST=localhost
     export DB_USER=bluadmin
     export DB_PASSWORD=bluadmin
     export DB_DATABASE=bludb
@@ -115,7 +115,7 @@ Using table spaces to organize storage offers a number of benefits:
 
    `dbsql -f <your-filename>`
 
-   You can used the file named [dimension.sql](./dimension.sql) located in `~/labs/create` in the Db2wh container.
+   You can used the file named [dimension.sql](Labs/CreateDBObjects/dimension.sql) located in `~/labs/create` in the Db2wh container.
 
 * Create a fact table.  Copy/past the DDL below into a file.  
 
@@ -139,7 +139,7 @@ Using table spaces to organize storage offers a number of benefits:
 
    `dbsql -f <your-filename>`
 
-   You can used the file named [fact.sql](./fact.sql) located in `~/labs/create` in the Db2wh container.
+   You can used the file named [fact.sql](Labs/CreateDBObjects/fact.sql) located in `~/labs/create` in the Db2wh container.
 
 
    * Check the table definition (db2clp example).  
