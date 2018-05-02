@@ -1,37 +1,37 @@
 # Workshop Agenda
 ## Day 1   
-*	Kick off
-*	Intro and Data Warehousing positioning
-*	Overview/Architecture
+* Kick off
+* Intro and Data Warehousing positioning
+* Overview/Architecture
   - Hardware
-  -	Platform
-  -	Software
-  -	System Sizing/Expansion (TBD)
-*	Console and command line/Console Demo
+  - Platform
+  - Software
+  - System Sizing/Expansion (TBD)
+* Console and command line/Console Demo
   * Lab: [Console exploration](Labs/Admin/Admin.md)     ***Assumes live system access***
 * Monitoring
   - Overall System
   - Individual Query (explain plans)
 
 ## Day 2
-*	Data Movement
-	- Etl, Loading Methods and Utils, load rate and Best Practices
+* Data Movement
+  - Etl, Loading Methods and Utils, load rate and Best Practices
 * Data Update/Delete
   - Data structures (what happens when data is updated/deleted)
   - Groom/Compression/Stats/Reclaim
   - Security.
   - Interesting software things
 * Lab: [Data Loading](Labs/DataLoading/Readme.md)   
-*	Migration tooling
+* Migration tooling
 * Lab: [Migration using tooling](Labs/MigrationTooling/Readme.md)
   - Harmony Profiler migrating a Netezza/PDA DDL
   - Set up Tables and Run DB2 Migrate
 
 ## Day 3
-*	Best Practices on Performance Tuning and tools
-*	DSX & Spark
-*	Lab: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
-*	Roadmap & Q&A  
+* Best Practices on Performance Tuning and tools
+* DSX & Spark
+* Lab: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
+* Roadmap & Q&A  
 
 
 
