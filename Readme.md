@@ -7,7 +7,7 @@
   - Hardware
   - Platform
   - Software
-  - System Sizing/Expansion
+  - System Sizing and Expansion
 * Console and command line/Console Demo
 * Lab: [Console exploration](Labs/Admin/Admin.md)   ***Assumes live system access***
 * Monitoring
