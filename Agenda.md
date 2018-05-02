@@ -24,7 +24,7 @@
   - Interesting software things
 * Lab: Data Loading   
 *	Migration tooling
-* Lab Migration using tooling
+* [Lab Migration using tooling](Labs/MigrationTooling/Readme.md)
   - Harmony Profiler migrating a Netezza/PDA DDL
   - Set up Tables and Run DB2 Migrate
 
