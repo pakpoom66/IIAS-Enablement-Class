@@ -16,7 +16,7 @@ Based on availability, we will have access to and IBM Integrated Analytics Syste
 Db2Warehouse VM:  Guest VM requirements.   Virtual Box:   2 Cores and 8GB RAM
 * The VM image login ***username:*** sailfish ***password:*** ./.cshr1c.
 * The Local Db2 Warehouse database:
-  * ***username:*** bluadmin ***password:*** blueadmin
+  * ***username:*** bluadmin ***password:*** bluadmin
 
   * ***username:*** root ***password:*** sailfish
 
@@ -27,7 +27,7 @@ https://amazingkalam.bluedemos.skytapdns.com/dsx-admin/#/
 
 Lab artifacts are included in the vm as well an here on git.
 
-* [Migration Lab](./Labs/MigrationTooling/Readme.md)
-* [Create DB Objects Lab](./Labs/CreateDBObjects/Readme.md)
-* [Data Load Lab](./Labs/DataLoading/Readme.md)
-* [TestDoc Links](../Docs/01_SVLLabAccess.md)
+* [Migration Lab](Labs/MigrationTooling/Readme.md)
+* [Create DB Objects Lab](Labs/CreateDBObjects/Readme.md)
+* [Data Load Lab](Labs/DataLoading/Readme.md)
+* [TestDoc Links](Docs/01_SVLLabAccess.md)
