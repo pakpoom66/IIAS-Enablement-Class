@@ -8,7 +8,7 @@
 
 # Lab systems used during class
 
-Based on availability, we will have access to and IBM Integrated Analytics System for you to review for the administration labs and DSX lab.
+Based on availability, we will have access to and IBM Integrated Analytics System for you to review for the administration labs and DSX lab.   To gain access to the IIAS system, you will need to follow the steps in the [Partner Access Document](ExternalPartnerAccess.pdf).  If enrolled in a workshop, then follow teh 4 steps starting at the bottom of page 2.
 
 [IIAS Console](https://10.50.88.240:8443/console)
 

@@ -121,11 +121,11 @@ From the IIAS Db2 Warehouse Container command line create the four sets of table
       * `db2` command line processor
       * 3rd party tool [Aginity, DBeaver, etc]
 
-* [`dbload` DDL](Labs/DataLoading/bdi_DBLOAD.ddl)  
-* [`db2load` DDL](Labs/DataLoading/bdi_DB2LOAD.ddl)  
-* [`curload` DDL](Labs/DataLoading/bdi_CURLOAD.ddl)  
+* [`dbload` DDL](DataLoading/bdi_DBLOAD.ddl)  
+* [`db2load` DDL](DataLoading/bdi_DB2LOAD.ddl)  
+* [`curload` DDL](DataLoading/bdi_CURLOAD.ddl)  
 * CTAS will be done in the LOAD CTAS section
-* [`fedload` DDL](Labs/DataLoading/bdi_FEDLOAD.ddl)  
+* [`fedload` DDL](DataLoading/bdi_FEDLOAD.ddl)  
 
 > Note: If you use `dbsql` in the Db2 Warehouse container on the IIAS head node you can copy the DDL files located in `/scratch/home/lab/ddl` to your home directory as follows:
 
