@@ -11,7 +11,7 @@
 Based on availability, we will have access to and IBM Integrated Analytics System for you to review for the administration labs and DSX lab.
 
 [IIAS Console](https://10.50.88.240:8443/console)
-[IIAS DSX Console TBD](https://10.50.88.240:8444/)
+
 
 Db2Warehouse VM:  Guest VM requirements.   Virtual Box:   2 Cores and 8GB RAM
 * The VM image login ***username:*** sailfish ***password:*** ./.cshr1c.
