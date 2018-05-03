@@ -28,11 +28,17 @@ Phase 1 of the POC will be to migrate assess the compatibility of the schemas an
 
 In phase one, an assessment will be done to understand the scope of the effort.  As a guide, the [PDA to Db2 questionaire](./PDA2Db2Questionnairev3.pdf) is used by IBM Migration lab services to as much of the information needed to do a proper sizing.  We will focus on collecting the database information and the tools used to help expedite the database migration.  Other applications that access the migrated data will need to be updated and in some cases changed.  The tooling will assess what is in the ddl that will port without change, areas of the ddl that the tool can change and then areas of manual intervention.   This tool will not optimize the ddl for performance, just make it run.  Your expertise is used to optimize for performance.
 
+### Collect the needed information from the source Netezza system.
+***Note:*** In this case, we have run this for you and the result is located in `~/nz` on the VM.  Part of the information gathered will be .ddl files which are used with the Harmony Profiler.
+1. Open up the [Migration Asseesment document](./PDA2Db2Questionnairev3.pdf)
+1. Review the document to understand what you would need to collect to properly assess a migration. 
+1. Open up and review the [gather_nz_info.sh](./gather_nz_info.sh)  Understand what it collects for you.  The IBM Services teams use this to collect most technical data.  This script would be run on each system that was targetted for migration.
+1. You would scp the script to the target systems.
+1. You would ssh to the Netezza ssytem and execute the script.  It might need to be chmod +x after the copy.
+1. Review the output for of the files.  These are on the VM and the files are in `~/nz/tmp/nz/gather_nz_info`.  You will be using `extracted.BDI.dll` in the next step
+
 ### Evaluate the ddl
-1. Login to the vm using
-1. Execute the [gather_nz_info.sh](./gather_nz_info.sh) on the Netezza machine.  In this case we have run this for you and is located in `~/nz` on the VM.  Part of the information gathered will be .ddl files which are used with the Harmony Profiler.
-  1. Review the output for of the files.  These files are in `~/nz/tmp/nz/gather_nz_info`
-  1. Look at
+1. Login to the vm using Username: sailfish  Password: ./.cshr1c
 1. Start the Harmony Profiler.  
   1. Double click the ***db_harmony_profiler.sh*** desktop launcher.  This will start Harmony Profiler.
   	 ![Harmony Profiler](./images/HarmonyLaunch.png)
@@ -43,7 +49,6 @@ In phase one, an assessment will be done to understand the scope of the effort. 
   1. Select ***Db2 Warehouse*** for the **Target Database Brand**.
   1. Click on ***Check Compatibility***
    ![Harmony Profiler](./images/CheckCompat.png )
-
    ***Note:*** The Harmony Profiler can also be run from the command line.  Which you will see at the end.
   1. Review the findings by double clicking on the result.
   ![result](./images/LaunchReport.png)
@@ -115,41 +120,29 @@ Please migrate your assigned database to your assigned target schema, see assign
 
 1. Login into the Db2 Warehouse local container on your vm.
   1. Click the **Login as bludmin to Db2wh** desktop launcher.  This log you into the Db2 Warehouse container as ***bluadmin***.
-  ![bluadmin](./images/Bluadmin_login.png)
-
+   >![bluadmin](./images/Bluadmin_login.png)
   1. From the command prompt type `db_migrate -h`.
-   ![Harmony Profiler](./images/db_migrate.png)
-
+   >![Harmony Profiler](./images/db_migrate.png)
   1. Take note at the beginning of the output.  There are arguments that start with **s** some with **t**.  **s** stands for the **source** or in our case Netezza and **t** stands for **target** or in our case Db2 Warehouse/IIAS.  
-
     `db_migrate -sbd <Netezza database name> -tdb <Db2 Warehouse database name> -shost <hostanme> -thost <Db2 Warehouse host> -suser <remote DB username> -tuser bluadmin -spassword <remote DB username> -tpassword bluadmin`
-
   1.  For this lab, you need to run a few commands since we are running a none standard port and db_migrate is not properly working with `-sport` argument.  None fo this would be necessary if we were using an IIAS system.  So bare with this hack.
     1. When ever you start a Db2 Wh local container, it will re-secure any changes I make to sshd.  So for simplicity we will run the following.
     1. Start a terminal and log into the docker container for Db2 Warehouse.
-
         `$ docker exec -it Db2wh sh`
     1. Replace the sshd_config file
-
         `$ cp /mnt/clusterfs/scratch/workaround/sshd_config /etc/ssh/sshd_config`
     1. Restart the sshd.
-
         `$ service sshd restart`
     1. Map a route from the local machine to the remote Netezza machine mocking the default port.  Your instructor may give you a different `<hostname>:<port>` to plug in to the ssh command.
-
         `ssh -L 5480:services-uscentral.skytap.com:9053 root@localhost -p 50022`    
     1. It will prompt for a password.  `root@localhost's password:`  Enter `sailfish`
-
         ***Note:*** Ignore Errors from SSH command
-
           `"bind: Cannot assign requested address`
-
           Validate with `netstat -an | grep 5480`
     1. Now super user to bluadmin
         `su bluadmin`
     1. Run the db_migrate command to move the data over.
     `db_migrate -shost localhost  -cksum yes -loader extTab -threads 2 -sDB bdi -tDB bludb -sUser admin -tUser bluadmin -sPassword password -tPassword bluadmin -schema admin -tschema bdi`
-
     1. This command will run 10-30 minutes depending on RAM, Network CPU etc.  From IIAS to Netezza machine the average time is 10 minutes.  Since this is on a VM, your performance milages will vary.
     ![db_migrate output](./images/db_migrateLog.png)
 1.  While this is running, let's see what can be reviewed while `db_migrate` runs .  Go to the terminal where `db_mgrate` is running and scroll back up and cp the log directory.    
