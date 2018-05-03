@@ -3,28 +3,21 @@
 ## This will be the admin lab to explore the administration of IIAS.
 
 1. From the Virtual Machine, launch the Cisco VPN ![Cisco VPN](./images/cisco.png)
-
-  * Verify that `sccvpn.im-ies.ibm.com` is in the **Connect to:** Box
+  * Verify that `sccvpn.im-ies.ibm.com` is in the **Connect to:** box
   * Click **Connect** button.
-  ![Connect VPN](./images/vpnlogin.png)
+![Connect VPN](./images/vpnlogin.png)
   * Enter your VPN user id and password.  **Note:** If you do not have this id, follow the [partner access document](../../../PartnerAccess.md) 
- ![User ID and Password](./images/userpassword.png)
-    
+![User ID and Password](./images/userpassword.png)   
 1. From the Virtual Machine launch Firefox.
 1. Bookmarked you will find a link to https://10.50.88.240:8443/console  
-
-  ![IIAS Console](./images/launchConsole.png)
-  
+![IIAS Console](./images/launchConsole.png)
 1. Login with user/password provided by the instructor. If you are running this outside of class, use your id provided.
   *  Note: This interface is very similar to Db2 Warehouse and DSX Local, as they are all build with Data Server Manager as the admin UI.
-  
-   ![Login IIAS Console](./images/iiasLogin.png)
+![Login IIAS Console](./images/iiasLogin.png)
 
 ## Review the Dashboard
 1. Acrost the masthead: (from left to right)
-
-   ![Dashboard](./images/iiasdashboard.png)
-   
+![Dashboard](./images/iiasdashboard.png)
   * Click the Flag box in the upper left.  This is a menu.
   * Click **IBM Integrated Analytics System**  This will always bring you back to the main Dashboard page.
   * Click **Status**.  This gives you a finer grained overall status.
@@ -35,13 +28,9 @@
 1.  Below the masthead are tiles that you can drill down into to discover what is available and interesting.  ***Note:*** Each on can be drilled down into.
 1. Click the Menu and review each of topics in the menu.
   * Expanding `Monitor > System > Hardware`, note the picture of the machine and the warning areas are indicated on the graphic.  This is so someone servicing the system can tell where on the rack you are having an issue.
-  
   ![hardware](./images/hardware.png)
-    
 1. Here is a view on the **Monitor** options:
-
   ![monitoring](./images/monitor.png)
-  
 1. Here is a view of the databse administration. Here you can review the systems schemas, tables, priviledges, workloads, etc.
   
   ![administer](./images/administration.png)
