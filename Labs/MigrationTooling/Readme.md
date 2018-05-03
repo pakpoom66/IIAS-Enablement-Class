@@ -47,37 +47,37 @@ In phase one, an assessment will be done to understand the scope of the effort. 
   1. Browse to `~/nz/tmp/nz/gather_nz_info` and select all of the `extracted.BDI.dll` file.  If desired, review the others, but in this lab we are focused on BDI.
   1. Select ***PureData Systems for Analytics*** from the **Source Database Brand**   ***Note:*** you can also select ***Oracle***
   1. Select ***Db2 Warehouse*** for the **Target Database Brand**.
-  1. Click on ***Check Compatibility***
+1. Click on ***Check Compatibility***
    ![Harmony Profiler](./images/CheckCompat.png )
    ***Note:*** The Harmony Profiler can also be run from the command line.  Which you will see at the end.
-  1. Review the findings by double clicking on the result.
+1. Review the findings by double clicking on the result.
   ![result](./images/LaunchReport.png)
-  1. The HTML report will be launched showing the ***Summary*** page.
+1. The HTML report will be launched showing the ***Summary*** page.
   ![summary](./images/Summary.png)
-  1. Switch to the next tab that shows ***Automatically conversion available*** tab.  Expand the `+` sign to see more details.
+1. Switch to the next tab that shows ***Automatically conversion available*** tab.  Expand the `+` sign to see more details.
   ![auto convert](./images/autoConvert.png)
-  1. Switch to the ***Manual conversion needed*** tab.
+1. Switch to the ***Manual conversion needed*** tab.
   ![manual convert](images/manualConvert.png)
-  1. Switch to the ***Unrecognized Syntax*** tab
+1. Switch to the ***Unrecognized Syntax*** tab
     ![unrecognized syntax](./images/unrecognizedSyntax.png)
-  1. Switch to the ***Statistics*** tab.
+1. Switch to the ***Statistics*** tab.
    ![summary](./images/statistics.png)
 
-  ### Convert the ddl
-  Since reviewing the evaluation and all seems pretty clean, go ahead back to the tool.   
-  1. Click on ***Convert SQL***
-  ![convert SQL](./images/ConvertCode.png)
-  1. Double Click result to review converted ddl.
-  ![review SQL](./images/launchreportConvert.png)
-  1. Review the converted ddl. One thing to note in the conversion, the create database statement has be converted into a schema.  IBM Integrated Analytics System currently only has one database. When migrating use schemas for multiple databases.
+### Convert the ddl
+Since reviewing the evaluation and all seems pretty clean, go ahead back to the tool.   
+1. Click on ***Convert SQL***
+   ![convert SQL](./images/ConvertCode.png)
+1. Double Click result to review converted ddl.
+   ![review SQL](./images/launchreportConvert.png)
+1. Review the converted ddl. One thing to note in the conversion, the create database statement has be converted into a schema.  IBM Integrated Analytics System currently only has one database. When migrating use schemas for multiple databases.
    >![review SQL](./images/ReadContertedSQL.png)
-  1. The file is saved in the `~/nz/tmp/nz/gather_nz_info` directory as `extracted.BDI_converted.sql`.
+1. The file is saved in the `~/nz/tmp/nz/gather_nz_info` directory as `extracted.BDI_converted.sql`.
 
-  ### ***Optional:*** Excuting from the command line
-  1. `cd /home/sailfish/db_harmony`
-  1. `./db_harmony_profiler.sh -help |more` to find the options.
+### ***Optional:*** Excuting from the command line
+1. `cd /home/sailfish/db_harmony`
+1. `./db_harmony_profiler.sh -help |more` to find the options.
     ![Harmony Profiler Command Line](./images/HpConsoleHelp.png)
-  1. `./db_harmony_profiler.sh evaluate 6 <ddl or sql file>`
+1. `./db_harmony_profiler.sh evaluate 6 <ddl or sql file>`
 
   ### Cleaning up the converted ddl
   The Command line `dbsql -f <file name>` is more forgiving than the Db2 Warehouse console.  For this lab we are going to go the picky route.  In the Loading lab, the command line approach will be taken.   The console's Run SQL will not tolorate the following:
