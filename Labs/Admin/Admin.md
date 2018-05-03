@@ -6,10 +6,9 @@
 
   * Verify that `sccvpn.im-ies.ibm.com` is in the **Connect to:** Box
   * Click **Connect** button.
-    ![Connect VPN](./images/vpnlogin.png)
-  * Enter your VPN user id and password.  **Note:** If you do not have this id, follow the [partner access document](../../../PartnerAccess.md)
-  
-    ![User ID and Password](./images/userpassword.png)
+  ![Connect VPN](./images/vpnlogin.png)
+  * Enter your VPN user id and password.  **Note:** If you do not have this id, follow the [partner access document](../../../PartnerAccess.md) 
+ ![User ID and Password](./images/userpassword.png)
     
 1. From the Virtual Machine launch Firefox.
 1. Bookmarked you will find a link to https://10.50.88.240:8443/console  
