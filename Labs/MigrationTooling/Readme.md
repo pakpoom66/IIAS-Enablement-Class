@@ -143,7 +143,7 @@ Please migrate your assigned database to your assigned target schema, see assign
         `su bluadmin`
 1. Run the db_migrate command to move the data over.
     `db_migrate -shost localhost  -cksum yes -loader extTab -threads 2 -sDB bdi -tDB bludb -sUser admin -tUser bluadmin -sPassword password -tPassword bluadmin -schema admin -tschema bdi`
-1. This command will run 10-30 minutes depending on RAM, Network CPU etc.  From IIAS to Netezza machine the average time is 10 minutes.  Since this is on a VM, your performance milages will vary.
+1. This command will run 10-30 minutes depending on RAM, Network CPU etc.  From IIAS to Netezza machine the average time is 10 minutes.  Since this is on a VM, your performance mileage will vary.  You may want to -exclude SALE
     ![db_migrate output](./images/db_migrateLog.png)
 1.  While this is running, let's see what can be reviewed while `db_migrate` runs .  Go to the terminal where `db_mgrate` is running and scroll back up and cp the log directory.    
 1. Open a new terminal by launching `Login a Bluadmin`  or `$ docker exec -it Db2wh sh`
