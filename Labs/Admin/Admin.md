@@ -10,7 +10,7 @@
     >![User ID and Password](./images/userpassword.png)   
 1. From the Virtual Machine launch Firefox.
 1. Bookmarked you will find a link to https://10.50.88.240:8443/console  
->![IIAS Console](./images/launchConsole.png)
+    >![IIAS Console](./images/launchConsole.png)
 1. Login with user/password provided by the instructor. If you are running this outside of class, use your id provided.
   *  Note: This interface is very similar to Db2 Warehouse and DSX Local, as they are all build with Data Server Manager as the admin UI.
   >![Login IIAS Console](./images/iiasLogin.png)
