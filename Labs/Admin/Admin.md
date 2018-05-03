@@ -13,7 +13,7 @@
     ![IIAS Console](./images/launchConsole.png)
 1. Login with user/password provided by the instructor. If you are running this outside of class, use your id provided.
     * Note: This interface is very similar to Db2 Warehouse and DSX Local, as they are all build with Data Server Manager as the admin UI.
-     ![Login IIAS Console](./images/iiasLogin.png)
+     >![Login IIAS Console](./images/iiasLogin.png)
 
 ## Review the Dashboard
 1. Across the masthead: (from left to right)
