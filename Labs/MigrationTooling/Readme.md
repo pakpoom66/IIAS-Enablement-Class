@@ -154,12 +154,12 @@ Please migrate your assigned database to your assigned target schema, see assign
     1.  When a `.bad` file is dropped by the command, the matching `.log` file is where to start the investigation.
 
 Verify that your migrated rows match the rows in the source system.
-[NZ Table counts](./images/BDI_rowcounts.md )
+[NZ Table counts](./BDI_rowcounts.md )
 
 Compare the table sizes between the Netezza and IIAS.  On IIAS use the `db_size` script to get tables size information.
-[NZ Table sizes](./images/BDI_DBSize.md)
+[NZ Table sizes](./BDI_DBSize.md)
 
-[Sample migration script](./images/migrate.sh)
+[Sample migration script](./migrate.sh)
 
 Report any issues found during initial migration and correct all errors.
 
@@ -167,9 +167,9 @@ Did you have any tables fail during the db_migration?
 How many tables failed? Why?  
 How did you fix the failed tables?  
 
-Single table migration [migrate-table script](./images/migrate-table.sh) example.
+Single table migration [migrate-table script](./migrate-table.sh) example.
 
-If you want a peak at the answers, try this page. [Answer sheet](./images/Answers.md )
+If you want a peak at the answers, try this page. [Answer sheet](./Answers.md )
 
 
 ## Phase 2 of POC
