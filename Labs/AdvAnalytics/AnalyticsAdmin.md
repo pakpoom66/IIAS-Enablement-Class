@@ -89,3 +89,9 @@ This has been a high level overview of ***Data Platform Manager*** of Data Scien
 ![DSX dashboard](./images/DSX-Project-JupyterNotebookSample.png)
 
 ###  You just created a ***Hello World Project and Notebook***
+
+1. Lets clean up and delete the project.
+1. **Click** the elipse at the far right of the ***GoWorkshop*** project in the view all projects.
+![DSX dashboard](./images/DSX-ProjectDelete.png)
+
+### You have successfully completed this lab
