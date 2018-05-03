@@ -70,7 +70,7 @@ In phase one, an assessment will be done to understand the scope of the effort. 
   1. Double Click result to review converted ddl.
   ![review SQL](./images/launchreportConvert.png)
   1. Review the converted ddl. One thing to note in the conversion, the create database statement has be converted into a schema.  IBM Integrated Analytics System currently only has one database. When migrating use schemas for multiple databases.
-  ![review SQL](./images/ReadContertedSQL.png)
+   >![review SQL](./images/ReadContertedSQL.png)
   1. The file is saved in the `~/nz/tmp/nz/gather_nz_info` directory as `extracted.BDI_converted.sql`.
 
   ### ***Optional:*** Excuting from the command line
@@ -95,20 +95,20 @@ In phase one, an assessment will be done to understand the scope of the effort. 
   1. Next is to delete out everything from `/*` to `*/`.  In the earlier example using `vi` this would take 4 `dd` keystrokes for each instance.
   1. In the interest of time, the sql file has been cleaned for you.  `~/nz/tmp/nz/gather_nz_info/extracted.BDI_converted.cleaned.sql` This file will be opened in the Db2 Warehouse console and run as SQL.
   1. From the browser, click the ***Db2 Warehouse***
-    ![Launch DB2 WH console](./images/Db2whConsoleLaunch.png)
+     >![Launch DB2 WH console](./images/Db2whConsoleLaunch.png)
   1. Login in as `bluadmin/blueadmin`.  It could be pre-saved for you.  
   1.  Click on the 3 green bars at the upper left.  Then click ***Run SQL***.
-  ![run SQL](./images/runSql.png)
+     >![run SQL](./images/runSql.png)
   1. Click ***Script*** then ***Open from client***
-  ![load SQL](./images/OpenClient.png)
+     >![load SQL](./images/OpenClient.png)
   1. Select ***Browse*** then select `~/nz/tmp/nz/gather_nz_info/extracted.BDI_converted.cleaned.sql` file and click ***Open***.
-  ![open SQL](./images/loadsql.png)
+     >![open SQL](./images/loadsql.png)
   1. Review the imported SQL, then click ***Run All***
-  ![Run SQL](./images/runall.png)
+     >![Run SQL](./images/runall.png)
   1. Review the results.  Notice that there were no failures.  
-  ![Run SQL](./images/success.png)
+    >![Run SQL](./images/success.png)
   1. If there were you can investigate on the panel to the right.  The execution time, action and results are easily accessible from this panel.
-  ![results SQL](./images/logresults.png)
+  > ![results SQL](./images/logresults.png)
 
 Schema and tables are all created.  Next step is to migrate the data from Netezza to Db2 Wareshouse.   
 
@@ -119,13 +119,13 @@ Utilize the `db_migrate` script available in the Db2 Warehouse client container 
 Please migrate your assigned database to your assigned target schema, see assignments above.
 
 1. Login into the Db2 Warehouse local container on your vm.
-  1. Click the **Login as bludmin to Db2wh** desktop launcher.  This log you into the Db2 Warehouse container as ***bluadmin***.
+    1. Click the **Login as bludmin to Db2wh** desktop launcher.  This log you into the Db2 Warehouse container as ***bluadmin***.
    >![bluadmin](./images/Bluadmin_login.png)
-  1. From the command prompt type `db_migrate -h`.
+    1. From the command prompt type `db_migrate -h`.
    >![Harmony Profiler](./images/db_migrate.png)
-  1. Take note at the beginning of the output.  There are arguments that start with **s** some with **t**.  **s** stands for the **source** or in our case Netezza and **t** stands for **target** or in our case Db2 Warehouse/IIAS.  
+    1. Take note at the beginning of the output.  There are arguments that start with **s** some with **t**.  **s** stands for the **source** or in our case Netezza and **t** stands for **target** or in our case Db2 Warehouse/IIAS.  
     `db_migrate -sbd <Netezza database name> -tdb <Db2 Warehouse database name> -shost <hostanme> -thost <Db2 Warehouse host> -suser <remote DB username> -tuser bluadmin -spassword <remote DB username> -tpassword bluadmin`
-  1.  For this lab, you need to run a few commands since we are running a none standard port and db_migrate is not properly working with `-sport` argument.  None fo this would be necessary if we were using an IIAS system.  So bare with this hack.
+    1.  For this lab, you need to run a few commands since we are running a none standard port and db_migrate is not properly working with `-sport` argument.  None fo this would be necessary if we were using an IIAS system.  So bare with this hack.
     1. When ever you start a Db2 Wh local container, it will re-secure any changes I make to sshd.  So for simplicity we will run the following.
     1. Start a terminal and log into the docker container for Db2 Warehouse.
         `$ docker exec -it Db2wh sh`
@@ -148,10 +148,10 @@ Please migrate your assigned database to your assigned target schema, see assign
 1.  While this is running, let's see what can be reviewed while `db_migrate` runs .  Go to the terminal where `db_mgrate` is running and scroll back up and cp the log directory.    
 1. Open a new terminal by launching `Login a Bluadmin`  or `$ docker exec -it Db2wh sh`
 1. Change directories to the log directory and execute a list of the files.
-  1. `db_migrate.output` is essentially the console output, so there is no need to direct this to a file.
-  1. The log files will change as tables are being migrated over.
-  1. if you see any with `.bad` at the end, then you will have some investigating to do.
-  1.  When a `.bad` file is dropped by the command, the matching `.log` file is where to start the investigation.
+    1. `db_migrate.output` is essentially the console output, so there is no need to direct this to a file.
+    1. The log files will change as tables are being migrated over.
+    1. if you see any with `.bad` at the end, then you will have some investigating to do.
+    1.  When a `.bad` file is dropped by the command, the matching `.log` file is where to start the investigation.
 
 Verify that your migrated rows match the rows in the source system.
 [NZ Table counts](./images/BDI_rowcounts.md )
