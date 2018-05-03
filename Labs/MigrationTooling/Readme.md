@@ -119,15 +119,15 @@ Utilize the `db_migrate` script available in the Db2 Warehouse client container 
 Please migrate your assigned database to your assigned target schema, see assignments above.
 
 1. Login into the Db2 Warehouse local container on your vm.
-    1. Click the **Login as bludmin to Db2wh** desktop launcher.  This log you into the Db2 Warehouse container as ***bluadmin***.
+1. Click the **Login as bludmin to Db2wh** desktop launcher.  This log you into the Db2 Warehouse container as ***bluadmin***.
    >![bluadmin](./images/Bluadmin_login.png)
-    1. From the command prompt type `db_migrate -h`.
+1. From the command prompt type `db_migrate -h`.
    >![Harmony Profiler](./images/db_migrate.png)
-    1. Take note at the beginning of the output.  There are arguments that start with **s** some with **t**.  **s** stands for the **source** or in our case Netezza and **t** stands for **target** or in our case Db2 Warehouse/IIAS.  
+1. Take note at the beginning of the output.  There are arguments that start with **s** some with **t**.  **s** stands for the **source** or in our case Netezza and **t** stands for **target** or in our case Db2 Warehouse/IIAS.  
     `db_migrate -sbd <Netezza database name> -tdb <Db2 Warehouse database name> -shost <hostanme> -thost <Db2 Warehouse host> -suser <remote DB username> -tuser bluadmin -spassword <remote DB username> -tpassword bluadmin`
-    1.  For this lab, you need to run a few commands since we are running a none standard port and db_migrate is not properly working with `-sport` argument.  None fo this would be necessary if we were using an IIAS system.  So bare with this hack.
-    1. When ever you start a Db2 Wh local container, it will re-secure any changes I make to sshd.  So for simplicity we will run the following.
-    1. Start a terminal and log into the docker container for Db2 Warehouse.
+1.  For this lab, you need to run a few commands since we are running a none standard port and db_migrate is not properly working with `-sport` argument.  None fo this would be necessary if we were using an IIAS system.  So bare with this hack.
+1. When ever you start a Db2 Wh local container, it will re-secure any changes I make to sshd.  So for simplicity we will run the following.
+1. Start a terminal and log into the docker container for Db2 Warehouse.
         `$ docker exec -it Db2wh sh`
     1. Replace the sshd_config file
         `$ cp /mnt/clusterfs/scratch/workaround/sshd_config /etc/ssh/sshd_config`
@@ -139,11 +139,11 @@ Please migrate your assigned database to your assigned target schema, see assign
         ***Note:*** Ignore Errors from SSH command
           `"bind: Cannot assign requested address`
           Validate with `netstat -an | grep 5480`
-    1. Now super user to bluadmin
+1. Now super user to bluadmin
         `su bluadmin`
-    1. Run the db_migrate command to move the data over.
+1. Run the db_migrate command to move the data over.
     `db_migrate -shost localhost  -cksum yes -loader extTab -threads 2 -sDB bdi -tDB bludb -sUser admin -tUser bluadmin -sPassword password -tPassword bluadmin -schema admin -tschema bdi`
-    1. This command will run 10-30 minutes depending on RAM, Network CPU etc.  From IIAS to Netezza machine the average time is 10 minutes.  Since this is on a VM, your performance milages will vary.
+1. This command will run 10-30 minutes depending on RAM, Network CPU etc.  From IIAS to Netezza machine the average time is 10 minutes.  Since this is on a VM, your performance milages will vary.
     ![db_migrate output](./images/db_migrateLog.png)
 1.  While this is running, let's see what can be reviewed while `db_migrate` runs .  Go to the terminal where `db_mgrate` is running and scroll back up and cp the log directory.    
 1. Open a new terminal by launching `Login a Bluadmin`  or `$ docker exec -it Db2wh sh`
