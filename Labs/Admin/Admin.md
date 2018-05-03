@@ -25,7 +25,7 @@
     * Clicking **Discover** will give you guided tour of the admin console
     * Clicking the **?** provides online help
     * Clicking the **book** at the far right gives you the documents for the system
-1.  Below the masthead are tiles that you can drill down into to discover what is available and interesting.  ***Note:*** Each on can be drilled down into.
+1.  Below the masthead are tiles that you can drill down into to discover what is available and interesting.  ***Note:*** Each one can be drilled down into.
 1. Click the Menu and review each of topics in the menu.
     * Expanding `Monitor > System > Hardware`, note the picture of the machine and the warning areas are indicated on the graphic.  This is so someone servicing the system can tell where on the rack you are having an issue.
      >![hardware](./images/hardware.png)
