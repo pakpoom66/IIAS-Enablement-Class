@@ -44,7 +44,7 @@ This day is about performance tuning  and tools as well as an introduction to Da
 
   There are desktop icons on this Ubuntu image that will Start/Stop and exec Db2 Warehouse, Db2 Client and Harmony Profile.  All of these launchers are bash scripts located in ~/scripts directory.
 
-  In the Db2Wh container are all the ddl and sql scripts needed to execute the labs.
+  In the Db2Wh container are all the ddl and sql scripts needed to execute the labs.  
 
 # Lab systems used during class
 
