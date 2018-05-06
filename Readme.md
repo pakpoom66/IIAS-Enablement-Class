@@ -1,5 +1,6 @@
 # Workshop Agenda
 ## Day 1   
+This day is an overview of the system: What it is, how to administrate and monitor.
 * Kick off
 * Intro and Data Warehousing positioning
 * Overview/Architecture
@@ -14,6 +15,7 @@
   - Individual Query (explain plans)
 
 ## Day 2
+This day is migration of tools, methods and understand of activities during a proof of concept.
 * Data Movement
   - Etl, Loading Methods and Utils, load rate and Best Practices
 * Data Update/Delete
@@ -28,6 +30,7 @@
   - Set up Tables and Run DB2 Migrate
 
 ## Day 3
+This day is about performance tuning  and tools as well as an introduction to Data Science.
 * Best Practices on Performance Tuning and tools
 * DSX & Spark
 * Lab: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***

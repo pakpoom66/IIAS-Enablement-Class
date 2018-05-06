@@ -46,7 +46,9 @@ We will perform the following types of loads: `dbload`, `Db2 LOAD`, `Db2 LOAD FR
 
 ## Lab Overview
 
-For this lab ,you will load data from inside the Db2 Warehouse container.   Now to load data into the BDI tables that you will create under your user default schema, so no need to prepend a schema name.  If IIAS, then create using the ID schema [`teamXX`].  You will have three sets of BDI tables to load, the tables will have the following extension added to the their name: `_DBLOAD`, `_DB2LOAD`, `_CURLOAD`, `_CTAS` and `FEDLOAD`.
+For this lab, you will load data from inside the Db2 Warehouse container.   
+  * **[Default Workshop]** If you are running this against Db2 Warehouse Local on the VM, you will create under your user default schema, so no need to prepend a schema name.  
+  * If you are running this against a live IIAS, then create using the ID schema [`teamXX`].  You will have three sets of BDI tables to load, the tables will have the following extension added to the their name: `_DBLOAD`, `_DB2LOAD`, `_CURLOAD`, `_CTAS` and `FEDLOAD`.
 
 Example for base table `CALL_CENTER` the following extension is added to the name:  
 ```
