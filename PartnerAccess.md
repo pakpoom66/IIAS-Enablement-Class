@@ -18,6 +18,7 @@ If you get an invalid email address message, your company’s access to the part
    >![RegComplete](./images/RegComplete.png)
 ***Note:*** If you get an error please copy and paste a screen shot into an email and send to askbpe@us.ibm.com so we can help address the issue.
 1. Click the think to ensure that you can log in to download the Cisco VPN client.  the VPN will be preinstalled for you during the workshop.  But this verifies that you can get access to the IBM Integrated Analytics System use in the workshop.
+
 https://sccvpn.im-ies.ibm.com/+CSCOE+/logon.html#form_title_text
 
 ## Changing Password or reset
