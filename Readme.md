@@ -34,7 +34,6 @@ This day is about performance tuning  and tools as well as an introduction to Da
 * Best Practices on Performance Tuning and tools
 * DSX & Spark
 * Lab: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
-* Roadmap & Q&A  
 
 
 
