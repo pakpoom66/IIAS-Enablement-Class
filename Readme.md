@@ -7,7 +7,7 @@ This day is an overview of the system: What it is, how to administrate and monit
   - Hardware
   - Platform
   - Software
-  - System Sizing/Expansion (TBD)
+  - System Sizing/Expansion
 * Console and command line/Console Demo
   * Lab: [Console exploration](Labs/Admin/Admin.md)     ***Assumes live system access***
 * Monitoring
