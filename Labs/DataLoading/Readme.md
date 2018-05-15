@@ -178,7 +178,7 @@ cd labs/load
 
       ```
       cd
-      cd lab/ddl/
+      cd labs/data
       db2 -tvf bdi_DBLOAD.ddl   
       db2 -tvf bdi_DB2LOAD.ddl  
       db2 -tvf bdi_CURLOAD.ddl  
