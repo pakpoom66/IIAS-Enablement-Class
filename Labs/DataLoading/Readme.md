@@ -2,7 +2,8 @@
 
 The typical scenario in a POC is that the customer will provide you data (files) to be loaded.  Prior to having the customer dump the entire dataset, request sample rows (1,000-10,000) for all the tables that you will load in the POC.  This will allow you to identify any potential issues with the generated load files.
 
-The data files have been prepared for you and are located in `/scratch/home/lab/data`.  The data files used in this lab do not include the schema as part of the the file name.  This was done for this lab to have one set of data files that all teams use to load.  In a customer POC it is recommended that data files names include the schema as part of the data file name. Example: `BDIPOC.CALL_CENTER.del`.  This will make scripting easier.
+The data files have been prepared for you and are located in `/scratch/home/lab/data` on Sailfish but on VM is  `/mnt/blumeta0/home/bluadminlabs/load/data`
+.  The data files used in this lab do not include the schema as part of the the file name.  This was done for this lab to have one set of data files that all teams use to load.  In a customer POC it is recommended that data files names include the schema as part of the data file name. Example: `BDIPOC.CALL_CENTER.del`.  This will make scripting easier.
 
 We will perform the following types of loads: `dbload`, `Db2 LOAD`, `Db2 LOAD FROM CURSOR`, `CREATE TABLE AS SELECT...` (CTAS) and Federation.  You are likely to use these load options/methods during a POC depending on your goal for the data loading.  
 
@@ -208,7 +209,7 @@ cd labs/load
 
 Load the data files into the Db2 tables defined with the `_DBLOAD` extension.  Utilize the `dbload` utility available in the Db2 Warehouse container.
 
-Data file directory: `/scratch/home/lab/data`  
+Data file directory: `/mnt/blumeta0/home/bluadmin/labs/load/data`  
 
 You can access help by typing `dbload -h`.
 
@@ -218,9 +219,9 @@ You can access help by typing `dbload -h`.
 
       ```
       cd  
-      mkdir -p lab/load  
+      mkdir -p labs/load  
       cd lab/load  
-      cp /scratch/home/lab/load/bdi_DBLOAD.sh ./  
+      cp /mnt/blumeta0/home/bluadmin/labs/load/bdi_DBLOAD.sh ./  
       ./bdi_DBLOAD.sh | tee bdi_DBLOAD.out  
       ```
 
