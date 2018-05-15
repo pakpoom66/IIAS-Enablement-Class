@@ -132,11 +132,7 @@ From the IIAS Db2 Warehouse Container command line create the four sets of table
 > Note: If you use `dbsql` in the Db2 Warehouse container on the IIAS head node you can copy the DDL files located in `/scratch/home/lab/ddl` to your home directory as follows:
 
 ```
-cd
-mkdir -p lab/ddl
-cd lab/ddl
-cp /scratch/home/lab/ddl/*.ddl ./
-ls ./
+cd labs/load
 ```
 
 ##### Option 1: Use `dbsql` to create the tables:
@@ -145,7 +141,7 @@ ls ./
 
       ```
       cd
-      cd lab/ddl/
+      cd labs/load/
       dbsql -schema <teamXX> -f bdi_DBLOAD.ddl
       dbsql -schema <teamXX> -f bdi_DB2LOAD.ddl
       dbsql -schema <teamXX> -f bdi_CURLOAD.ddl  
