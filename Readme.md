@@ -34,6 +34,7 @@ This day is about performance tuning  and tools as well as an introduction to Da
 * Best Practices on Performance Tuning and tools
 * DSX & Spark
 * Lab: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
+* Lab: [Jupyter Notebook and Machine Learning](https://cloudcontent.mybluemix.net/cloud/garage/tutorials/high-powered-analytics-appliance?task=3)
 
 
 
