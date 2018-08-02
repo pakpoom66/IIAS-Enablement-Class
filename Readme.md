@@ -2,37 +2,36 @@
 ## Day 1   
 This day is an overview of the system: What it is, how to administrate and monitor.
 * Kick off
-* Intro and Data Warehousing positioning
 * Overview/Architecture
-  - Hardware
-  - Platform
-  - Software
-  - System Sizing/Expansion
+* Lab: [Console exploration](Labs/Admin/Admin.md)     ***Assumes live system access***
 * Console and command line/Console Demo
   * Lab: [Console exploration](Labs/Admin/Admin.md)     ***Assumes live system access***
 * Monitoring
   - Overall System
   - Individual Query (explain plans)
+* Lab: Your DB2 Wh lab for a drill down into Administer part of IIAS admin (VM)
+* Lab: Command line processor (VM)
 
 ## Day 2
 This day is migration of tools, methods and understand of activities during a proof of concept.
-* Data Movement
-  - Etl, Loading Methods and Utils, load rate and Best Practices
-* Data Update/Delete
+* Understanding the IIAS data engine - BLU
   - Data structures (what happens when data is updated/deleted)
   - Groom/Compression/Stats/Reclaim
   - Security.
   - Interesting software things
+* The tools to move Data
+  - Etl, Loading Methods and Utils, load rate and Best Practices
+* Lab: Data Loading (VM)
+* Performance tuning
 * Lab: [Data Loading](Labs/DataLoading/Readme.md)   
-* Migration tooling
+* Migration Gotchas/best practices
 * Lab: [Migration using tooling](Labs/MigrationTooling/Readme.md)
   - Harmony Profiler migrating a Netezza/PDA DDL
   - Set up Tables and Run DB2 Migrate
 
 ## Day 3
 This day is about performance tuning  and tools as well as an introduction to Data Science.
-* Best Practices on Performance Tuning and tools
-* DSX & Spark
+* Spark, Livey/Spark/ Watson Studio
 * Lab: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
 * Lab: [Jupyter Notebook and Machine Learning](https://cloudcontent.mybluemix.net/cloud/garage/tutorials/high-powered-analytics-appliance?task=3)
 
