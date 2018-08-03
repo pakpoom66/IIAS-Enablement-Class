@@ -17,13 +17,10 @@ This day is migration of tools, methods and understand of activities during a pr
 * Understanding the IIAS data engine - BLU
   - Data structures (what happens when data is updated/deleted)
   - Groom/Compression/Stats/Reclaim
-  - Security.
-  - Interesting software things
 * Understanding Data Layout
-* The tools to move Data
+* Tools to move Data
   - Etl, Loading Methods and Utils, load rate and Best Practices
-* Lab: Data Loading (VM)
-* Lab: [Data Loading](Labs/DataLoading/Readme.md)  
+* Lab: [Data Loading](Labs/DataLoading/Readme.md)  (VM)
 * Performance tuning
 * Migration Gotchas/best practices
 * Lab: [Migration using tooling](Labs/MigrationTooling/Readme.md)
