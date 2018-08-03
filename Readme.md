@@ -3,14 +3,14 @@
 This day is an overview of the system: What it is, how to administrate and monitor.
 * Kick off
 * Overview/Architecture
+* Admin Overview
 * Lab: [Console exploration](Labs/Admin/Admin.md)     ***Assumes live system access***
-* Console and command line/Console Demo
-  * Lab: [Console exploration](Labs/Admin/Admin.md)     ***Assumes live system access***
 * Monitoring
   - Overall System
   - Individual Query (explain plans)
-* Lab: Your DB2 Wh lab for a drill down into Administer part of IIAS admin (VM)
-* Lab: Command line processor (VM)
+* Db2 Admin Overview
+* Lab: Db2 Warehouse Administration as part of IIAS  (VM)
+* Lab: Db2 Warehouse Command line processor (VM)
 
 ## Day 2
 This day is migration of tools, methods and understand of activities during a proof of concept.
@@ -19,11 +19,12 @@ This day is migration of tools, methods and understand of activities during a pr
   - Groom/Compression/Stats/Reclaim
   - Security.
   - Interesting software things
+* Understanding Data Layout
 * The tools to move Data
   - Etl, Loading Methods and Utils, load rate and Best Practices
 * Lab: Data Loading (VM)
+* Lab: [Data Loading](Labs/DataLoading/Readme.md)  
 * Performance tuning
-* Lab: [Data Loading](Labs/DataLoading/Readme.md)   
 * Migration Gotchas/best practices
 * Lab: [Migration using tooling](Labs/MigrationTooling/Readme.md)
   - Harmony Profiler migrating a Netezza/PDA DDL
