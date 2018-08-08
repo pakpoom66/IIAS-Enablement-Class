@@ -9,7 +9,7 @@ This day is an overview of the system: What it is, how to administrate and monit
   - Overall System
   - Individual Query (explain plans)
 * Db2 Admin Overview
-* Lab: Db2 Warehouse Administration as part of IIAS  (VM)
+* Lab: [Db2 Warehouse Administration as part of IIAS](Labs/Db2Console/Db2W_IIAS_Web_Console.md)  (VM)
 * Lab: Db2 Warehouse Command line processor (VM)
 
 ## Day 2
