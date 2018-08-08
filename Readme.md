@@ -9,8 +9,8 @@ This day is an overview of the system: What it is, how to administrate and monit
   - Overall System
   - Individual Query (explain plans)
 * Db2 Admin Overview
-* Lab: [Db2 Warehouse Administration as part of IIAS](Labs/db2Console/Db2W_IIAS_Web_Console.md) (VM)
-* Lab: [Db2 Warehouse Command line processor](Labs/db2cmd/Db2W_Cmd_Line.md) (VM)
+* Lab: [Administration as part of IIAS](Labs/db2Console/Db2W_IIAS_Web_Console.md) (VM)
+* Lab: [Command line processor](Labs/db2cmd/Db2W_Cmd_Line.md) (VM)
 
 ## Day 2
 This day is migration of tools, methods and understand of activities during a proof of concept.
@@ -63,8 +63,10 @@ DSX Workshop available
 
 Lab instructions are included in the vm as well an here on git.
 
-* [Migration Lab](Labs/MigrationTooling/Readme.md)
-* [Create DB Objects Lab](Labs/CreateDBObjects/Readme.md)
-* [Data Load Lab](Labs/DataLoading/Readme.md)
-* [Administration Lab](Labs/Admin/Admin.md)
-* [DSX User Experience Lab](Labs/AdvAnalytics/AnalyticsAdmin.md)
+* [Migration Lab](Labs/MigrationTooling/Readme.md) (VM)
+* [Administration as part of IIAS](Labs/db2Console/Db2W_IIAS_Web_Console.md) (VM)
+* [Command line processor](Labs/db2cmd/Db2W_Cmd_Line.md) (VM)
+* [Create DB Objects Lab](Labs/CreateDBObjects/Readme.md) (VM)
+* [Data Load Lab](Labs/DataLoading/Readme.md) (VM)
+* [Administration Lab](Labs/Admin/Admin.md)  (IIAS system)
+* [DSX User Experience Lab](Labs/AdvAnalytics/AnalyticsAdmin.md) (IIAS system)
