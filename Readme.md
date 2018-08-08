@@ -23,7 +23,7 @@ This day is migration of tools, methods and understand of activities during a pr
 * Lab: [Data Loading](Labs/DataLoading/Readme.md)  (VM)
 * Performance tuning
 * Migration Gotchas/best practices
-* Lab: [Migration using tooling](Labs/MigrationTooling/Readme.md)
+* Lab: [Migration using tooling](Labs/MigrationTooling/Readme.md) (VM)
   - Harmony Profiler migrating a Netezza/PDA DDL
   - Set up Tables and Run DB2 Migrate
 
