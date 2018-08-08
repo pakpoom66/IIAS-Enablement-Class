@@ -96,13 +96,13 @@ Create a table from the with dbsql command line tool
 ----------------------------------------------------
 
 1.  Access the SQL files from a terminal session
-    ~~~
-    cd ~
 
-    cd labs/sql/ddl
+    `cd ~`
 
-    ls -l
-    ~~~
+    `cd labs/sql/ddl`
+
+    `ls -l`
+
     ![](./media/image8.png)
 
 2.  To use the dbsql tool you can set the environment variables for the dbtool kit by adding the following into your .bashrc file. This has already been done for you. This allows you to run dbsql without providing the hostname, database, user and password.
@@ -121,19 +121,19 @@ Create a table from the with dbsql command line tool
     ~~~
 3.  Get dbsql help
 
-    > dbsql –h
+   `dbsql –h`
 
     ![](./media/image9.png)
 
 4.  Create the table EMP_EXPENSE_FACT table with dbsql
 
-    > dbsql -f POT.EMP_EXPENSE_FACT.sql
+    `dbsql -f POT.EMP_EXPENSE_FACT.sql`
 
     ![](./media/image10.png)
 
 5.  Let’s put some data into the table.
 
-    > dbsql -c "insert into pot.emp_expense_fact select * from gosalesdw.emp_expense_fact"
+    `dbsql -c "insert into pot.emp_expense_fact select * from gosalesdw.emp_expense_fact"`
 
     ![](./media/image11.png)
 
@@ -196,13 +196,13 @@ Before you can run a query, you must connect to the database by typing connect t
 
 -   Run a query in the db2clp:
 
-> select \* from emp\_expense\_fact fetch first 10 rows only;.
+ `select * from emp_expense_fact fetch first 10 rows only;`
 
 To exit from the db2clp interactive mode type **quit**.
 
 Next, let's use the db2clp in the file input mode. At the Linux prompt connect to the BLUDB database by typing:
 
->   db2 connect to bludb
+  `db2 connect to bludb`
 
 ***Note:*** This will establish a persistent connection to the database and all subsequent commands will run against that database until you disconnect from the database.
 
@@ -240,25 +240,25 @@ Let's get an explain plan for one of the queries by following these steps:
 
 Execute a query in explain mode to capture the explain information:
 
-> db2 -tvf q1.sql
+  `db2 -tvf q1.sql`
 
 Now format the explain output:
 
-> db2exfmt -d bludb -1 -o q1-explain.out
+  `db2exfmt -d bludb -1 -o q1-explain.out`
 
 View the explain:
 
-> less q1-explain.out
+  `less q1-explain.out`
 
 ***Note:*** for the less command use the space bar to page through the output, enter key to advance one line at a time and q to quit
 
 Disconnect from the database by typing:
 
-> db2 connect reset
+ `db2 connect reset`
 
 Terminate you db2clp back-end process by typing:
 
-> db2 terminate
+ `db2 terminate`
 
 Congratulations
 ---------------

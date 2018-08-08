@@ -155,7 +155,7 @@ Login as the New Web Console User
 
 3.  User name: potuser01
 
-    -   Password: Potuser01\_123 (Note: password is case sensitive)
+    -   Password: Potuser01_123 (Note: password is case sensitive)
 
     -   Click on the **Sign in** button
 

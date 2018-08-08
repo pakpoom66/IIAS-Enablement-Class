@@ -1,373 +1,337 @@
-# Load / Data Movement Lab  
 
-The typical scenario in a POC is that the customer will provide you data (files) to be loaded.  Prior to having the customer dump the entire dataset, request sample rows (1,000-10,000) for all the tables that you will load in the POC.  This will allow you to identify any potential issues with the generated load files.
 
-The data files have been prepared for you and are located in `/scratch/home/lab/data` on Sailfish but on VM is  `/mnt/blumeta0/home/bluadminlabs/load/data`
-.  The data files used in this lab do not include the schema as part of the the file name.  This was done for this lab to have one set of data files that all teams use to load.  In a customer POC it is recommended that data files names include the schema as part of the data file name. Example: `BDIPOC.CALL_CENTER.del`.  This will make scripting easier.
+Overview
+========
 
-We will perform the following types of loads: `dbload`, `Db2 LOAD`, `Db2 LOAD FROM CURSOR`, `CREATE TABLE AS SELECT...` (CTAS) and Federation.  You are likely to use these load options/methods during a POC depending on your goal for the data loading.  
+IBM Db2 Warehouse is a software-defined data warehouse for private and virtual clouds that support Docker container technology. It is client managed and optimized for fast and flexible deployment with automated scaling to meet agile analytic workloads. Fusing IBM Db2 BLU and Netezza technologies, Db2 Warehouse offers cloud elasticity combined with the simplicity of a software appliance. It is supported on variety of platforms such as Intel x86, Power and Linux on z and IBM Integrated Analytics System. Db2 Warehouse can also be deployed on IBM Cloud Private platform, IBM Cloud, or any virtual private cloud such as AWS, Microsoft Azure and more.
 
-   1.  `dbload` (BEST PERFORMANCE)
-   1.  `Db2 LOAD` (BEST COMPRESSION)
-   1.  `Db2 LOAD FROM CURSOR` (BEST COMPRESSION for Copying data within the cluster and outside the cluster)
-   1. `CREATE TABLE AS SELECT...` (Netezza CTAS Style)
-   1.  Federation (Ease of data movement - slowest performing and poorest compression)
+Introduction
+============
 
+Db2 Warehouse is a best-of-breed of database technology that is available in the many deployment form-factors. It combines BLU acceleration with analytical capabilities of Netezza to facilitate analytics for data warehouse. In this Proof-of-Technology, you will learn how to interact with Db2 Warehouse, create tables, load data and query data for exploration. You will also learn how migrated an existing Netezza database into Db2 Warehouse.
 
-## Table and Data Information
 
-| schema | table | file name | records | size |
-|---|---|---|---:|---:|
-|  TEAMXX  |  CALL_CENTER  |  CALL_CENTER.del  |  15  |  6.7K  |
-|  TEAMXX  |  CATALOG_PAGE  |  CATALOG_PAGE.del  |  11,844  |  1.7M  |
-|  TEAMXX  |  CATALOG_RETURNS  |  CATALOG_RETURNS.del  |  720,174  |  126M  |
-|  TEAMXX  |  CATALOG_SALES  |  CATALOG_SALES.del  |  71,99,490  |  1.7G  |
-|  TEAMXX  |  CUSTOMER  |  CUSTOMER.del  |  277,001  |  53M  |
-|  TEAMXX  |  CUSTOMER_ADDRESS  |  CUSTOMER_ADDRESS.del  |  138,001  |  23M  |
-|  TEAMXX  |  CUSTOMER_DEMOGRAPHICS  |  CUSTOMER_DEMOGRAPHICS.del  |  1,920,801  |  115M  |
-|  TEAMXX  |  DATE_DIM  |  DATE_DIM.del  |  73,050  |  12M  |
-|  TEAMXX  |  HOUSEHOLD_DEMOGRAPHICS  |  HOUSEHOLD_DEMOGRAPHICS.del  |  7,201  |  208K  |
-|  TEAMXX  |  INCOME_BAND  |  INCOME_BAND.del  |  21  |  314  |
-|  TEAMXX  |  INVENTORY  |  INVENTORY.del  |  49,329,000  |  920M  |
-|  TEAMXX  |  ITEM  |  ITEM.del  |  54,001  |  22M  |
-|  TEAMXX  |  PROMOTION  |  PROMOTION.del  |  389  |  82K  |
-|  TEAMXX  |  REASON  |  REASON.del  |  40  |  4.9K  |
-|  TEAMXX  |  SHIP_MODE  |  SHIP_MODE.del  |  21  |  2.4K  |
-|  TEAMXX  |  STORE  |  STORE.del  |  53  |  18K  |
-|  TEAMXX  |  STORE_RETURNS  |  STORE_RETURNS.del  |  1,437,911  |  203M  |
-|  TEAMXX  |  STORE_SALES  |  STORE_SALES.del  |  14,400,052  |  2.4G  |
-|  TEAMXX  |  TIME_DIM  |  TIME_DIM.del  |  86,401  |  9.4M  |
-|  TEAMXX  |  WAREHOUSE  |  WAREHOUSE.del  |  8  |  1.4K  |
-|  TEAMXX  |  WEB_PAGE  |  WEB_PAGE.del  |  122  |  18K  |
-|  TEAMXX  |  WEB_RETURNS  |  WEB_RETURNS.del  |  359,991  |  60M  |
-|  TEAMXX  |  WEB_SALES  |  WEB_SALES.del  |  3,599,503  |  864M  |
-|  TEAMXX  |  WEB_SITE  |  WEB_SITE.del  |  35  |  14K  |
+Lab 3: Db2 Warehouse Loading Data
+=================================
 
+Lab Objectives
+---------------
 
+In this section, you will interface with Db2 Warehouse using the command line to load data into tables. You will create four sets of tables and load them using different load methods
 
-## Lab Overview
+You will use the Virtual Machine (VM) provided to perform the exercises below. Inside the Ubuntu VM you are running the Db2 Warehouse software running as a Docker Container.
 
-For this lab, you will load data from inside the Db2 Warehouse container.   
-  * **[Default Workshop]** If you are running this against Db2 Warehouse Local on the VM, you will create under your user default schema, so no need to prepend a schema name.  
-  * If you are running this against a live IIAS, then create using the ID schema [`teamXX`].  You will have three sets of BDI tables to load, the tables will have the following extension added to the their name: `_DBLOAD`, `_DB2LOAD`, `_CURLOAD`, `_CTAS` and `FEDLOAD`.
+> VM User ID: sailfish
+>
+> VM User PW: passw0rd
 
-Example for base table `CALL_CENTER` the following extension is added to the name:  
-```
-TEAMXX.CALL_CENTER_DBLOAD
-TEAMXX.CALL_CENTER_DB2LOAD
-TEAMXX.CALL_CENTER_CURLOAD
-TEAMXX.CALL_CENTER_CTASLOAD
-TEAMXX.CALL_CENTER_FEDLOAD
-```
+Db2 Warehouse Overview
+----------------------
 
-This lab will be performed from the command line inside the Db2 Warehouse container. On the IBM Integrated Analytics System  this would be performed inside the Db2 Warehouse container on the master node.  You can run any of the SQL statements from another tool  if you wish.  However, there are several bash scripts that need to be run from the Db2 Warehouse container.
+Db2® Warehouse is an analytics data warehouse that you deploy by using a Docker container. Db2 Warehouse provides control over data and applications but simple deployment and management. The product offers in-memory BLU processing technology and in-database analytics, plus scalability and performance through the MPP architecture. Db2 Warehouse also provides Oracle and Netezza® compatibility.
 
+You can deploy Db2 Warehouse in a wide range of environments, from a basic laptop (our PoT environment) for development and training purposes, all the way to a large production cluster. You can choose either a single-node (SMP) deployment (our lab) or a multi-node (MPP) deployment. (On Windows and Mac, only SMP deployments are supported.) An MPP deployment has a minimum of three nodes and a maximum of either 24 or 60 nodes. The maximum depends on the number of data partitions that were allocated when you deployed.
 
-### Access the IIAS Db2 Warehouse container command line.
+The containerization technology that Db2 Warehouse uses makes deployment fast and simple. Deployment typically requires fewer than 30 minutes for an MPP cluster and significantly less for SMP. Usually, only one or two commands are required to download and initialize the image. As you can see in Figure 1, the Db2 Warehouse container is lightweight because it doesn’t contain a guest operating system or a hypervisor, as with a VM. The Db2 Warehouse software stack is isolated in its own container, but you can use your existing infrastructure and cloud management or monitoring tools.
 
-#### Using the VM
-* Use the launcher on the desktop that is labeled `Login in as bluadmin to Db2wh`. This will open you up to a shell inside the VM's Db2 Warehouse container as bluadmin.
+*Figure 1: Architecture for Db2 Warehouse.*
 
+![](./media/image4.png)
 
-#### If connecting to an actual IIAS System:
+IBM® provides two editions of Db2 Warehouse:
 
-Following these steps to access the Db2 Warehouse command line (Linux command line).  
+-   Db2 Warehouse Enterprise Edition. This is the warranted edition of Db2 Warehouse. You can use this edition in production environments, and it supports both SMP and MPP deployments. It comes with a 90-day trial license so that you can try before buying.
 
-* Open a `Terminal` on Mac OS or Linux: `ssh teamXX@<VIP> -p 50022`  
-  * VIP: `<virtual IP provided by instructor>`
-  * User ID: `teamXX`
-  * Password: `<password-provided-by-instructor>`
-    > Replace `XX` with your assigned team number  
+-   Db2 Warehouse Developer Edition. You can use this edition to try out features in your development and test environments; this edition is not intended for production use and is for SMP environments only. This edition is unwarranted and does not come with official IBM support, but you can post questions to the community forum. This edition has a non-expiring free license.
 
-* Open `PuTTY` on Windows and enter the following information and click `*Open*`:  
-  * Host Name (or IP address): Virtual IP provided by instructor
-  * Port: `50022`
-  * Connection type: `SSH`
-  * Saved Session (Optional): `node0101`
-  When prompted:  
-  * User ID: `teamXX`
-  * Password: `<password-provided-by-instructor>`
-    > Replace `XX` with your assigned team number  
+> In this Lab Db2 Warehouse has been set up for you. Details on deploying Db2 Warehouse can be found here: <https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.doc/admin/local_setup.html>
 
+Access the VM Desktop Environment
+---------------------------------
 
-### Set up the dbtoolkit environment variables
+1.  Login to VM Desktop:
 
-To reduce the number of parameters needed for the dbtoolkit utilities you can set environment variables.
+> VM User ID: sailfish
+>
+> VM User PW: passw0rd
 
-Add the following to your user ID's `.bashrc` file and source the file `source ~/.bashrc` to shorten the `dbsql` command.
+ ![](./media/image5.png)
 
-   ```
-   echo "export DB_HOST=<your-VIP>" >> ~/.bashrc  
-   echo "export DB_DATABASE=BLUDB" >> ~/.bashrc  
-   echo "export DB_USER=<`teamXX`>" >> ~/.bashrc  
-   echo "export DB_PASSWORD=<your-password>" >> ~/.bashrc  
-   ```
 
-   Source the `.bashrc` file or logout and login.
+**The VM Desktop**
 
-   `source ~/.bashrc`
+ For this Lab shortcuts are available on the VM desktop to start/stop, command line, status command line tools. By double clicking these shortcuts you perform the function detailed in the image.
 
-   > Note: These environment variables will be set for all future logins of `teamXX`.  With these variables set you do not need to provide the host, database, user ID or password to any of the dbtoolkit utilities such as `dbsql` or `dbload`.
+ ![](./media/image6.png)
 
+Get the Db2 Warehouse Status
+----------------------------
 
-### Create the tables needed for the lab.
+1.  Get the status of the Db2 Warehouse Docker Container by double-clicking the “Status Db2 Warehouse” icon on the desktop. A terminal window will open and display the status. ![](./media/image7.png)
 
-From the IIAS Db2 Warehouse Container command line create the four sets of tables using either the dbtoolkit utility `dbsql` or the db2 command line processor - `db2`.
+> All Services should be RUNNING as shown above. If a service isn’t running double click the **Stop Db2 Warehouse** icon. Then click the **Start Db2 Warehouse** icon. Wait a few minutes and then Click the “Status Db2 Warehouse” icon.
+>
+> Note: if you are working in the IBM Integrated Analytics System environment appliance commands are used the perform these operations from the host operating system such as apstart and apstop.
+>
+> More details available here: <https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.iias.admin.doc/doc/appl_apcmds.html>
 
+Perform database operations from the command line.
+==================================================
 
-#### Copy each of the `DDL` files into seperate files inside the Db2 Warehouse container (Linux OS) or into a SQL tool of your choice and execute the `DDL`:
+In this section, you will use the command line to perform typical database administrator functions. The command line is a fully functioning Linux environment that can be used for scripting and other common tasks.
 
-> Tools:
+Access the command line.
+------------------------
 
-      * IIAS /Db2 Warehouse Console (`Run SQL`)
-      * `dbsql` command line
-      * `db2` command line processor
-      * 3rd party tool [Aginity, DBeaver, etc]
+1.  On the VM desktop, double click on the shortcut link **Login as** **bluadmin to Db2wh**. This shortcut will open a terminal session connected to the IIAS Db2 Warehouse container, where you will have access to Linux and database commands line tools.
 
-* [`dbload` DDL](./bdi_DBLOAD.ddl)  
-* [`db2load` DDL](./bdi_DB2LOAD.ddl)  
-* [`curload` DDL](./bdi_CURLOAD.ddl)  
-* CTAS will be done in the LOAD CTAS section
-* [`fedload` DDL](./bdi_FEDLOAD.ddl)  
+> Note: you can also ssh to directly access to the Db2 Warehouse container. In the IBM Intergrated Analytics system ssh is the primary method to access the command line tools.
+>
+> Example: ssh potuser01@&lt;VIP&gt; -p 50022
+>
+> As you can see you are now logged into the Db2 Warehouse container which is a Linux-based OS container with all the appropriate Db2 tools to interact with the database.
 
-> Note: If you use `dbsql` in the Db2 Warehouse container on the IIAS head node you can copy the DDL files located in `/scratch/home/lab/ddl` to your home directory as follows:
+Db2 Load Using the Command Line
+-------------------------------
 
-```
-cd labs/load
-```
+The data files have been prepared for you and are located in `~bluadmin/lab/data` on inside the Db2 Warehouse container on the VM.
 
-##### Option 1: Use `dbsql` to create the tables:
+We will perform the following types of loads: dbload, Db2 LOAD, Db2 LOAD FROM CURSOR and CREATE TABLE AS SELECT... (CTAS. You are likely to use these load options/methods during a POC depending on your goal for the data loading.
 
-   1. Process the DDL files via the `dbsql`  
+1.  dbload (BEST PERFORMANCE)
 
-      ```
-      cd
-      cd labs/load/
-      dbsql -schema <teamXX> -f bdi_DBLOAD.ddl
-      dbsql -schema <teamXX> -f bdi_DB2LOAD.ddl
-      dbsql -schema <teamXX> -f bdi_CURLOAD.ddl  
-      dbsql -schema <teamXX> -f bdi_FEDLOAD.ddl
-      ```
+2.  Db2 LOAD (BEST COMPRESSION)
 
-      > Your schema is `teamXX`, where `XX` is your assigned team number.  
+3.  Db2 LOAD FROM CURSOR (BEST COMPRESSION for Copying data within the cluster and outside the cluster)
 
-      > Note: dbtoolkit will use the environment variables (`DB_HOST`, `DB_DATABASE`, `DB_USER`, `DB_PASSWORD` ) if options not specified at command line.
+4.  CREATE TABLE AS SELECT... (Netezza CTAS Style)
 
-      > *`dbsql` Long version*, options override environment variables.  
-      `dbsql -host <hostname/VIP> -d bludb -u <teamXX> -pw <your-password> -schema <teamXX> -f <ddlfile>`  
+Table and Data Information
+--------------------------
 
-   1. List the created tables  
+  **schema**  |  **table**  |               **file name**  |               **records**  | **size**
+  ------------ |------------------------- | ----------------------------- | ------------- | ----------
+  BLUADMIN |  CALL_CENTER | CALL_CENTER.del |             15  |  6.7K
+  BLUADMIN |  CATALOG_PAGE | CATALOG_PAGE.del  |   11,844   |   1.7M
+  BLUADMIN |   CATALOG_RETURNS |         CATALOG_RETURNS.del   |  720,174  |   126M
+  BLUADMIN |   CATALOG_SALES  |   CATALOG_SALES.del    |  71,99,490  |   1.7G
+  BLUADMIN |   CUSTOMER    |  CUSTOMER.del |    277,001   |    53M
+  BLUADMIN |   CUSTOMER_ADDRESS |        CUSTOMER_ADDRESS.del |  138,001 |  23M
+  BLUADMIN |   CUSTOMER_DEMOGRAPHICS  |  CUSTOMER_DEMOGRAPHICS.del |   1,920,801  |   115M
+  BLUADMIN |  DATE_DIM | DATE_DIM.del  |  73,050 | 12M
+  BLUADMIN |  HOUSEHOLD_DEMOGRAPHICS |  HOUSEHOLD_DEMOGRAPHICS.del |  7,201   | 208K
+  BLUADMIN |  INCOME_BAND |  INCOME_BAND.del |             21  |   314
+  BLUADMIN |  INVENTORY |  INVENTORY.del |                49,329,000  |  920M
+  BLUADMIN |   ITEM |   ITEM.del |                      54,001   |     22M
+  BLUADMIN |     PROMOTION   |              PROMOTION.del |                389    |       82K
+  BLUADMIN |     REASON  |                  REASON.del  |                  40     |       4.9K
+  BLUADMIN |     SHIP_MODE    |            SHIP_MODE.del     |           21  |          2.4K
+  BLUADMIN |     STORE   |                  STORE.del     |                53     |       18K
+  BLUADMIN |     STORE_RETURNS  |          STORE_RETURNS.del   |         1,437,911 |    203M
+  BLUADMIN |     STORE_SALES  |            STORE_SALES.del   |           14,400,052  |  2.4G
+  BLUADMIN |     TIME_DIM |                 TIME_DIM.del     |            86,401  |      9.4M
+  BLUADMIN |     WAREHOUSE  |               WAREHOUSE.del     |            8    |         1.4K
+  BLUADMIN |     WEB_PAGE                 WEB_PAGE.del  |               122   |        18K
+  BLUADMIN |     WEB_RETURNS  |            WEB_RETURNS.del     |         359,991  |     60M
+  BLUADMIN |     WEB_SALES    |            WEB_SALES.del    |            3,599,503  |   864M
+  BLUADMIN |     WEB_SITE  |               WE_SITE.del       |          35    |        14K
 
-      ```
-      dbsql -schema <teamXX> -c "\d" |grep _DBLOAD  
-      dbsql -schema <teamXX> -c "\d" |grep _DB2LOAD  
-      dbsql -schema <teamXX> -c "\d" |grep _CURLOAD  
-      dbsql -schema <teamXX> -c "\d" |grep _FEDLOAD  
-      ```
 
-      > Note: Your schema is `teamXX`, where `XX` is your assigned team number.
+In this section, you will interface with Db2 Warehouse using the Command Line tools. You will create and load tables.
 
-##### Option 2: Use `db2clp` to create the tables:
+Access the Db2 Warehouse Container Command Line
+-----------------------------------------------
 
-   1. Connect to the database  
+You will use the Virtual Machine (VM) provided to perform the exercises below. Inside the Ubuntu VM you are running the Db2 Warehouse software running as a Docker Container.
 
-      `db2 connect to bludb`
+> VM User ID: sailfish
+>
+> VM User PW: passw0rd
 
-      > Note: this connect persists until `db2 connect reset` or `db2 terminate` executed.
+Use the launcher on the desktop that is labeled **Login in as bluadmin to Db2wh**. This will open you up to a shell inside the VM’s Db2 Warehouse container as **bluadmin**.
 
-   1. Process the DDL files via the `db2clp`  
+Create the tables needed for the lab.
+-------------------------------------
 
-      ```
-      cd
-      cd labs/data
-      db2 -tvf bdi_DBLOAD.ddl   
-      db2 -tvf bdi_DB2LOAD.ddl  
-      db2 -tvf bdi_CURLOAD.ddl  
-      db2 -tvf bdi_FEDLOAD.ddl  
-      ```
+From the Db2 Warehouse Container command line create the four sets of tables using dbsql.
 
-   1. List the created tables  
+1.  `cd`
 
-      ```
-      db2 list tables for schema <teamXX> |grep _DBLOAD  
-      db2 list tables for schema <teamXX> |grep _DB2LOAD  
-      db2 list tables for schema <teamXX> |grep _CURLOAD  
-      db2 list tables for schema <teamXX> |grep _FEBLOAD  
-      ```
+2.  `cd ./labs/sql/ddl`
 
-      > Note: Your schema is `teamX`, where `XX` is your assigned team number.
+3.  `ls –l`
 
-   1. Reset the Db2 Connection  
+4.  `dbsql -f bdi_CURSOR.sql`
 
-      `db2 connect reset`  
+    ![](./media/image8.png)
 
-   1. Terminate the Db2 Connection  
+5.  Repeat step 4 for the other DDL files.
 
-      `db2 terminate`
+    -   `dbsql -f bdi_Db2.sql`
 
-### Load using `dbload`
+    -   `dbsql -f bdi_EXTTBL.sql`
 
-Load the data files into the Db2 tables defined with the `_DBLOAD` extension.  Utilize the `dbload` utility available in the Db2 Warehouse container.
+        bdi_CURSOR.sql -&gt; Db2 LOAD utility using a CURSOR SELECT data from an existing table.
 
-Data file directory: `/mnt/blumeta0/home/bluadmin/labs/load/data`  
+        bdi\_Db2.sql -&gt; Db2 LOAD utility from a CSV file
 
-You can access help by typing `dbload -h`.
+        bdi\_EXTTBL.sql -&gt; dbload utility utilizing EXTERNAL TABLES
 
-#### Load the BDI `_DBLOAD` tables as follows:  
+6.  List the tables:
 
-   1. Use the load script to load the tables for `_DBLOAD`:
+-   `dbsql -schema bluadmin -c "\d" |grep _DBLOAD`
 
-      ```
-      cd  
-      mkdir -p labs/load  
-      cd lab/load  
-      cp /mnt/blumeta0/home/bluadmin/labs/load/bdi_DBLOAD.sh ./  
-      ./bdi_DBLOAD.sh | tee bdi_DBLOAD.out  
-      ```
+-   `dbsql -schema bluadmin -c "\d" |grep _DB2LOAD`
 
-      > Note: after the load completes you can review the output:  
+-   `dbsql -schema bluadmin -c "\d" |grep _CURLOAD`
 
-      `less bdi_DBLOAD.out`
+Load scripts
+------------
 
-   1. Verify loaded records for each `_DBLOAD` table:
+From the Db2 Warehouse Container command line load the four sets of tables using the scripts provided. Examine the script to see how the tables are loaded. Change to the load scripts directory.
 
-      ```
-      cd  
-      cd lab/load  
-      cp /scratch/home/lab/load/verify_DBLOAD.sql ./  
-      db2 connect to bludb  
-      db2 -xf verify_DBLOAD.sql |grep errors  
-      ```
+1.  `cd`
 
-   1. Check compression after data loads:
+2.  `cd ./labs/load`
 
-      ```
-      cd  
-      cd lab/load  
-      cp /scratch/home/lab/load/compr_DBLOAD.sql ./  
-      db2 connect to bludb  
-      db2 -tf compr_DBLOAD.sql  
-      ```
+3.  `ls -l`
 
-### Load using Db2 `LOAD`
+4.  `cat Db2W.env`
 
-Load the data files into the Db2 tables defined with the `_DB2LOAD` extension.  Utilize the Db2 `LOAD` utility available in the Db2 Warehouse container.
+    ![](./media/image9.png)
 
-Data file directory: `/scratch/home/lab/data`  
+Load tables
+-----------
 
-You can access help by typing `db2 load ?`.
+Load the four sets of tables using the following scripts:
 
-#### Load the BDI `_DB2LOAD` tables as follows:  
+1.  dbload (BEST PERFORMANCE)
 
+    -   `./load_EXTTBL.sh | tee load_EXTBL.out`
 
-   1. Use the load script to load the tables for `_DB2LOAD`:
+2.  Db2 LOAD (BEST COMPRESSION)
 
-      ```
-      cd  
-      mkdir -p lab/load  
-      cd lab/load  
-      cp /scratch/home/lab/load/bdi_DB2LOAD.sh ./  
-      ./bdi_DB2LOAD.sh | tee bdi_DB2LOAD.out  
-      ```
+    -   `./load_Db2.sh | tee load_Db2.out`
 
-      > Note: after the load completes you can review the output:  
+3.  Db2 LOAD FROM CURSOR (BEST COMPRESSION for Copying data within the cluster and outside the cluster)
 
-      `less bdi_DB2LOAD.out`
+    -   `./load_CURSOR.sh | tee load_CURSOR.out`
 
-   1. Verify loaded records for each `_DB2LOAD` table:
+4.  CREATE TABLE AS SELECT... (Netezza CTAS Style)
 
-      ```
-      cd  
-      cd lab/load  
-      cp /scratch/home/lab/load/verify_DB2LOAD.sql ./  
-      db2 connect to bludb  
-      db2 -xf verify_DB2LOAD.sql |grep errors  
-      ```
+    -   `./load_CTAS.sh | tee load_CTAS.out`
 
-   1. Check compression after data loads:
+    -   List the CTAS tables:
 
-      ```
-      cd  
-      cd lab/load  
-      cp /scratch/home/lab/load/compr_DB2LOAD.sql ./  
-      db2 connect to bludb  
-      db2 -tf compr_DB2LOAD.sql  
-      ```
+        -   `dbsql -schema bluadmin -c "\d" |grep _CTAS`
 
-### Load using Db2 `LOAD FROM CURSOR`
+Verify data loads
+-----------------
 
-For the following exercise to work you must have loaded all the tables with the `_DBLOAD` extension.  The `CURSOR` pulls the data from the `_DBLOAD` tables.
+Verify the four sets of tables loaded using the following scripts:
 
-   1. Use the load script to load the tables for `_CURLOAD`:
+1.  `db2 connect to bludb`
 
-      ```
-      cd  
-      mkdir -p lab/load  
-      cd lab/load  
-      cp /scratch/home/lab/load/bdi_CURLOAD.sh ./  
-      chmod +x bdi_CURLOAD.sh  
-      ./bdi_CURLOAD.sh | tee bdi_CURLOAD.out  
-      ```
+2.  dbload (BEST PERFORMANCE)
 
-      > Note: after the load completes you can review the output:  
+    -   `db2 –tvf ./verify_EXTTBL.sql | tee verify\_EXTBL.out`
 
-      `less bdi_CURLOAD.out`
+3.  Db2 LOAD (BEST COMPRESSION)
 
-   1. Verify loaded records for each `_CURLOAD` table:
+    -   `db2 –tvf ./verify_Db2.sql | tee verify_Db2.out`
 
-      ```
-      cd  
-      cd lab/load  
-      cp /scratch/home/lab/load/verify_CURLOAD.sql ./  
-      db2 connect to bludb  
-      db2 -xf verify_CURLOAD.sql |grep errors  
-      ```
+4.  Db2 LOAD FROM CURSOR (BEST COMPRESSION for Copying data within the cluster and outside the cluster)
 
-   1. Check compression after data loads:
+    -   `db2 –tvf ./verify_CURSOR.sql | tee verify_CURSOR.out`
 
-      ```
-      cd  
-      cd lab/load  
-      cp /scratch/home/lab/load/compr_CURLOAD.sql ./  
-      db2 connect to bludb  
-      db2 -tf compr_CURLOAD.sql  
-      ```
+5.  CREATE TABLE AS SELECT... (Netezza CTAS Style)
 
-### Load using `CREATE TABLE AS...`(CTAS)
+    -   `db2 –tvf ./verify_CTAS.sql | tee verify_CTAS.out`
 
-For the following exercise to work you must have loaded all the tables with the `_DBLOAD` extension.  The `CTAS` pulls the data from the `_DBLOAD` tables.
+Congratulations
+---------------
 
-   1. Use the load script to load the tables for `_CTASLOAD`:
+You have completed the tutorial for IBM Integrated Analytics System.
 
-      ```
-      cd  
-      mkdir -p lab/load  
-      cd lab/load  
-      cp /scratch/home/lab/load/bdi_CTASLOAD.sql ./    
-      db2 connect to bludb  
-      db2 -tvf bdi_CTASLOAD.sql | tee bdi_CTASLOAD.out  
-      ```
+Notices
+=======
 
-      > Note: after the load completes you can review the output:  
+This information was developed for products and services offered in the U.S.A.
 
-      `less bdi_CTASLOAD.out`
+IBM may not offer the products, services, or features discussed in this document in other countries. Consult your local IBM representative for information on the products and services currently available in your area. Any reference to an IBM product, program, or service is not intended to state or imply that only that IBM product, program, or service may be used. Any functionally equivalent product, program, or service that does not infringe any IBM intellectual property right may be used instead. However, it is the user's responsibility to evaluate and verify the operation of any non-IBM product, program, or service.
 
-   1. Verify loaded records for each `_CTASLOAD` table:
+IBM may have patents or pending patent applications covering subject matter described in this document. The furnishing of this document does not grant you any license to these patents. You can send license inquiries, in writing, to:
 
-      ```
-      cd  
-      cd lab/load  
-      cp /scratch/home/lab/load/verify_CTASLOAD.sql ./  
-      db2 connect to bludb  
-      db2 -xf verify_CTASLOAD.sql |grep errors  
-      ```
+IBM Director of Licensing\
+IBM Corporation\
+North Castle Drive\
+Armonk, NY 10504-1785\
+USA
 
-   1. Check compression after data loads:
+For license inquiries regarding double-byte (DBCS) information, contact the IBM Intellectual Property Department in your country or send inquiries, in writing, to:
 
-      ```
-      cd  
-      cd lab/load  
-      cp /scratch/home/lab/load/compr_CTASLOAD.sql ./  
-      db2 connect to bludb  
-      db2 -tf compr_CTASLOAD.sql  
-      ```
+IBM World Trade Asia Corporation\
+Licensing\
+2-31 Roppongi 3-chome, Minato-ku\
+Tokyo 106-0032, Japan
+
+**The following paragraph does not apply to the United Kingdom or any other country where such provisions are inconsistent with local law:** INTERNATIONAL BUSINESS MACHINES CORPORATION PROVIDES THIS PUBLICATION "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. Some states do not allow disclaimer of express or implied warranties in certain transactions, therefore, this statement may not apply to you.
+
+This information could include technical inaccuracies or typographical errors. Changes are periodically made to the information herein; these changes will be incorporated in new editions of the publication. IBM may make improvements and/or changes in the product(s) and/or the program(s) described in this publication at any time without notice.
+
+Any references in this information to non-IBM web sites are provided for convenience only and do not in any manner serve as an endorsement of those web sites. The materials at those Web sites are not part of the materials for this IBM product and use of those web sites is at your own risk.
+
+IBM may use or distribute any of the information you supply in any way it believes appropriate without incurring any obligation to you.
+
+Any performance data contained herein was determined in a controlled environment. Therefore, the results obtained in other operating environments may vary significantly. Some measurements may have been made on development-level systems and there is no guarantee that these measurements will be the same on generally available systems. Furthermore, some measurements may have been estimated through extrapolation. Actual results may vary. Users of this document should verify the applicable data for their specific environment.
+
+Information concerning non-IBM products was obtained from the suppliers of those products, their published announcements or other publicly available sources. IBM has not tested those products and cannot confirm the accuracy of performance, compatibility or any other claims related to non-IBM products. Questions on the capabilities of non-IBM products should be addressed to the suppliers of those products.
+
+All statements regarding IBM's future direction and intent are subject to change or withdrawal without notice, and represent goals and objectives only.
+
+This information contains examples of data and reports used in daily business operations. To illustrate them as completely as possible, the examples include the names of individuals, companies, brands, and products. All of these names are fictitious and any similarity to the names and addresses used by an actual business enterprise is entirely coincidental. All references to fictitious companies or individuals are used for illustration purposes only.
+
+COPYRIGHT LICENSE:
+
+This information contains sample application programs in source language, which illustrate programming techniques on various operating platforms. You may copy, modify, and distribute these sample programs in any form without payment to IBM, for the purposes of developing, using, marketing or distributing application programs conforming to the application programming interface for the operating platform for which the sample programs are written. These examples have not been thoroughly tested under all conditions. IBM, therefore, cannot guarantee or imply reliability, serviceability, or function of these programs.
+
+Trademarks and copyrights
+=========================
+
+The following terms are trademarks of International Business Machines Corporation in the United States, other countries, or both:
+
+IBM IBM logo 1-2-3 AIX DB2 IMS
+
+Lotus Cloudant Sametime IBM Data Studio DCW
+
+Adobe, the Adobe logo, PostScript, and the PostScript logo are either registered trademarks or trademarks of Adobe Systems Incorporated in the United States, and/or other countries.
+
+IT Infrastructure Library is a registered trademark of the Central Computer and Telecommunications Agency which is now part of the Office of Government Commerce.
+
+Intel, Intel logo, Intel Inside, Intel Inside logo, Intel Centrino, Intel Centrino logo, Celeron, Intel Xeon, Intel SpeedStep, Itanium, and Pentium are trademarks or registered trademarks of Intel Corporation or its subsidiaries in the United States and other countries.
+
+Linux is a registered trademark of Linus Torvalds in the United States, other countries, or both.
+
+Microsoft, Windows, Windows NT, and the Windows logo are trademarks of Microsoft Corporation in the United States, other countries, or both.
+
+Oracle is a registered trademark of Oracle Corporation and/or its affiliates.
+
+ITIL is a registered trademark, and a registered community trademark of The Minister for the Cabinet Office, and is registered in the U.S. Patent and Trademark Office.
+
+UNIX is a registered trademark of The Open Group in the United States and other countries.
+
+Java and all Java-based trademarks and logos are trademarks or registered trademarks of Oracle and/or its affiliates.
+
+Cell Broadband Engine is a trademark of Sony Computer Entertainment, Inc. in the United States, other countries, or both and is used under license therefrom.
+
+Linear Tape-Open, LTO, the LTO Logo, Ultrium, and the Ultrium logo are trademarks of HP, IBM Corp. and Quantum in the U.S. and other countries.
+
+![IBM-600dpi-1](./media/image10.png)
+
+© Copyright IBM Corporation 2017.
+
+The information contained in these materials is provided for informational purposes only, and is provided AS IS without warranty of any kind, express or implied. IBM shall not be responsible for any damages arising out of the use of, or otherwise related to, these materials. Nothing contained in these materials is intended to, nor shall have the effect of, creating any warranties or representations from IBM or its suppliers or licensors, or altering the terms and conditions of the applicable license agreement governing the use of IBM software. References in these materials to IBM products, programs, or services do not imply that they will be available in all countries in which IBM operates. This information is based on current IBM product plans and strategy, which are subject to change by IBM without notice. Product release dates and/or capabilities referenced in these materials may change at any time at IBM’s sole discretion based on market opportunities or other factors, and are not intended to be a commitment to future product or feature availability in any way.
+
+IBM, the IBM logo and ibm.com are trademarks of International Business Machines Corp., registered in many jurisdictions worldwide. Other product and service names might be trademarks of IBM or other companies. A current list of IBM trademarks is available on the web at “Copyright and trademark information” at www.ibm.com/legal/copytrade.shtml.
+
+![Please Recycle](./media/image11.png)
