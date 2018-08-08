@@ -61,7 +61,7 @@ Access the VM Desktop Environment
 >
 > For this Lab shortcuts are available on the VM desktop to start/stop, command line, status command line tools. By double clicking these shortcuts you perform the function detailed in the image.
 >
-> ![](./media/image6.emf)
+> ![](./media/image6.png)
 
 Get the Db2 Warehouse Status
 ----------------------------
