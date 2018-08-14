@@ -140,12 +140,12 @@ Create a table from the with dbsql command line tool
 6.  Type dbsql to enter interactive more and try the following commands:
   ~~~
   set schema POT;
-   ?
-   dt
-   d EMP_EXMPENSE_FACT
+   \?
+   \dt
+   \d EMP_EXMPENSE_FACT
    select count(*) from POT.EMP_EXPENSE_FACT;
    select * from POT.EMP_EXPENSE_FACT;
-   q
+   \q
    ~~~
 
 1.  Query tables in BDI schema from command line.
@@ -192,7 +192,7 @@ Starting Db2 command line processor
 
 -   To get help for reading help screens type ? HELP.
 
-Before you can run a query, you must connect to the database by typing connect to bludb.
+Before you can run a query, you must connect to the database by typing `db2 connect to bludb`.
 
 -   Run a query in the db2clp:
 
