@@ -77,7 +77,7 @@ Get the Db2 Warehouse Status
 Add POT folder to Desktop
 -------------------------
 1. Right click and download the following zip file. <a href="PoT.zip" download>Click to Download</a>
-1. Extract this to `/home/sailfish`
+1. Extract this to `/home/sailfish/Desktop`
 
 Sign-in to the Web Console
 --------------------------
