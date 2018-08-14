@@ -135,7 +135,7 @@ Please migrate your assigned database to your assigned target schema, see assign
         `$ service sshd restart`
     1. Map a route from the local machine to the remote Netezza machine mocking the default port.  Your instructor may give you a different `<hostname>:<port>` to plug in to the ssh command.
         `ssh -L 5480:services-uscentral.skytap.com:9053 root@localhost -p 50022`    
-    1. It will prompt for a password.  `root@localhost's password:`  Enter `sailfish`
+    1. It will prompt for a password.  `root@localhost's password:`  Enter `passw0rd`
         ***Note:*** Ignore Errors from SSH command
           `"bind: Cannot assign requested address`
           Validate with `netstat -an | grep 5480`
