@@ -123,7 +123,7 @@ Create a table from the with dbsql command line tool
 
    `dbsql –h`
 
-    ![](./media/image9.png)
+   ![](./media/image9.png)
 
 4.  Create the table EMP_EXPENSE_FACT table with dbsql
 
