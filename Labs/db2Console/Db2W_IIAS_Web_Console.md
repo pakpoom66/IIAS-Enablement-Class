@@ -74,6 +74,11 @@ Get the Db2 Warehouse Status
 >
 > More details available here: <https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.iias.admin.doc/doc/appl_apcmds.html>
 
+Add POT folder to Desktop
+-------------------------
+1. Right click and download the following zip file. <a href="PoT.zip" download>Click to Download</a>
+1. Extract this to `/home/sailfish`
+
 Sign-in to the Web Console
 --------------------------
 
