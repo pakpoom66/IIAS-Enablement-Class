@@ -8,7 +8,7 @@ This day is an overview of the system: What it is, how to administrate and monit
 * Monitoring
   - Overall System
   - Individual Query (explain plans)
-* Db2 Admin Overview
+* Data Warehouse Admin Overview
 * Lab: [Administration as part of IIAS](Labs/db2Console/Db2W_IIAS_Web_Console.md) (VM)
 * Lab: [Command line processor](Labs/db2cmd/Db2W_Cmd_Line.md) (VM)
 
@@ -25,7 +25,7 @@ This day is migration of tools, methods and understand of activities during a pr
 * Migration Gotchas/best practices
 * Lab: [Migration using tooling](Labs/MigrationTooling/Readme.md) (VM)
   - Harmony Profiler migrating a Netezza/PDA DDL
-  - Set up Tables and Run DB2 Migrate
+  - Set up Tables and Run db_migrate
 
 ## Day 3
 This day is about performance tuning  and tools as well as an introduction to Data Science.
