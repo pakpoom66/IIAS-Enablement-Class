@@ -234,7 +234,7 @@ Verify the four sets of tables loaded using the following scripts:
 
 2.  dbload (BEST PERFORMANCE)
 
-    -   `db2 –tvf ./verify_EXTTBL.sql | tee verify\_EXTBL.out`
+    -   `db2 –tvf ./verify_EXTTBL.sql | tee verify_EXTBL.out`
 
 3.  Db2 LOAD (BEST COMPRESSION)
 
