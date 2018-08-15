@@ -179,11 +179,11 @@ From the Db2 Warehouse Container command line create the four sets of tables usi
 
 6.  List the tables:
 
--   `dbsql -schema bluadmin -c "\d" |grep _DBLOAD`
+-   `dbsql -schema bluadmin -c "\d" |grep _DB2`
 
--   `dbsql -schema bluadmin -c "\d" |grep _DB2LOAD`
+-   `dbsql -schema bluadmin -c "\d" |grep _EXTTBL`
 
--   `dbsql -schema bluadmin -c "\d" |grep _CURLOAD`
+-   `dbsql -schema bluadmin -c "\d" |grep _CURSOR`
 
 Load scripts
 ------------
