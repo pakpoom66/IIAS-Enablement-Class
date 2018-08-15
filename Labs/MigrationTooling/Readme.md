@@ -134,13 +134,11 @@ Please migrate your assigned database to your assigned target schema, see assign
     1. Restart the sshd.
         `$ service sshd restart`
     1. Map a route from the local machine to the remote Netezza machine mocking the default port.  Your instructor may give you a different `<hostname>:<port>` to plug in to the ssh command.
-        `ssh -L 5480:services-uscentral.skytap.com:9053 root@localhost -p 50022`    
-    1. It will prompt for a password.  `root@localhost's password:`  Enter `passw0rd`
+        `ssh -L 5480:services-uscentral.skytap.com:9053 bluadmin@localhost -p 50022`    
+    1. It will prompt for a password.  `bluadmin@localhost's password:`  Enter `bluadmin`
         ***Note:*** Ignore Errors from SSH command
           `"bind: Cannot assign requested address`
           Validate with `netstat -an | grep 5480`
-1. Now super user to bluadmin
-        `su bluadmin`
 1. Run the db_migrate command to move the data over.
     `db_migrate -shost localhost  -cksum yes -loader extTab -threads 2 -sDB bdi -tDB bludb -sUser admin -tUser bluadmin -sPassword password -tPassword bluadmin -schema admin -tschema bdi`
 1. This command will run 10-30 minutes depending on RAM, Network CPU etc.  From IIAS to Netezza machine the average time is 10 minutes.  Since this is on a VM, your performance mileage will vary.  You may want to -exclude SALE
