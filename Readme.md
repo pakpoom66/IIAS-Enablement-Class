@@ -59,7 +59,7 @@ STOP:
 Assign Username
 
 
-*LAB: Create DSX Users
+* LAB: Create DSX Users
   ~~~
   Drop Down from IBM Data Science Experience Local to IBM Data Platform
   (Hamburger Icon) -> User Management -> +add users
