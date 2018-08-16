@@ -28,10 +28,78 @@ This day is migration of tools, methods and understand of activities during a pr
   - Set up Tables and Run db_migrate
 
 ## Day 3
+
+* Lab: [Console exploration](Labs/Admin/Admin.md) 
+  ~~~
+  Access to IIAS - Sailfish Appliance
+  https://cap-au-sg-prd-01.integration.ibmcloud.com:15150/console/dswebcustomauth/pages/login.jsp
+
+  Lab: Console exploration     Assumes live system access - As admin
+  START on:  Review the Dashboard - Section
+  Username : bluadmin   password: bluadmin
+
+  Lab: Console exploration     Assumes live system access - As user
+  START on:  Review the Dashboard - Section 
+  (Notice the differences between an admin and user
+
+  Username: potuser01
+  Password: Potuser01_123
+
+  ~~~
+
 This day is about performance tuning  and tools as well as an introduction to Data Science.
 * Spark, Livey/Spark/ Watson Studio
+
+* DSX Lab:
+Access to IIAS - Data Science 
+https://cap-sg-prd-4.integration.ibmcloud.com:18940/auth/login/login.html
+username : admin    password: password
+
+STOP:
+Assign Username
+
+
+*LAB: Create DSX Users
+  ~~~
+  Drop Down from IBM Data Science Experience Local to IBM Data Platform
+  (Hamburger Icon) -> User Management -> +add users
+
+  Name: (Your name) Example : Paulinda
+  Username (Note: Your assigned username) Example: team00
+  Email: (Your email) : It's not used but it's a required field in a valid email format
+  Access Level: Admin
+
+  Username : team01 Password: sailfish01
+  Username : team02 Password: sailfish02
+  ........
+  Username : team12 Password: sailfish12
+
+  Note: DSX will provide a temporary password. This is the password to send to the user
+  ~~~
+* LAB: Assign password
+  ~~~~
+  (Hamburger Icon) -> User Management
+  Look for Username (note STATUS column)
+  on Actions column - > Click Pencil - Assign password as above:
+
+
+  LAB: Check Login for new user
+  - Signout as Admin (Top right corner)
+  - Login as new user
+  - Drop Down from IBM Data Science Experience Local to IBM Data Platform
+  - (Hamburger Icon) -> User Management
+  - Look for Username (note STATUS column)
+  ~~~~
 * Lab: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
 * Lab: [Jupyter Notebook and Machine Learning](https://cloudcontent.mybluemix.net/cloud/garage/tutorials/high-powered-analytics-appliance?task=3)
+
+DSX User Experience
+Link: https://tjmcmanus.github.io/IIAS-Enablement-Class/Labs/AdvAnalytics/AnalyticsAdmin.html
+
+STOP: DO NOT check Cluster Logs
+
+DSX Advance Labs - Jupyter Notebook and Machine Learning
+https://cloudcontent.mybluemix.net/cloud/garage/tutorials/high-powered-analytics-appliance?task=3
 
 
 
