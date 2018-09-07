@@ -29,7 +29,7 @@ This day is migration of tools, methods and understand of activities during a pr
 
 ## Day 3
 
-* Lab: [Console exploration](Labs/Admin/Admin.md) 
+* Lab: [Console exploration](Labs/Admin/Admin.md)
   ~~~
   Access to IIAS - Sailfish Appliance
   https://cap-au-sg-prd-01.integration.ibmcloud.com:15150/console/dswebcustomauth/pages/login.jsp
@@ -39,7 +39,7 @@ This day is migration of tools, methods and understand of activities during a pr
   Username : bluadmin   password: bluadmin
 
   Lab: Console exploration     Assumes live system access - As user
-  START on:  Review the Dashboard - Section 
+  START on:  Review the Dashboard - Section
   (Notice the differences between an admin and user
 
   Username: potuser01
@@ -51,7 +51,7 @@ This day is about performance tuning  and tools as well as an introduction to Da
 * Spark, Livey/Spark/ Watson Studio
 
 * DSX Lab:
-Access to IIAS - Data Science 
+Access to IIAS - Data Science
 https://cap-sg-prd-4.integration.ibmcloud.com:18940/auth/login/login.html
 username : admin    password: password
 
@@ -119,7 +119,7 @@ Based on availability, we will have access to and IBM Integrated Analytics Syste
 
 
 Db2 Warehouse VM:  Guest VM requirements.   Virtual Box:   3 Cores and 10GB RAM
-* The VM image login ***username:*** sailfish ***password:*** ./.cshr1c.
+* The VM image login ***username:*** sailfish ***password:*** passw0rd.
 * The Local Db2 Warehouse database:
   * ***username:*** bluadmin ***password:*** bluadmin
 
