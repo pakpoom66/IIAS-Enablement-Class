@@ -67,8 +67,10 @@ This has been a high level overview of ***Admin Console*** of Data Science Exper
     * RStudio.
     * Zeppelin.
     * SPSS.
-      ![DSX dashboard](./images/DSX-Tools-MenuOptions.png)
+    
+    ![DSX dashboard](./images/DSX-Tools-MenuOptions.png)
   1. **Click** on **Tools>Jupyter**  **Note:**  This opens up to ***Create a Notebook***.   From here you can create a **Jupyter** or **Zeppelin** notebook.   One difference is that Jupyter notebooks also you to select the language where Zeppelin notebooks.
+  
   ![DSX dashboard](./images/DSX-Create-Notebook-Jupyter.png)
   ![DSX dashboard](./images/DSX-Create-Notebook-Zeppelin.png)
   1. **Click** on **Tools>RStudio** This will open RStudio in the context of the project that you are working.
