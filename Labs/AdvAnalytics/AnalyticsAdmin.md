@@ -37,8 +37,18 @@
   ![DSX dashboard](./images/DSX-ExternalLDAP.png)
 1. **Click** on the Menu > Alerts
 ![DSX dashboard](./images/DSX-Alerts-dash.png)
+1. **Click** on the Menu > Image management
+![DSX dashboard](./images/DSX-imagemanagement.png)
+1. **Click** on the Menu > Scripts
+![DSX dashboard](./images/DSX-script.png)
+   * pick the type of script you want to run
+   ![DSX dashboard](./images/DSX-script-dropdown.png)
+ 1. **Click** on the Menu > Hadoop integration
+![DSX dashboard](./images/DSX-hadoop.png)
+   * Click registration to register the Hadoop Cluster
+   ![DSX dashboard](./images/DSX-hadoop-reg.png)  
 
-This has been a high level overview of ***Data Platform Manager*** of Data Science Expereince.
+This has been a high level overview of ***Admin Console*** of Data Science Expereince.
 
 ## View of a user
 1. Here is the main dashboard.
