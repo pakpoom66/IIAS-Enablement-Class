@@ -2,27 +2,27 @@
 ## Day 1   
 This day is an overview of the system: What it is, how to administrate and monitor.
 * Kick off
-* Overview/Architecture
-* Admin Overview
+* [Overview/Architecture](https://ibm.box.com/s/o1rg57uzziyv28dzgn9tqb3az8vqath1)
+* [Admin Overview](https://ibm.box.com/s/polu8i4yktsa6xcwun7ewh0jbmrvd68k)
 * Lab: [Console exploration](Labs/Admin/Admin.md)     ***Assumes live system access***
-* Data Warehouse Admin Overview
+* [Data Warehouse Admin Overview](https://ibm.box.com/s/vvblhgx2dbhonocaxqnpop9b0pq44b5n)
 * Lab: [Administration as part of IIAS](Labs/db2Console/Db2W_IIAS_Web_Console.md) (VM)
 * Lab: [Command line processor](Labs/db2cmd/Db2W_Cmd_Line.md) (VM)
-* Monitoring
+* [Monitoring](https://ibm.box.com/s/0s45e3mdrgh7f9cvbmlm388eai6zjcbz)
   - Overall System
   - Individual Query (explain plans)
 
 ## Day 2
 This day is migration of tools, methods and understand of activities during a proof of concept.
-* Understanding the IIAS data engine - BLU
+* [Understanding the IIAS data engine - BLU](https://ibm.box.com/s/q1r8rzuzxsbhtqv5ztqlniztqve1wkgp)
   - Data structures (what happens when data is updated/deleted)
   - Groom/Compression/Stats/Reclaim
-* Understanding Data Layout
-* Tools to move Data
+* [Understanding Data Layout](https://ibm.box.com/s/na7z74rsoqfap6bi4hy85skwc3bz0dbk)
+* [Tools to move Data](https://ibm.box.com/s/7fnk0o6dlbhytj63tantuc3eeork6qqh)
   - Etl, Loading Methods and Utils, load rate and Best Practices
 * Lab: [Data Loading](Labs/DataLoading/Readme.md)  (VM)
-* Performance tuning
-* Migration Gotchas/best practices
+* [Performance tuning](https://ibm.box.com/s/lflozxmdq6bsfla92sj2ev9h00tx7mjx)
+* [Migration Gotchas/best practices](https://ibm.box.com/s/nkbzottl6slozepsiy60wcemuxybtdvr)
 * Lab: [Migration using tooling](Labs/MigrationTooling/Readme.md) (VM)
   - Harmony Profiler migrating a Netezza/PDA DDL
   - Set up Tables and Run db_migrate
