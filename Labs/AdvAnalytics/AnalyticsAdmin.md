@@ -4,18 +4,18 @@
       ![DSX Console](./images/DSX-Login.png)
 1. You should be looking at the main dashboard for DSX.
    ![DSX dashboard](./images/DSX-MainDash-user.png)
-1. If you are an **Admin** you can toggle the name icon to pick the ***IBM Data Platform Manager*** or stay on the ***Data Science Experience*** console.
-![DSX dashboard](./images/DSX-Masthead-options.png)
+1. If you are an **Admin** you can toggle the name icon to pick the ***Admin Console*** or stay on the ***Data Science Experience*** console.
+    ![DSX dashboard](./images/DSX-Masthead-options.png)
 
 ## View of an  admin
 1. Select **Admin Console**.
 1. Here is the main dashboard.
  ![DSX dashboard](./images/DSX-MainDash-admin.png)
 1. **Click** the 3 bar hamburger in the upper left to open the menu.
-1. Review the options avaialble.  **DashBoard, Nodes, Cluster Log, Services, Pods, User Management, Image Management, Scripts, Hadoop integration  Alerts**
-![DSX dashboard](./images/DSX-Menu-Options.png)
+1. Review the options avaialble.  **DashBoard, Nodes, Cluster Log, Services, Pods, Alerts, User Management, Image Management, Scripts, Hadoop integration**
+    ![DSX dashboard](./images/DSX-Menu-Options.png)
 1. Since you already saw the Main Dashboard, move down to the **Nodes**.  **Click** on **Nodes**.  **Note:** There are ***Control Plane, Worker*** and ***Storage Nodes*** avaialble.
-![DSX dashboard](./images/DSX-Nodes-Expanded.png)
+ ![DSX dashboard](./images/DSX-Nodes-Expanded.png)
 1. Once you are finished reviewing the ***Nodes***, **click** though to the **Cluster Log**.  Here you can filter, choose and research what is happening in the system
 ![DSX dashboard](./images/DSX-ClusterLog.png)
 1. **Click** on  **Services**.  This will list out all the services enabled on the system.  
