@@ -7,7 +7,7 @@
 ![DSX dashboard](./images/DSX-Masthead-options.png)
 
 ## View of an  admin
-1. Select **IBM Data Platform Manager**.
+1. Select **Admin Console**.
 1. Here is the main dashboard.
  ![DSX dashboard](./images/DSX-MainDash-admin.png)
 1. **Click** the 3 bar hamburger in the upper left to open the menu.
