@@ -29,6 +29,8 @@ This day is migration of tools, methods and understand of activities during a pr
 
 ## Day 3
 
+This day is about performance tuning  and tools as well as an introduction to Data Science.
+* Spark, Livey/Spark/ Data Science Experience
 * Lab: [Console exploration](Labs/Admin/Admin.md)
   ~~~
   Access to IIAS - Sailfish Appliance  --TBD
@@ -46,8 +48,7 @@ This day is migration of tools, methods and understand of activities during a pr
 
   ~~~
 
-This day is about performance tuning  and tools as well as an introduction to Data Science.
-* Spark, Livey/Spark/ Watson Studio
+
 
 * DSX Lab:
 Access to IIAS - Data Science - TBD
