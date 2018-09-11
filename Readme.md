@@ -91,15 +91,6 @@ Assign Username
 * Lab: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
 * Lab: [Jupyter Notebook and Machine Learning](https://cloudcontent.mybluemix.net/cloud/garage/tutorials/high-powered-analytics-appliance?task=3)
 
-* DSX User Experience
-Link: https://tjmcmanus.github.io/IIAS-Enablement-Class/Labs/AdvAnalytics/AnalyticsAdmin.html
-
-STOP: DO NOT check Cluster Logs
-
-* DSX Advance Labs - Jupyter Notebook and Machine Learning
-https://cloudcontent.mybluemix.net/cloud/garage/tutorials/high-powered-analytics-appliance?task=3
-
-
 
 # Class Prerequisites
 
