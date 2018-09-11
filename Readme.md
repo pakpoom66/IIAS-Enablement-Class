@@ -31,8 +31,7 @@ This day is migration of tools, methods and understand of activities during a pr
 
 * Lab: [Console exploration](Labs/Admin/Admin.md)
   ~~~
-  Access to IIAS - Sailfish Appliance
-  https://cap-au-sg-prd-01.integration.ibmcloud.com:15150/console/dswebcustomauth/pages/login.jsp
+  Access to IIAS - Sailfish Appliance  --TBD
 
   Lab: Console exploration     Assumes live system access - As admin
   START on:  Review the Dashboard - Section
@@ -51,9 +50,8 @@ This day is about performance tuning  and tools as well as an introduction to Da
 * Spark, Livey/Spark/ Watson Studio
 
 * DSX Lab:
-Access to IIAS - Data Science
-https://cap-sg-prd-4.integration.ibmcloud.com:18940/auth/login/login.html
-username : admin    password: password
+Access to IIAS - Data Science - TBD
+username : admin    password: Sail2018fish!
 
 STOP:
 Assign Username
