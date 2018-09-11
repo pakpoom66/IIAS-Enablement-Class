@@ -30,7 +30,7 @@ This day is migration of tools, methods and understand of activities during a pr
 ## Day 3
 
 This day is about performance tuning  and tools as well as an introduction to Data Science.
-* Spark, Livey/Spark/ Data Science Experience
+* [Spark, Livey/Spark/ Data Science Experience](https://ibm.box.com/s/s3zdjdwy0p7fhka5g8psxu1vs4rt1slc)
 * Lab: [Console exploration](Labs/Admin/Admin.md)
   ~~~
   Access to IIAS - Sailfish Appliance  --TBD
