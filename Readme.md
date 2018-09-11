@@ -100,7 +100,9 @@ Assign Username
 
   In the Db2Wh container are all the ddl and sql scripts needed to execute the labs.  
 
-# Lab systems used during class
+# Lab systems and presentations used during class
+
+Here is a [link to a Box folder](https://ibm.box.com/v/IIASWorkshop) with presentations for you to follow along.  For further education, please look at the [Channel Technical Enablememt Guide](https://www.onlinedigitallearning.com/course/view.php?id=3716)
 
 Based on availability, we will have access to and IBM Integrated Analytics System for you to review for the administration labs and DSX lab.   Complete the needful in the [Partner access document](./PartnerAccess.md)
 
