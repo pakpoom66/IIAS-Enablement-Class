@@ -62,11 +62,15 @@ This has been a high level overview of ***Admin Console*** of Data Science Exper
 1. Let's leave ***Projects*** for last, as the next section will be creating a sample project and notebook.  **Click** on **Model Management**.  Here you can see ***Published*** Machine Learning Models by other people on the system.  Which deployments are called most often, which deployments have the best runtimes.   This is made available, so that a user can see what others are using.  Maybe not replicate the same work, hence increasing productivity.
 ![DSX dashboard](./images/DSX-Model-Dashboard.png)
 1. **Click** on the hamburger menu icon, Expand **Tools**.  Notice the list of tools available:
+    * Decision Optimization.
     * Jupyter.
     * RStudio.
     * Zeppelin.
+    * SPSS.
+    
     ![DSX dashboard](./images/DSX-Tools-MenuOptions.png)
   1. **Click** on **Tools>Jupyter**  **Note:**  This opens up to ***Create a Notebook***.   From here you can create a **Jupyter** or **Zeppelin** notebook.   One difference is that Jupyter notebooks also you to select the language where Zeppelin notebooks.
+  
   ![DSX dashboard](./images/DSX-Create-Notebook-Jupyter.png)
   ![DSX dashboard](./images/DSX-Create-Notebook-Zeppelin.png)
   1. **Click** on **Tools>RStudio** This will open RStudio in the context of the project that you are working.
