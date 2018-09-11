@@ -1,6 +1,6 @@
 # A walk through of a IBM Data Science Experience (DSX) console
 1. Login into the DSX console
-   ![DSX Console](./images/DSX-login.png)
+   ![DSX Console](./images/DSX-Login.png)
 1. You should be looking at the main dashboard for DSX.
    ![DSX dashboard](./images/DSX-MainDash-user.png)
 1. If you are an **Admin** you can toggle the name icon to pick the ***IBM Data Platform Manager*** or stay on the ***Data Science Experience*** console.
