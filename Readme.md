@@ -5,12 +5,12 @@ This day is an overview of the system: What it is, how to administrate and monit
 * Overview/Architecture
 * Admin Overview
 * Lab: [Console exploration](Labs/Admin/Admin.md)     ***Assumes live system access***
-* Monitoring
-  - Overall System
-  - Individual Query (explain plans)
 * Data Warehouse Admin Overview
 * Lab: [Administration as part of IIAS](Labs/db2Console/Db2W_IIAS_Web_Console.md) (VM)
 * Lab: [Command line processor](Labs/db2cmd/Db2W_Cmd_Line.md) (VM)
+* Monitoring
+  - Overall System
+  - Individual Query (explain plans)
 
 ## Day 2
 This day is migration of tools, methods and understand of activities during a proof of concept.
