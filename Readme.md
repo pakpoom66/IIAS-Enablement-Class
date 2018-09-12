@@ -15,7 +15,6 @@ This day is an overview of the system: What it is, how to administrate and monit
 ## Day 2
 This day is about an introduction to Data Science.
 * [Spark, Livey/Spark/ Data Science Experience](https://ibm.box.com/s/s3zdjdwy0p7fhka5g8psxu1vs4rt1slc)
-
 * Access to IIAS - Data Science 
    ~~~
    https://9.30.106.50:8444
@@ -29,7 +28,6 @@ Assign Username
 * Lab 3: [DSX Advance Labs - Jupyter Notebook and Machine Learning](https://cloudcontent.mybluemix.net/cloud/garage/tutorials/high-powered-analytics-appliance?task=3) ***Assumes live system access***
 
     ***Modifications to Lab 3*** [Click here for Modifications](Labs/AdvAnalytics/lab3mods.md)
-
 
 
 ## Day 3
@@ -46,10 +44,6 @@ This day is migration of tools, methods and understand of activities during a pr
 * Lab: [Migration using tooling](Labs/MigrationTooling/Readme.md) (VM)
   - Harmony Profiler migrating a Netezza/PDA DDL
   - Set up Tables and Run db_migrate
-
-
-
-
 
 
 # Class Prerequisites
