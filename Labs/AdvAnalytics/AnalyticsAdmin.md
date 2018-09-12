@@ -95,10 +95,12 @@ This has been a high level overview of ***Admin Console*** of Data Science Exper
 ![DSX dashboard](./images/DSX-CreateProjectWorkshop.png)
 1. From the Project dashboard, **Click  +**  Then **Create Notebook**  This will launch the ***Create Notebook*** wizard
 ![DSX dashboard](./images/DSX-Project-CreateNewNotebook.png)
-1. Enter in the ***Name*** of the notebook.  **GoWorkshopProject**.
-![DSX dashboard](./images/DSX-Project-JupyterNotebookCreate.png)
-1. Toggle the **Language** to review, but select **Python**
-![DSX dashboard](./images/DSX-Project-JupyterNotebookCreateLanguageOpts.png)
+1. Enter in the ***Name*** of the notebook.  **GoWorkshopNotebook**.
+![DSX dashboard](./images/DSX-Notebook.png)
+1. Toggle the **Environment** to review, but select **Jupyter with Python 2.7, Scala 2.11, R3.4.3, Spark 2.0.2**
+![DSX dashboard](./images/DSX-Notebook-env.png)
+1. Toggle the **Language** to review, but select **Python 2.7**
+![DSX dashboard](./images/DSX-Notebook-lang.png)
 1. **Click Create**
 1. Enter into the Notebook to the right of ***[1]***  `print("Go Workshop Python Sample");`  Then **Click** the run button circled in red.
 ![DSX dashboard](./images/DSX-Project-JupyterNotebookSample.png)
