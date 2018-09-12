@@ -22,7 +22,7 @@ This day is about an introduction to Data Science.
    username : admin    password: Sail2018fish!
    ~~~
 STOP:
-Assign Username
+Assign Username 
 
 * LAB 1: [Creating and managing users](Labs/AdvAnalytics/CreateUser.md) ***Assumes live system access***
 * Lab 2: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
