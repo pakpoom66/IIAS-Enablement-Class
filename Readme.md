@@ -22,9 +22,9 @@ This day is about an introduction to Data Science.
    username : admin    password: Sail2018fish!
    ~~~
 STOP:
-Assign Username 
+Assign Username
 
-* LAB 1: [Creating and managing users](Labs/AdvAnalytics/CreateUser.md) ***Assumes live system access***
+* Lab 1: [Creating and managing users](Labs/AdvAnalytics/CreateUser.md) ***Assumes live system access***
 * Lab 2: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
 * Lab 3: [DSX Advance Labs - Jupyter Notebook and Machine Learning](https://cloudcontent.mybluemix.net/cloud/garage/tutorials/high-powered-analytics-appliance?task=3) ***Assumes live system access***
 
