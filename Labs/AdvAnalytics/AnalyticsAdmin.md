@@ -7,6 +7,8 @@
 1. If you are an **Admin** you can toggle the name icon to pick the ***Admin Console*** or stay on the ***Data Science Experience*** console.
     ![DSX dashboard](./images/DSX-Masthead-options.png)
 
+    ***Note*** From time to time you will see a warning that something is pending, free resources.  This is a spurious message being triggered by a response timeout. Just click the "X" ignore, this will be fixed.
+
 ## View of an  admin
 1. Select **Admin Console**.
 1. Here is the main dashboard.
@@ -55,7 +57,7 @@ This has been a high level overview of ***Admin Console*** of Data Science Exper
 1. Here is the main dashboard.
  ![DSX dashboard](./images/DSX-MainDash-user.png)
 1. **Click** the 3 bar hamburger in the upper left to open the menu.
-1. Review the options avaialble.  **Community, Projects, Model Management, Tools** and **Runtimes**.
+1. Review the options avaialble.  **Community, Published Assets, Projects, Tools, My Data, Environmnets ** and **All Active Environments**.
 ![DSX dashboard](./images/DSX-Main-Menu-user.png)
 1. **Click** on **Community**.   These are all sample project to get you started on your journey.  These samples are listed with Topic or industry, hopefully making the sample more interesting.
 ![DSX dashboard](./images/DSX-User-Community.png)
@@ -65,21 +67,22 @@ This has been a high level overview of ***Admin Console*** of Data Science Exper
     * RStudio.
     * Zeppelin.
     * SPSS.
-    
+
     ![DSX dashboard](./images/DSX-Tools-MenuOptions.png)
-  1. **Click** on **Tools>Jupyter**  **Note:**  This opens up to ***Create a Notebook***.   From here you can create a **Jupyter** or **Zeppelin** notebook.   One difference is that Jupyter notebooks also you to select the language where Zeppelin notebooks.
-  ![DSX dashboard](./images/DSX-Create-Notebook-Jupyter.png)
-  ![DSX dashboard](./images/DSX-Create-Notebook-Zeppelin.png)
+  1. **Click** on **Tools>Jupyter**  **Note:**  This opens up to ***Create a Project***.   Once you are in the context of a project, you can create a **Jupyter** or **Zeppelin** notebook.   One difference is that Jupyter notebooks also you to select the language where Zeppelin notebooks.  
+     ![DSX dashboard](./images/DSX-Create-Notebook-Jupyter.png)![DSX dashboard](./images/DSX-Create-Notebook-Zeppelin.png)
   1. **Click** on **Tools>RStudio** This will open RStudio in the context of the project that you are working.
   ![DSX dashboard](./images/DSX-RStudio.png)
-1. **Click** on **Runtimes**.  This lists all of the runtimes that are owned by this user.
-![DSX dashboard](./images/DSX-Runtimes-dash.png)
+1. **Click** on **Environments**.  This lists all of the runtimes that are owned by this user.
+![DSX dashboard](./images/DSX-MyEnvironemnts.png)
   1. Drilling into the ***Jupyter Runtime***, one can adjust the number of cores and see memory statistics.
   ![DSX dashboard](./images/DSX-Jupyter-Runtime.png)
   1. Drilling into the ***RStudio Runtime***, one can adjust the number of cores and see memory statistics.
   ![DSX dashboard](./images/DSX-R-Runtime.png)
   1. Drilling into the ***Zeppelin Runtime***, one can adjust the number of cores and see memory statistics.
   ![DSX dashboard](./images/DSX-Zep-runtime.png)
+1. **Click** on **My Data**  If in the context of a project, you will see all data sources and data sets at your disposal.
+1. **Click** on **All Active Environments**.  This will show you all active runtimes.   If you have not created anything yet, this will be empty.
 
 ***This concludes the user experience.***
 
