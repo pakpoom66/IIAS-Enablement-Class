@@ -31,66 +31,53 @@ This day is migration of tools, methods and understand of activities during a pr
 
 This day is about performance tuning  and tools as well as an introduction to Data Science.
 * [Spark, Livey/Spark/ Data Science Experience](https://ibm.box.com/s/s3zdjdwy0p7fhka5g8psxu1vs4rt1slc)
-* Lab: [Console exploration](Labs/Admin/Admin.md)
-  ~~~
-  Access to IIAS - Sailfish Appliance  --TBD
 
-  Lab: Console exploration     Assumes live system access - As admin
-  START on:  Review the Dashboard - Section
-  Username : bluadmin   password: bluadmin
 
-  Lab: Console exploration     Assumes live system access - As user
-  START on:  Review the Dashboard - Section
-  (Notice the differences between an admin and user
+* Access to IIAS - Data Science 
+   ~~~
+   https://9.30.106.50:8444
+   username : admin    password: Sail2018fish!
+   ~~~
+STOP:
+Assign Username
 
-  Username: potuser01
-  Password: Potuser01_123
-
-  ~~~
+* LAB 1 : Creating and managing users
+* Lab 2: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
+* Lab 3: [DSX Advance Labs - Jupyter Notebook and Machine Learning](https://cloudcontent.mybluemix.net/cloud/garage/tutorials/high-powered-analytics-appliance?task=3)
 
 
 
-* DSX Lab:
-Access to IIAS - Data Science - TBD
-username : admin    password: Sail2018fish!
+
 
 STOP:
 Assign Username
 
+DSX Lab 1: Creating and managing users
 
-* LAB: Create DSX Users
-  ~~~
-  Drop Down from IBM Data Science Experience Local to IBM Data Platform
-  (Hamburger Icon) -> User Management -> +add users
+LAB: Create DSX Users
+Drop Down from IBM Data Science Experience Local to
+(Hamburger Icon) -> Admin Console-> +add users
 
-  Name: (Your name) Example : Paulinda
-  Username (Note: Your assigned username) Example: team00
-  Email: (Your email) : It's not used but it's a required field in a valid email format
-  Access Level: Admin
+Name: (Your name) Example : Paulinda
+Username (Note: Your assigned username) Example: team00
+Email: (Your email) : It's not used but it's a required field in a valid email format
+Access Level: Admin
 
-  Username : team01 Password: sailfish01
-  Username : team02 Password: sailfish02
-  ........
-  Username : team12 Password: sailfish12
+Username : team01 Password: sailfish01
+Username : team02 Password: sailfish02
+........
+Username : team12 Password: sailfish12
 
-  Note: DSX will provide a temporary password. This is the password to send to the user
-  ~~~
-* LAB: Assign password
-  ~~~~
-  (Hamburger Icon) -> User Management
-  Look for Username (note STATUS column)
-  on Actions column - > Click Pencil - Assign password as above:
+Note: DSX will provide a temporary password. This is the password to send to the user
+
+LAB: Assign password
+(Hamburger Icon) -> Admin Console
+Look for Username (note STATUS column)
+on Actions column - > Click Pencil - Assign password as above:
 
 
-  LAB: Check Login for new user
-  - Signout as Admin (Top right corner)
-  - Login as new user
-  - Drop Down from IBM Data Science Experience Local to IBM Data Platform
-  - (Hamburger Icon) -> User Management
-  - Look for Username (note STATUS column)
-  ~~~~
-* Lab: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
-* Lab: [Jupyter Notebook and Machine Learning](https://cloudcontent.mybluemix.net/cloud/garage/tutorials/high-powered-analytics-appliance?task=3)
+
+
 
 
 # Class Prerequisites
