@@ -13,37 +13,36 @@ This day is an overview of the system: What it is, how to administrate and monit
   - Individual Query (explain plans)
 
 ## Day 2
-This day is about an introduction to Data Science.
-* [Spark, Livey/Spark/ Data Science Experience](https://ibm.box.com/s/s3zdjdwy0p7fhka5g8psxu1vs4rt1slc)
-* Access to IIAS - Data Science 
-   ~~~
-   https://9.30.106.50:8444
-   username : admin    password: Sail2018fish!
-   ~~~
-STOP:
-Assign Username
-
-* Lab 1: [Creating and managing users](Labs/AdvAnalytics/CreateUser.md) ***Assumes live system access***
-* Lab 2: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
-* Lab 3: [DSX Advance Labs - Jupyter Notebook and Machine Learning](https://cloudcontent.mybluemix.net/cloud/garage/tutorials/high-powered-analytics-appliance?task=3) ***Assumes live system access***
-
-    ***Modifications to Lab 3*** [Click here for Modifications](Labs/AdvAnalytics/lab3mods.md)
-
-
-## Day 3
 This day is migration of tools, methods and understand of activities during a proof of concept.
 * [Understanding the IIAS data engine - BLU](https://ibm.box.com/s/q1r8rzuzxsbhtqv5ztqlniztqve1wkgp)
   - Data structures (what happens when data is updated/deleted)
   - Groom/Compression/Stats/Reclaim
 * [Understanding Data Layout](https://ibm.box.com/s/na7z74rsoqfap6bi4hy85skwc3bz0dbk)
 * [Tools to move Data](https://ibm.box.com/s/7fnk0o6dlbhytj63tantuc3eeork6qqh)
-  - Etl, Loading Methods and Utils, load rate and Best Practices
+  - ETL, Loading Methods and Utils, load rate and Best Practices
 * Lab: [Data Loading](Labs/DataLoading/Readme.md)  (VM)
 * [Performance tuning](https://ibm.box.com/s/lflozxmdq6bsfla92sj2ev9h00tx7mjx)
 * [Migration Gotchas/best practices](https://ibm.box.com/s/nkbzottl6slozepsiy60wcemuxybtdvr)
 * Lab: [Migration using tooling](Labs/MigrationTooling/Readme.md) (VM)
   - Harmony Profiler migrating a Netezza/PDA DDL
   - Set up Tables and Run db_migrate
+
+
+
+## Day 3
+This day is about an introduction to Data Science.
+* [Spark, Livey/Spark/ Data Science Experience](https://ibm.box.com/s/s3zdjdwy0p7fhka5g8psxu1vs4rt1slc)
+* Access to IIAS - Data Science 
+   ~~~
+   https://10.50.88.240:8444
+   username : admin00    password: password00
+   ~~~
+
+* Lab 1: [Creating and managing users](Labs/AdvAnalytics/CreateUser.md) ***Assumes live system access***
+* Lab 2: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
+* Lab 3: [DSX Advance Labs - Jupyter Notebook and Machine Learning](https://cloudcontent.mybluemix.net/cloud/garage/tutorials/high-powered-analytics-appliance?task=3) ***Assumes live system access***
+
+    ***Modifications to Lab 3*** [Click here for Modifications](Labs/AdvAnalytics/lab3mods.md)
 
 
 # Class Prerequisites
