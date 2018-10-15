@@ -35,12 +35,12 @@ A)  Creating Projects. When you create a project for analyzing data, you associa
 
 **Click** on the hamburger icon on the top left and **select** **Projects**, then **select** the project name you created in Part 1 - your team name: example team00
 
-![](images/tutorials/high-powered-analytics-appliance/image21.jpeg)
+![](images/new/image21.jpeg)
 
   - First create a data source that will be recognized by the machine
     learning builder. **Click** on **Data sources** from the above screen
 
-  ![](images/tutorials/high-powered-analytics-appliance/image22.jpeg)
+  ![](images/new/image22.jpeg)
 
   **Click** on **add data source** on the right side of the screen.
 
@@ -56,24 +56,24 @@ A)  Creating Projects. When you create a project for analyzing data, you associa
   - When you’re done – the screen should look like below. **DO NOT** click ‘Create’ yet.
   Scroll down to define the remote data set **(Next section)**
 
-  ![](images/tutorials/high-powered-analytics-appliance/image24.jpeg)
+  ![](images/new/image24.jpeg)
 
   -  Now scroll down, click on **Add Remote Data Set**.
      - **Remote Data Set Name** is ***GOSales***
      - **Schema** leave blank
      - **Table** is ***dash7268.GOSALES***
 
-  ![](images/tutorials/high-powered-analytics-appliance/image25.jpeg)
+  ![](images/new/image25.jpeg)
 
   **Click** Create. The ‘GOSales’ data source should now appear.
 
-  ![](images/tutorials/high-powered-analytics-appliance/image26.png)
+  ![](images/new/image26.png)
 
   - In the prior steps, you have essentially loaded your data into a data structure or container. In an Apache Spark service, that is how a data gets processed. In DSX Local, some of the supported data frames are pandas.DataFrame, numpy.array,   Spark RDD and Spark DataFrame.
 
  **Click** on **Add model** under ** + ** pull down on the top right NOT the drop down arrow
 
- ![](images/tutorials/high-powered-analytics-appliance/image27.jpeg)
+ ![](images/new/image27.jpeg)
 
 
 
@@ -81,11 +81,11 @@ B)  **Creating Models** : Predictive modeling is a process that uses data mining
 
    - On the **Add Model** screen, use these values , **Name** your team name ***TeamXX*** . **Select**  ***Manual***. This will allow us to specify the ML algorithm to use. **Note** Data Scientists and Statisticians will know which Machine Language algorithm applies. **Click** on **Create**.
 
- ![](images/tutorials/high-powered-analytics-appliance/image28.jpeg)
+ ![](images/new/image28.jpeg)
 
    - **Selecting the data** : Now we need to select the data which will be used to create the model.
 
-  ![](images/tutorials/high-powered-analytics-appliance/image29.jpeg)
+  ![](images/new/image29.jpeg)
 
   **Click** on the circle next to **GOSales** data source which we just created. **Click** on **Next**.
 
@@ -93,7 +93,7 @@ B)  **Creating Models** : Predictive modeling is a process that uses data mining
   Keep **Auto Data Preparation** . **Click** **Next** to select the data. **Note:** The data displayed on your
   screen will be different from the image below
 
-  ![](images/tutorials/high-powered-analytics-appliance/image31.jpeg)
+  ![](images/new/image31.jpeg)
 
 
 
@@ -105,59 +105,59 @@ C)  **Training** predictive models. A predictive model must be trained to determ
 
    - Once it's determined what 'type' of data we're dealing with, DSX will recommend what type(s) of ML algorithm(s) are relevant in the form of **Estimators**. Estimators are used to train on the data and produce a model for each one. **Click** **Add Estimators**.
 
- ![](images/tutorials/high-powered-analytics-appliance/image33.jpeg)
+ ![](images/new/image33.jpeg)
 
   - A list of estimators will be displayed. Leave the **Search** blank (magnifying glass) to let DSX decide which estimator to use. Select all three estimators (Decision Tree Classifier, Random Forest Classifier, Naïve Bayes) to compare results between all 3 , by **clicking** on the
 
-  ![](images/tutorials/high-powered-analytics-appliance/image35.jpeg)
+  ![](images/new/image35.jpeg)
 
     for each technique. Now **click** **Add**.
 
-  ![](images/tutorials/high-powered-analytics-appliance/image36.jpeg)
+  ![](images/new/image36.jpeg)
 
-  ![](images/tutorials/high-powered-analytics-appliance/image38.jpeg)
+  ![](images/new/image38.jpeg)
 
   - The list of configured estimators will be listed on the right hand side of the screen. Click **Next** to train and evaluate the model
 
-  ![](images/tutorials/high-powered-analytics-appliance/image40.jpeg).
+  ![](images/new/image40.jpeg).
 
   - The models will now be trained. This may take some time so please be patient.
 
   - The results of the 3 estimators will be listed. In this case, the **Decision Tree Classifier** provided the best results. DSX will select the estimator with the best performance, but you can choose the estimator you want to use. In Part 1 of this lab, for example, we used Random Forest. After selecting the estimator type, **click** on **Save**. Note: The accuracy (Performance) of each of these models in this lab exercise is **Poor** or **Fail**. In real world applications, you can achieve greater accuracy by using a customized code via a Notebook as we did in Part 1 of this lab, including more data, and using regularization, normalization or other statistical techniques. To demonstrate the DSX's capability for developing models, we will continue and use only the best of the 3 estimators.
 
- ![](images/tutorials/high-powered-analytics-appliance/image42.jpeg)
+ ![](images/new/image42.jpeg)
 
  - You will be prompted to **Save** the model. Each time you use the same model name , its version will be incremented. **Click** **Save**
 
- ![](images/tutorials/high-powered-analytics-appliance/image44.jpeg)
+ ![](images/new/image44.jpeg)
 
  - The Model will be processed
 
- ![](images/tutorials/high-powered-analytics-appliance/image45.jpeg)
+ ![](images/new/image45.jpeg)
 
  - The list of Models will be displayed. Your list of Models will be different from the screen print below.
 
- ![](images/tutorials/high-powered-analytics-appliance/image46.jpeg)
+ ![](images/new/image46.jpeg)
 
 D) **Deploying the Model** : After the model is validated, the model will be applied to new data  and implement a **Scoring** system. Now it’s time to deploy the model. **Click** on the 3 dots next to the model you just created, and select **Deploy**
 
- ![](images/tutorials/high-powered-analytics-appliance/image47.jpeg)
+ ![](images/new/image47.jpeg)
 
   - In the **Create deployment** screen , **Name** is your team name - example team00. For DSX on IIAS , the only supported deployment type
     is online. For **Type** drop down list - select Online . Click on
     **Create**.
 
- ![](images/tutorials/high-powered-analytics-appliance/image48.jpeg)
+ ![](images/new/image48.jpeg)
 
   - The model will be deployed. When it completes, a list of deployed models will be listed under the **Deployments** tab. Under the **Deployment** column, look for your team name e.g. team00 and **Click**.
 
- ![](images/tutorials/high-powered-analytics-appliance/image49.jpeg)
+ ![](images/new/image49.jpeg)
 
   - A Deployment screen with deployment parameters will be displayed. The **Deployment Name**, Internal Scoring Endpoints - which is the computing engine used for scoring (e.g., the internal scoring endpoint is an NGINX web server). You can score    models outside DSX using these scoring endpoints via REST APIs such as CURL, for example. **PUBLISHER** is the username (team00) , The **ASSOCIATED MODEL NAME** is the MODEL name , **Input Schema** lists the Input variables , the **Output Schema** includes the predicted variables which includes the product line.
 
   **Click** ‘**TestAPI**’.
 
- ![](images/tutorials/high-powered-analytics-appliance/image53.jpeg)
+ ![](images/new/image53.jpeg)
 
   - Use the provided input or specify something different, then **click** on **Predict**. The scoring results will be displayed. The results indicate that for the following customer demographic : Gender: F (Female), Age: 31, Marital
  Status:Married, Profession: Executive, the predicted product interests are as follows:
@@ -172,8 +172,8 @@ D) **Deploying the Model** : After the model is validated, the model will be app
 
   8% - Outdoor Protection
 
- ![](images/tutorials/high-powered-analytics-appliance/image50.jpeg)
+ ![](images/new/image50.jpeg)
 
   - You can try other values. To do so, **Click** **Close** to close the current screen. This will bring up the Deployment screen. Then **click** **Test API**. Other values to try are listed in the following table:
 
-  ![](images/tutorials/high-powered-analytics-appliance/image51.jpeg)
+  ![](images/new/image51.jpeg)
