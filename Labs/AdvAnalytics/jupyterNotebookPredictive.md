@@ -141,7 +141,7 @@ A primer on Jupyter notebook:
    
    - To execute each cell, click on each cell. Below is an example of a cell. While the cell is running, you will see an asterisk (\*) next to the bracket []. This means that the cell is executing, so you need to wait until it completes, before executing the next cell. The cell will be assigned a number inside the bracket [] when it's executed. The numbers are assigned based on when they are ran, and it's not relevant to how the statements in the notebook will be processed. For example, if you've ran the first cell and you get [1], if you decide to run it again, after cell 3, note that cell 1 will be assigned [4]. Cells that do not have a bracket are non-executable cell. There is no need to execute them. These cells provide clarification, explanation or instructions.
    
-   -The results will be listed under each cell. Below is an example of an executed cell. Based on the cell number, it is the first cell executed for this run.
+   - The results will be listed under each cell. Below is an example of an executed cell. Based on the cell number, it is the first cell executed for this run.
 
    ![](images/new/image16.jpeg)   
 
@@ -158,4 +158,3 @@ You learned how to use DSX's Jupyter Notebook and load data into a Spark DataFra
 
 You **completed** the tutorial. **Congratulations!!!**
 
-![](images/new/image52.jpeg)
