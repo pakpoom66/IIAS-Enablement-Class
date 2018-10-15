@@ -34,8 +34,7 @@ DSX on Integrated Analytics System includes a one node implementation. DSX Local
 ### Lab data
 
 The data we are using is publicly available and can also be downloaded here
-[GoSales Transactions](https://apsportal.ibm.com/exchange-api/v1/entries/8044492073eb964f46597b4be06ff5ea/data?accessKey=9561295fa407698694b1e254d0099600).
-It contains historical outdoor sports equipment purchases for a fictitious company.
+[GoSales Transactions](https://apsportal.ibm.com/exchange-api/v1/entries/8044492073eb964f46597b4be06ff5ea/data?accessKey=9561295fa407698694b1e254d0099600).  It contains historical outdoor sports equipment purchases for a fictitious company.
 
 We will create a predictive model that will predict outdoor sports product interests based on a consumer's demographic: gender, age, marital status and profession. The product lines are: Personal Accessories, Mountaineering Equipment, Golf Equipment, Camping Equipment, Outdoor Protection, and Personal Accessories. Gender values are: M for Male, and F for Female. Marital Status are: Single and Married. Professions are as follows : Executive, Professional, Hospitality, Retired, Retail, Trades, Sales, Executive, Student and Other.
 
@@ -59,11 +58,11 @@ The learning goals are:
 
 After completing this lab,  you will get a Pie-Chart similar to the one displayed below, showing the predicted client interest distribution for each product line. The chart shows that 59% of consumers are interested in camping equipment, 30% in personal accessories, 6% in mountaineering equipment, and 5% in golf equipment.
 
-![](images/tutorials/high-powered-analytics-appliance/image19.jpeg)
+![](images/new/image19.jpeg)
 
 Additional Analyses – What is the predicted Consumer MEAN age for each product line?
 
-![](images/tutorials/high-powered-analytics-appliance/image20.jpeg)
+![](images/new/image20.jpeg)
 
 Based on the Bar Chart, the mean ages for clients who are interested in camping equipment, golf, mountaineering equipment, and personal accessories are 32, 50, 36, and 34 years old, respectively.
 
@@ -86,53 +85,53 @@ To Sign In: Use your **team##** with a **password** of **sailfish##**,
  In the login screen, **Username** is team##. **Password** is (see example above). **Click**
  **Sign In**
 
- ![](images/tutorials/high-powered-analytics-appliance/image3.jpeg)
+ ![](images/new/image3.jpeg)
 
 
 1) After a successful sign in, several sample Community Notebooks will be displayed. The Community contains resources to help you learn more about data science.
 
    - Sample Notebooks
 
-   ![](images/tutorials/high-powered-analytics-appliance/image4.jpeg)
+   ![](images/new/image4.jpeg)
 
 - Click the **More** button on the top right to get additional Community Notebooks. Please take a few moments to view the various assets available to get started with DSX quickly.
 
-   ![](images/tutorials/high-powered-analytics-appliance/image5.jpeg)
+   ![](images/new/image5.jpeg)
 
 2) Now click on the hamburger icon (3-line icon on the top left). **Click** on **Projects** and **View all Projects**. A project is how you organize your resources - data assets, collaborators, and analytic assets such as notebooks, models.
 
 
- ![](images/tutorials/high-powered-analytics-appliance/image8.jpeg)
+ ![](images/new/image8.jpeg)
 
 
   A list of projects will be listed for each user. Since this is the first time you've logged in, you will see one project named dsx-samples.  **Click** on **create project**.
 
-![](images/tutorials/high-powered-analytics-appliance/image9.jpeg)
+![](images/new/image9.jpeg)
 
 
 3) In the **Create new project** screen , **Name** is the project name. Project names are unique. In this lab, use your team## as your project name (Example team00). **Name** is your **team##** (For example: team00). Be sure you remember the new project name . **Description** : Put your name. **Click** on **Create**.
 
- ![](images/tutorials/high-powered-analytics-appliance/image11.jpeg)
+ ![](images/new/image11.jpeg)
 
  When your new project is created, you will see the resources available for that project. Note: Your screen content will vary from the sample screen below because you have not yet created those resources.
 
- ![](images/tutorials/high-powered-analytics-appliance/image12.jpeg)
+ ![](images/new/image12.jpeg)
 
   **Click** the ** + ** icon. **Click** Create notebook
 
- ![](images/tutorials/high-powered-analytics-appliance/image13.jpeg)
+ ![](images/new/image13.jpeg)
 
 4)  In the **Create Notebook** screen, **Click** on **From URL**. Fill in the values for :
   - **Name** is DSXLocalSailfish
   - **Description** ‘YourName’ Notebook Jupyter (where YourName is your name)
   - **Notebook URL**:Copy-paste
-    https://raw.githubusercontent.com/pepangaldan/DSXLabNotebook/master/DSXLocalSailfish-20180109.ipynb  
+    `https://raw.githubusercontent.com/pepangaldan/DSXLabNotebook/master/DSXLocalSailfish-20180109.ipynb`
   - **Tool** dropdown select **Jupyter** . Review to verify that you copy-pasted the URL location correctly.
 
- ![](images/tutorials/high-powered-analytics-appliance/image14.jpeg)
+ ![](images/new/image14.jpeg)
 
       Backup Github site:
-      https://raw.githubusercontent.com/dxkikuchi/DSX/master/DSXLocalSailfish/DSXLocalSFBU.ipynb
+      `https://raw.githubusercontent.com/dxkikuchi/DSX/master/DSXLocalSailfish/DSXLocalSFBU.ipynb`
 
 
 The step above will import a Jupyter notebook from GitHub into your DSX Local environment. You can also import a notebook from a file or create a notebook from scratch. This process will load the Jupyter notebook into the DSX environment, as well as start processing the kernel – Python2 with DSX Spark. Be sure that the kernel has started before executing any of the code cells by watching the top right of the notebook. While it's starting, you will see a feedback that the kernel is starting. This process is quick, so you may not see it but you need to be aware.
@@ -142,7 +141,7 @@ A primer on Jupyter notebook:
 
    - To run each cell, **click** on
 
-    ![](images/tutorials/high-powered-analytics-appliance/image15.jpeg),
+    ![](images/new/image15.jpeg),
 
     which is located on the CellToolbar (Underneath the Menu – (File, Edit, View, etc)).
 
@@ -150,7 +149,7 @@ A primer on Jupyter notebook:
 
     -The results will be listed under each cell. Below is an example of an executed cell. Based on the cell number, it is the first cell executed for this run.
 
-    ![](images/tutorials/high-powered-analytics-appliance/image16.jpeg)   
+    ![](images/new/image16.jpeg)   
 
   - Please walk through the notebook by reading and executing the code cells. There are explanations before and after cell execution to help you understand what is being accomplished.
 
@@ -165,4 +164,4 @@ You learned how to use DSX's Jupyter Notebook and load data into a Spark DataFra
 
 You **completed** the tutorial. **Congratulations!!!**
 
-![](images/tutorials/high-powered-analytics-appliance/image52.jpeg)
+![](images/new/image52.jpeg)
