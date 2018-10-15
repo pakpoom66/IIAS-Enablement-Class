@@ -135,7 +135,7 @@ To Sign In: Use your **team##** with a **password** of **sailfish##**,
 The step above will import a Jupyter notebook from GitHub into your DSX Local environment. You can also import a notebook from a file or create a notebook from scratch. This process will load the Jupyter notebook into the DSX environment, as well as start processing the kernel – Python2 with DSX Spark. Be sure that the kernel has started before executing any of the code cells by watching the top right of the notebook. While it's starting, you will see a feedback that the kernel is starting. This process is quick, so you may not see it but you need to be aware.
 
 
-A primer on Jupyter notebook:
+### A primer on Jupyter notebook:
 
    - To run each cell, **click** on  ![](images/new/image15.jpeg)  which is located on the CellToolbar (Underneath the Menu – (File, Edit, View, etc)).
    
