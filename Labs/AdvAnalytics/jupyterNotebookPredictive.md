@@ -127,10 +127,9 @@ To Sign In: Use your **team##** with a **password** of **sailfish##**,
   - **Notebook URL**:Copy-paste
     `https://raw.githubusercontent.com/pepangaldan/DSXLabNotebook/master/DSXLocalSailfish-20180109.ipynb`
   - **Tool** dropdown select **Jupyter** . Review to verify that you copy-pasted the URL location correctly.
-
  ![](images/new/image14.jpeg)
 
-      Backup Github site: `https://raw.githubusercontent.com/dxkikuchi/DSX/master/DSXLocalSailfish/DSXLocalSFBU.ipynb`
+  Backup Github site: `https://raw.githubusercontent.com/dxkikuchi/DSX/master/DSXLocalSailfish/DSXLocalSFBU.ipynb`
 
 
 The step above will import a Jupyter notebook from GitHub into your DSX Local environment. You can also import a notebook from a file or create a notebook from scratch. This process will load the Jupyter notebook into the DSX environment, as well as start processing the kernel – Python2 with DSX Spark. Be sure that the kernel has started before executing any of the code cells by watching the top right of the notebook. While it's starting, you will see a feedback that the kernel is starting. This process is quick, so you may not see it but you need to be aware.
@@ -138,11 +137,7 @@ The step above will import a Jupyter notebook from GitHub into your DSX Local en
 
 A primer on Jupyter notebook:
 
-   - To run each cell, **click** on
-
-    ![](images/new/image15.jpeg),
-
-    which is located on the CellToolbar (Underneath the Menu – (File, Edit, View, etc)).
+   - To run each cell, **click** on  ![](images/new/image15.jpeg)  which is located on the CellToolbar (Underneath the Menu – (File, Edit, View, etc)).
 
    - To execute each cell, click on each cell. Below is an example of a cell. While the cell is running, you will see an asterisk (\*) next to the bracket []. This means that the cell is executing, so you need to wait until it completes, before executing the next cell. The cell will be assigned a number inside the bracket [] when it's executed. The numbers are assigned based on when they are ran, and it's not relevant to how the statements in the notebook will be processed. For example, if you've ran the first cell and you get [1], if you decide to run it again, after cell 3, note that cell 1 will be assigned [4]. Cells that do not have a bracket are non-executable cell. There is no need to execute them. These cells provide clarification, explanation or instructions.
 
