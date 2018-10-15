@@ -40,11 +40,10 @@ This day is about an introduction to Data Science.
 
 * Lab 1: [Creating and managing users](Labs/AdvAnalytics/CreateUser.md) ***Assumes live system access***
 * Lab 2: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
-* Lab 3: DSX Advance Labs
-[Jupyter Notebook and Machine Learning](Labs/AdvAnalytics/jupyterNotebookPredictive.md) ***Assumes live system access***
-[Jupyter Notebook and Machine Learning](Labs/AdvAnalytics/machineBuilder.md) ***Assumes live system access***
+* Lab 3: [DSX Advance Labs: Jupyter Notebook](Labs/AdvAnalytics/jupyterNotebookPredictive.md) ***Assumes live system access***
+* Lab 4: [DSX Advance Labs: Machine Learning Builder](Labs/AdvAnalytics/machineBuilder.md) ***Assumes live system access***
 
-    ***Modifications to Lab 3*** [Click here for Modifications](Labs/AdvAnalytics/lab3mods.md)
+***Modifications to Lab 3*** [Click here for Modifications](Labs/AdvAnalytics/lab3mods.md)
 
 
 # Class Prerequisites
