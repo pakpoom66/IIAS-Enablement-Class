@@ -70,7 +70,8 @@ Db2 Warehouse VM:  Guest VM requirements.   Virtual Box:   3 Cores and 10GB RAM
 
   * ***username:*** root ***password:*** sailfish
 
-DSX Workshop available
+[DSX Console](https://10.50.88.240:8444/console) 10.50.88.240
+  * ***username:*** admin ***password:*** password
 
 # Lab Instructions
 
