@@ -254,7 +254,7 @@ Next, we will create new table in the POT schema. We will do this using a script
 
 -   Enter **EMP_EXPENSE_FACT** in the **Filter by name** field and press enter.
 
--   Click on the table **EMP_EXPENSE_FACT** with the “BLUADMIN” schema.
+-   Click on the table **EMP_EXPENSE_FACT** with the “GOSALESDW” schema.
 
 -   ![](./media/image20.png)
 
