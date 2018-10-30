@@ -104,6 +104,7 @@ Since reviewing the evaluation and all seems pretty clean, go ahead back to the 
      >![load SQL](./images/OpenClient.png)
   1. Select ***Browse*** then select `~/nz/tmp/nz/gather_nz_info/extracted.BDI_converted.cleaned.sql` file and click ***Open***.
      >![open SQL](./images/loadsql.png)
+  1. Edit the sql and change the schema to `BDIxx` where xx is the suffix of the user.  Example user22 would use BDI22.
   1. Review the imported SQL, then click ***Run All***
      >![Run SQL](./images/runall.png)
   1. Review the results.  Notice that there were no failures.  
