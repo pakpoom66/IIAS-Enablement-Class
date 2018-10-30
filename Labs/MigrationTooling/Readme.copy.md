@@ -97,7 +97,7 @@ Since reviewing the evaluation and all seems pretty clean, go ahead back to the 
   1. From the browser, click the ***Db2 Warehouse***
      >![Launch DB2 WH console](./images/Db2whConsoleLaunch.png)
   1. Change the URL to point o `https://10.50.88.240:8443/console`   
-  1. Login in as with yorur dredentials `user00/Sail2018fish!`.  
+  1. Login in as with your credentials `user00/Sail2018fish!`.  
   1.  Click on the 3 green bars at the upper left.  Then click ***Run SQL***.
      >![run SQL](./images/runSql.png)
   1. Click ***Script*** then ***Open from client***
