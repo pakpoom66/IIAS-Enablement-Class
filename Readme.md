@@ -23,7 +23,7 @@ This day is migration of tools, methods and understand of activities during a pr
 * Lab: [Data Loading](Labs/DataLoading/Readme.md)  (VM)
 * [Performance tuning](https://ibm.box.com/s/lflozxmdq6bsfla92sj2ev9h00tx7mjx)
 * [Migration Gotchas/best practices](https://ibm.box.com/s/nkbzottl6slozepsiy60wcemuxybtdvr)
-* Lab: [Migration using tooling](Labs/MigrationTooling/Readme.md) (VM)
+* Lab: [Migration using tooling](Labs/MigrationTooling/Readme.copy.md) (VM)
   - Harmony Profiler migrating a Netezza/PDA DDL
   - Set up Tables and Run db_migrate
 
