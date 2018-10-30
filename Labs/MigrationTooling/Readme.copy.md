@@ -125,10 +125,10 @@ Please migrate your assigned database to your assigned target schema, see assign
 1. From the command prompt type `db_migrate -h`.
    >![Harmony Profiler](./images/db_migrate.png)
 1. Take note at the beginning of the output.  There are arguments that start with **s** some with **t**.  **s** stands for the **source** or in our case Netezza and **t** stands for **target** or in our case Db2 Warehouse/IIAS.  
-    `db_migrate -sbd <Netezza database name> -tdb <Db2 Warehouse database name> -shost <hostanme> -thost <Db2 Warehouse host> -suser <remote DB username> -tuser bluadmin -spassword <remote DB username> -tpassword bluadmin`
+    `db_migrate -sbd <Netezza database name> -tdb <Db2 Warehouse database name> -shost <hostanme> -thost <Db2 Warehouse host> -suser <remote DB username> -tuser bluadmin -spassword <remote DB username> -tpassword bluadmin -createTargetTable yes`
 
-1. Run the db_migrate command to move the data over.
-    `db_migrate -shost 10.50.88.25  -cksum yes -loader extTab -threads 2 -sDB bdi00 -tDB bludb -sUser admin  -tUser userXX -sPassword password -tPassword  Sail2018fish!  -tschema bdiXX -sSchema BDINSIGHTS`
+1. Run the db_migrate command to move the data over. ***Note:*** replace userXX with your assigned userid and change bdiXX to be bdi(last 2 digits in your user id)
+    `db_migrate -shost 10.50.88.25  -cksum yes -loader extTab -threads 2 -sDB bdi00 -tDB bludb -sUser admin  -tUser userXX -sPassword password -tPassword  Sail2018fish!  -tschema bdiXX -sSchema bdinsights -createTargetTable yes`
 
 1. This command will run 10-30 minutes depending on RAM, Network CPU etc.  From IIAS to Netezza machine the average time is 10 minutes.  Since this is on a VM, your performance mileage will vary.  
     ![db_migrate output](./images/db_migrateLog.png)
