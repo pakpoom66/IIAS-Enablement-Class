@@ -128,7 +128,7 @@ Please migrate your assigned database to your assigned target schema, see assign
     `db_migrate -sbd <Netezza database name> -tdb <Db2 Warehouse database name> -shost <hostanme> -thost <Db2 Warehouse host> -suser <remote DB username> -tuser bluadmin -spassword <remote DB username> -tpassword bluadmin`
 
 1. Run the db_migrate command to move the data over.
-    `db_migrate -shost 10.50.88.25  -cksum yes -loader extTab -threads 2 -sDB bdi00 -tDB bludb -sUser admin  -tUser userXX -sPassword password -tPassword  Sail2018fish@  -tschema bdiXX -sSchema BDINSIGHTS`
+    `db_migrate -shost 10.50.88.25  -cksum yes -loader extTab -threads 2 -sDB bdi00 -tDB bludb -sUser admin  -tUser userXX -sPassword password -tPassword  Sail2018fish!  -tschema bdiXX -sSchema BDINSIGHTS`
 
 1. This command will run 10-30 minutes depending on RAM, Network CPU etc.  From IIAS to Netezza machine the average time is 10 minutes.  Since this is on a VM, your performance mileage will vary.  
     ![db_migrate output](./images/db_migrateLog.png)
