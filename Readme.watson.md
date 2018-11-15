@@ -38,13 +38,8 @@ This day is about an introduction to Data Science.
    username : admin00    password: password00
    ~~~
 
-* Lab 1: [Creating and managing users](Labs/AdvAnalytics/CreateUser.md) ***Assumes live system access***
-* Lab 2: [DSX : User experience](Labs/AdvAnalytics/AnalyticsAdmin.md)  ***Assumes live system access***
-* Lab 3: [DSX Advance Labs: Jupyter Notebook](Labs/AdvAnalytics/jupyterNotebookPredictive.md) ***Assumes live system access***
-* Lab 4: [DSX Advance Labs: Machine Learning Builder](Labs/AdvAnalytics/machineBuilder.md) ***Assumes live system access***
-
-***Modifications to Lab 3*** [Click here for Modifications](Labs/AdvAnalytics/lab3mods.md)
-
+* Lab 1: Using Watson Studio on IBM Cloud, use [Spark and Python to Predict Equipment Purchases](https://dataplatform.cloud.ibm.com/exchange/public/entry/view/d80de77f784fed7915c14353512ef14d) You can create the project using the copy icon in the red box in the following image.
+![Pull Down Notebook](./images/Notebook.png)
 
 # Class Prerequisites
 
